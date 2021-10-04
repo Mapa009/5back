@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.yooooon.hr.emp.dao.RecordFamilyInfoDAO">
+
+   <!--<resultMap type="kr.co.yooooon.hr.emp.to.RecordFamilyInfoTO" id="recordFamilyInfoResult">
+      <result property="empCode" column="EMP_CODE" />
+      <result property="familyCode" column="FAMILY_CODE" />
+      <result property="familyName" column="FAMILY_NAME" />
+      <result property="relation" column="RELATION" />
+      <result property="birthdate" column="BIRTHDATE" />
+      <result property="liveTogether" column="LIVE_TOGETHER" />
+      <result property="dependentRelation" column="DEPENDENT_RELATION" />
+      <result property="residentRegistration" column="RESIDENT_REGISTRATION_NUMBER" />
+      <result property="allowance" column="ALLOWANCE" />
+      <result property="dependency" column="DEPENDENCY" />
+      <result property="yearendTax" column="YEAR_END_TAX" />
+      <result property="disabled" column="DISABLED" />
+      <result property="foreigner" column="FOREIGNER" />
+      <result property="solarLunal" column="SOLAR_LUNAL" />
+      <result property="education" column="EDUCATION" />
+      <result property="graduated" column="GRADUATED" />
+      <result property="job" column="JOB" />
+      <result property="workPlace" column="WORK_PLACE_NAME" />
+      <result property="position" column="POSITION" />
+   </resultMap>
+
+   <select id="selectFamilyList" parameterType="string" resultMap="recordFamilyInfoResult">
+      select emp_code, family_code, family_name, relation, live_together, DEPENDENT_RELATION, RESIDENT_REGISTRATION_NUMBER,
+      ALLOWANCE, DEPENDENCY, YEAR_END_TAX, DISABLED, FOREIGNER, to_char(birthdate,'YYYY/MM/DD') birthdate,
+      SOLAR_LUNAL, EDUCATION, GRADUATED, JOB, WORK_PLACE_NAME, POSITION
+      from family_detail_info
+      where emp_code = #{empCode}
+   </select>
+   
+   <insert id="insertFamilyInfo" parameterType="kr.co.yooooon.hr.emp.to.RecordFamilyInfoTO">
+      INSERT INTO family_detail_info VALUES
+      (#{empCode}
+      , FAMILY_CODE_SEQ.NEXTVAL
+      , #{familyName}
+      , #{relation}
+      , #{liveTogether}
+      , #{dependentRelation}
+      , #{residentRegistration}
+      , #{allowance}
+      , #{dependency}
+      , #{yearendTax}
+      , #{disabled}
+      , #{foreigner}
+      , TO_DATE(#{birthdate}, 'YYYY/MM/DD')
+      , #{solarLunal}
+      , #{education}
+      , #{graduated}
+      , #{job}
+      , #{workPlace}
+      , #{position})
+   </insert>
+   
+   <update id="updateFamilyInfo" parameterType="kr.co.yooooon.hr.emp.to.RecordFamilyInfoTO">
+      UPDATE family_detail_info SET
+      FAMILY_NAME = #{familyName}
+      , RELATION = #{relation}
+      , LIVE_TOGETHER = #{liveTogether}
+      , DEPENDENT_RELATION = #{dependentRelation}
+      , RESIDENT_REGISTRATION_NUMBER = #{residentRegistration}
+      , ALLOWANCE = #{allowance}
+      , DEPENDENCY = #{dependency}
+      , YEAR_END_TAX = #{yearendTax}
+      , DISABLED = #{disabled}
+      , FOREIGNER = #{foreigner}
+      , BIRTHDATE = TO_DATE(#{birthdate}, 'YY/MM/DD')
+      , SOLAR_LUNAL = #{solarLunal}
+      , EDUCATION = #{education}
+      , GRADUATED = #{graduated}
+      , JOB = #{job}
+      , WORK_PLACE_NAME = #{workPlace}
+      , POSITION = #{position}
+      WHERE EMP_CODE = #{empCode}
+      and FAMILY_CODE = #{familyCode}
+   </update>
+   
+   <delete id="deleteFamilyInfo" parameterType="kr.co.yooooon.hr.emp.to.RecordFamilyInfoTO">
+      DELETE FROM family_detail_info
+      WHERE EMP_CODE = #{empCode} 
+      AND FAMILY_CODE = #{familyCode}
+   </delete>-->
+</mapper>

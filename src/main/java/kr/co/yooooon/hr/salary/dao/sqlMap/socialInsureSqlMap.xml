@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.yooooon.hr.salary.dao.SocialInsureDAO">
+	<!--
+        <resultMap type="kr.co.yooooon.hr.salary.to.SocialInsureTO" id="socialInsureResult" >
+            <result property="attributionYear" column="ATTRIBUTION_YEAR" />
+            <result property="healthInsureRates" column="HEALTH_INSURE_RATES" />
+            <result property="longtermCareRate" column="LONG_TERM_CARE_RATE" />
+            <result property="nationPenisionRates" column="NATION_PENISION_RATES" />
+            <result property="teachPenisionRates" column="TEACH_PENISION_RATES" />
+            <result property="empInsureRates" column="EMP_INSURE_RATES" />
+            <result property="wrkInsureRates" column="WRK_INSURE_RATES" />
+            <result property="jobStabilRates" column="JOBSTABIL_RATES" />
+            <result property="vocaCompetencyRates" column="VOCA_COMPETENCY_RATES" />
+            <result property="industInsureRates" column="INDUST_INSURE_RATES" />
+            <result property="industInsurecharRates" column="INDUST_INSURE_CHAR_RATES" />
+        </resultMap>
+
+
+        <parameterMap type="map" id="updateParameter" >
+          <parameter property="attributionYear" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+          <parameter property="healthInsureRates" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+          <parameter property="longtermCareRate" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+          <parameter property="nationPenisionRates" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+          <parameter property="teachPenisionRates" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+          <parameter property="empInsureRates" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+          <parameter property="wrkInsureRates" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+          <parameter property="jobStabilRates" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+          <parameter property="vocaCompetencyRates" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+          <parameter property="industInsureRates" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+          <parameter property="industInsurecharRates" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+        </parameterMap>
+    -->
+
+	<select id="selectBaseInsureList" parameterType="map" statementType="CALLABLE">
+      <![CDATA[
+           {call P_INSURE_SELECT(
+           #{yearBox, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{result, mode=OUT, jdbcType=CURSOR, javaType=java.sql.ResultSet, resultMap=socialInsureResult}
+           )
+       ]]>
+	</select>
+<!--
+	<select id="updateInsureData" parameterType="socialInsureTO" statementType="CALLABLE">
+		<![CDATA[
+        	{call P_INSURE_INSERT(?,?,?,?,?,?,?,?,?,?,?)}
+    	]]>
+	</select>
+	
+	<delete id="deleteInsureData" parameterType="socialInsureTO">
+		DELETE FROM SOCIAL_INSURE_RATIO
+		WHERE ATTRIBUTION_YEAR = #{attributionYear}
+	</delete>
+	-->
+</mapper>

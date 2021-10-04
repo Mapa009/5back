@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.yooooon.base.dao.BoardDAO">	
+
+	<!--<resultMap type="kr.co.yooooon.base.to.BoardTO" id="boardResult">
+		<result property="boardSeq" column="BOARD_SEQ" />
+		<result property="author" column="AUTHOR" />
+		<result property="title" column="TITLE" />
+		<result property="content" column="CONTENT" />
+		<result property="today" column="TODAY" />
+		<result property="mm" column="MM" />
+		<result property="rrrr" column="RRRR" />
+		<result property="dd" column="DD" />
+		<result property="refSeq" column="REF_SEQ" />
+	</resultMap>
+	
+    <insert id="insertBoard" parameterType="kr.co.yooooon.base.to.BoardTO">
+		<![CDATA[                
+   			INSERT INTO NEW_BOARD3 VALUES (newBoard_seq2.NEXTVAL, #{author}, #{title}, #{content}, #{today}, #{mm}, #{dd}, newBoard_seq2.CURRVAL)
+   		]]>
+    </insert>
+    
+    <select id="selectBoardList" resultMap="boardResult">
+		<![CDATA[
+	   		SELECT 
+			BOARD_SEQ,
+			AUTHOR,TITLE,
+			CONTENT,
+			TODAY,
+			MM,
+			DD,
+			REF_SEQ
+			FROM NEW_BOARD3
+			ORDER by BOARD_SEQ desc
+   		]]>
+    </select>
+    
+    <select id="selectPost" resultMap="boardResult" parameterType="kr.co.yooooon.base.to.BoardTO">
+		<![CDATA[
+	   		SELECT 
+			BOARD_SEQ,
+			AUTHOR,TITLE,
+			CONTENT,
+			TODAY,
+			MM,
+			DD,
+			REF_SEQ
+			FROM NEW_BOARD3
+			WHERE BOARD_SEQ = #{boardSeq}
+			  AND REF_SEQ = #{refSeq}
+   		]]>
+    </select>-->
+
+</mapper>

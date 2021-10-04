@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.yooooon.hr.salary.dao.BaseSalaryDAO">
+	
+	<!--<resultMap type="kr.co.yooooon.hr.emp.to.PositionTO" id="baseSalaryResult">
+		<result property="positionCode" column="POSITION_CODE" />
+		<result property="position" column="POSITION" />
+		<result property="baseSalary" column="BASE_SALARY" />
+		<result property="hobongRatio" column="HOBONG_RATIO" />
+	</resultMap>
+
+	<select id="selectBaseSalaryList" resultMap="baseSalaryResult">
+		<![CDATA[
+			SELECT * FROM POSITION 
+			ORDER BY POSITION_CODE
+		]]>
+	</select>
+	
+	<update id="updateBaseSalary" parameterType="PositionTO">
+		<![CDATA[
+			UPDATE POSITION SET
+			BASE_SALARY = #{baseSalary}
+			, HOBONG_RATIO = #{hobongRatio}
+			WHERE POSITION_CODE = #{positionCode}
+		]]>
+	</update>
+	
+	<update id="updatePosition" parameterType="PositionTO">
+		<![CDATA[
+			UPDATE  POSITION SET
+			POSITION = #{position}
+			, BASE_SALARY = #{baseSalary}
+			, HOBONG_RATIO = #{hobongRatio}
+			WHERE POSITION_CODE = #{positionCode}
+		]]>
+	</update>
+	
+	<insert id="insertPosition" parameterType="PositionTO">
+		<![CDATA[
+			INSERT INTO POSITION 
+			VALUES 
+			( #{positionCode}
+			, #{position}
+			, #{baseSalary}
+			, #{hobongRatio} )
+		]]>
+	</insert>
+	
+	<delete id="deletePosition" parameterType="PositionTO">
+		<![CDATA[
+			DELETE POSITION
+			WHERE POSITION_CODE = #{positionCode}
+			AND POSITION = #{position}
+		]]>
+	</delete>
+	-->
+</mapper>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration debug="true">
+
+	<property name="LOGS_ABSOLUTE_PATH" value="logs"/> <!-- ${LOGS_ABSOLUTE_PATH}를 입력하면 logs라는 이름으로 루트폴더 안에 폴더명이 생성됩니다 -->
+   <!-- Appenders -->
+   <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+      <encoder>
+         <Pattern>%d %5p [%c] %m%n</Pattern>
+      </encoder>   
+   </appender>
+
+   <appender name="console-infolog" class="ch.qos.logback.core.ConsoleAppender">
+      <encoder>
+         <Pattern>%d %5p %m%n</Pattern>
+      </encoder>   
+   </appender>
+
+
+    <!-- File Appender -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+       <file>${LOGS_ABSOLUTE_PATH}/logback.log</file> <!-- 파일경로 설정 -->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"> <!-- 출력패턴 설정 -->
+        	<charset>UTF-8</charset>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+        </encoder>
+         
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy"> <!-- 일자별로 로그를 자동적으로 기록하는 메서드입니다 -->
+           <fileNamePattern>${LOGS_ABSOLUTE_PATH}/logback.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern> <!-- .gz 나 .zip 등의 확장자를 맨 뒤에 붙여주면 자동으로 로그파일을 압축 -->
+           <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP"> <!-- 파일당 최고 용량 kb, mb, gb -->
+               <maxFileSize>10MB</maxFileSize> <!-- 10MB를 넘으면 로그파일이 압축되고 압축파일 뒤에는 날짜가 기록됩니다 -->
+           </timeBasedFileNamingAndTriggeringPolicy> <!-- 일자별 로그파일 최대 보관주기(~일), 해당 설정일 이상된 파일은 자동으로 제거 -->
+           <maxHistory>30</maxHistory> <!--<MinIndex>1</MinIndex> <MaxIndex>10</MaxIndex> -->
+         </rollingPolicy>
+   </appender>
+
+
+        
+	<!-- ERROR레벨 이상만 출력 -->
+	<root level="ERROR">
+	 	<appender-ref ref="FILE"/>
+	</root>
+
+   <!-- 로거 -->
+   <logger name="jdbc.sqlonly" level="INFO" appender-ref="console-infolog"/>
+      <logger name="jdbc.resultsettable" level="INFO" appender-ref="console-infolog"/>
+      <logger name="org.springframework" level="error"/>
+      <logger name="org.springframework.jdbc" level="error"/>      
+
+   <!-- 루트 로거. console과 FILE에 INFO 정보를 남깁니다. -->
+    <root level="INFO">
+         <appender-ref ref="console"/>
+         <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>

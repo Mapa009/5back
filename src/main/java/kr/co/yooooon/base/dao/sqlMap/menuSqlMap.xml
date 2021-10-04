@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.yooooon.base.dao.menuDAO">
+
+	<!--<resultMap type="kr.co.yooooon.base.to.MenuTO" id="menuResult">
+		<result property="menu_name" column="menu_name" />
+		<result property="super_menu_code" column="super_menu_code" />
+		<result property="menu_code" column="menu_code" />
+		<result property="depth" column="depth" />
+		<result property="is_collapce" column="is_collapce" />
+		<result property="menu_url" column="menu_url" />
+	</resultMap>
+
+	<select id="selectMenuList" resultMap="menuResult">
+		<![CDATA[ 
+			select  menu_name ,
+					super_menu_code ,
+					menu_code ,
+					level as depth ,
+					decode(super_menu_code,null,'Y','N') as is_collapce ,
+					menu_url 
+					from menu 
+					start with super_menu_code is null connect by prior menu_code = super_menu_code
+			 ]]>
+    </select>-->
+</mapper>

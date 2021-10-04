@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.yooooon.hr.salary.dao.MonthExtSalDAO">
+			
+	<!--<resultMap type="kr.co.yooooon.hr.salary.to.MonthExtSalTO" id="monthExtSalResult">
+		<result property="monthExtSalCode" column="MONTH_EXT_SAL_CODE" />
+		<result property="applyYearMonth" column="APPLY_YEAR_MONTH" />
+		<result property="empCode" column="EMP_CODE" />
+		<result property="extSalCode" column="EXT_SAL_CODE" />
+		<result property="extSalName" column="EXT_SAL_NAME" />
+		<result property="price" column="PRICE" />
+	</resultMap>
+
+	<select id="selectMonthExtSalList" parameterType = "map" resultMap="monthExtSalResult">
+		<![CDATA[
+			SELECT * 
+			FROM MONTH_EXT_SAL
+			WHERE APPLY_YEAR_MONTH = #{applyYearMonth}
+			AND EMP_CODE = #{empCode}
+		]]>
+	</select>-->
+	
+</mapper>

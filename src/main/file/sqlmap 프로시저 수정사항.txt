@@ -1,0 +1,142 @@
+SqlMap 수정해야될 곳
+- 사유: 기존의 ibatis 형식으로 작성한 것이 mybatis에서는 사용하지 않는 방식이므로, 수정해야 함
+
+
+================================================================================================================================
+1. hr/salary/sqlmap/socialInsureSqlMap
+
+1) 지워야할 것
+	<parameterMap id="selectParameter" class="map">
+      <parameter property="yearBox" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+      <parameter property="result" jdbcType="ORACLECURSOR" javaType="java.sql.ResultSet" mode="OUT" />
+	</parameterMap>
+
+
+2) 기존 것을 지우고 아래의 것을 복사&붙여넣기 할 것
+	
+	<select id="selectBaseInsureList" parameterType="map" statementType="CALLABLE">
+      <![CDATA[
+           {call P_INSURE_SELECT(
+           #{yearBox, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{result, mode=OUT, jdbcType=CURSOR, javaType=java.sql.ResultSet, resultMap=socialInsureResult}
+           )
+       ]]>
+	</select>
+	
+	
+
+================================================================================================================================
+
+2. hr/salary/sqlmap/fullTimeSalarySqlMap
+
+1) 지워야할 것
+	<parameterMap class="map" id="fullTimeSalaryParameter" >
+      <parameter property="applyYearMonth" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+      <parameter property="empCode" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+      <parameter property="result" jdbcType="ORACLECURSOR" javaType="java.sql.ResultSet" mode="OUT" />
+      <parameter property="errorCode" jdbcType="VARCHAR" javaType="java.lang.String" mode="OUT" />
+      <parameter property="errorMsg" jdbcType="VARCHAR" javaType="java.lang.String" mode="OUT" />
+   </parameterMap>   
+
+
+2) 기존 것을 지우고 아래의 것을 복사&붙여넣기 할 것
+	
+	<select id="selectFullTimeSalary" parameterType="map" statementType="CALLABLE"> 
+      <![CDATA[
+           {call P_CREATE_MONTH_SALARY(
+           #{applyYearMonth, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{empCode, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{result, mode=OUT, jdbcType=CURSOR, javaType=java.sql.ResultSet, resultMap=fullTimeSalaryResult}
+           , #{errorCode, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{errorMsg, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
+           )
+       ]]>
+	</select>
+	
+	
+	
+================================================================================================================================
+
+3. hr/salary/sqlmap/monthSalarySqlMap
+
+1) 지워야할 것
+	<parameterMap type="map" id="monthSalaryParameter" >
+      <parameter property="applyYearMonth" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+      <parameter property="empCode" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+      <parameter property="result" jdbcType="CURSOR" javaType="java.sql.ResultSet" mode="OUT" resultMap="monthSalaryResult"/>
+      <parameter property="errorCode" jdbcType="VARCHAR" javaType="java.lang.String" mode="OUT" />
+      <parameter property="errorMsg" jdbcType="VARCHAR" javaType="java.lang.String" mode="OUT" />
+   </parameterMap>   
+
+
+2) 기존 것을 지우고 아래의 것을 복사&붙여넣기 할 것
+	
+   	<select id="batchMonthSalaryProcess" parameterType="map" statementType="CALLABLE"> 
+      <![CDATA[
+           {call P_HR_SALARY.P_CREATE_MONTH_SALARY(
+           #{applyYearMonth, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{empCode, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{result, mode=OUT, jdbcType=CURSOR, javaType=java.sql.ResultSet, resultMap=monthSalaryResult}
+           , #{errorCode, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{errorMsg, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
+           )
+       ]]>
+	</select>
+		
+	
+	
+================================================================================================================================
+
+4. hr/attd/sqlmap/annualVacationMgtSqlMap
+
+1) 지워야할 것
+	<parameterMap type="map" id="dayAttdMgtParameter">
+      <parameter property="applyDay" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+      <parameter property="result" jdbcType="CURSOR" javaType="java.sql.ResultSet" mode="OUT" resultMap="dayAttdMgtResult"/>
+      <parameter property="errorCode" jdbcType="VARCHAR" javaType="java.lang.String" mode="OUT" />
+      <parameter property="errorMsg" jdbcType="VARCHAR" javaType="java.lang.String" mode="OUT" />
+   </parameterMap>
+
+
+2) 기존 것을 지우고 아래의 것을 복사&붙여넣기 할 것
+	
+	<select id="batchDayAttdMgtProcess" parameterType="map" statementType="CALLABLE">
+		<![CDATA[
+        	{call P_HR_ATTENDANCE.P_CREATE_DAY_ATTD_MANAGE(
+           #{applyDay, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{result, mode=OUT, jdbcType=CURSOR, javaType=java.sql.ResultSet, resultMap=dayAttdMgtResult}
+           , #{errorCode, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{errorMsg, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
+           )
+    	]]>
+	</select>
+			
+	
+	
+================================================================================================================================
+
+5. hr/attd/sqlmap/monthAttdMgtSqlMap
+
+1) 지워야할 것
+	<parameterMap type="map" id="monthAttdMgtParameter" >
+      <parameter property="applyYearMonth" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+       <parameter property="deptName" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />
+      <parameter property="result" jdbcType="CURSOR" javaType="java.sql.ResultSet" mode="OUT" resultMap="monthAttdMgtResult"/>
+      <parameter property="errorCode" jdbcType="VARCHAR" javaType="java.lang.String" mode="OUT" />
+      <parameter property="errorMsg" jdbcType="VARCHAR" javaType="java.lang.String" mode="OUT" />
+   </parameterMap>
+
+
+2) 기존 것을 지우고 아래의 것을 복사&붙여넣기 할 것
+	
+	<select id="batchMonthAttdMgtProcess" parameterType="map"
+		statementType="CALLABLE">
+		<![CDATA[
+        	{call P_HR_ATTENDANCE.P_CREATE_MONTH_ATTD_MANAGE(
+           #{applyYearMonth, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{result, mode=OUT, jdbcType=CURSOR, javaType=java.sql.ResultSet, resultMap=monthAttdMgtResult}
+           , #{errorCode, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{errorMsg, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
+           )
+    	]]>
+	</select>

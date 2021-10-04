@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.yooooon.hr.salary.dao.FullTimeSalaryDAO">
+
+	<!--<resultMap type="kr.co.yooooon.hr.salary.to.FullTimeSalTO" id="fullTimeSalaryResult">
+		<result property="empCode" column="EMP_CODE" />
+		<result property="applyYearMonth" column="APPLY_YEAR_MONTH" />
+		<result property="basicSalary" column="BASIC_SALARY" />
+		<result property="positionSalary" column="POSITION_SALARY" />
+		<result property="familySalary" column="FAMILY_SALARY" />
+		<result property="foodSalary" column="FOOD_SALARY" />
+		<result property="overWorkSalary" column="OVER_WORK_SALARY" />
+		<result property="nationalPension" column="NATIONAL_PENSION" />
+		<result property="healthInsurance" column="HEALTH_INSURANCE" />
+		<result property="longTermInsurance" column="LONG_TERM_INSURANCE" />
+		<result property="employmentInsurance" column="EMPLOYMENT_INSURANCE" />
+		<result property="religionDonation" column="RELIGION_DONATION" />
+		<result property="incomeTax" column="INCOME_TAX" />
+		<result property="residentTax" column="RESIDENT_TAX" />
+		<result property="finalizeStatus" column="FINALIZE_STATUS" />
+		<result property="basicSalBefore" column="BASIC_SAL_BEFORE" />
+	</resultMap>
+	 
+   
+	<select id="findAllMoney" resultMap="fullTimeSalaryResult" parameterType="String">
+		SELECT EMP_CODE, APPLY_YEAR_MONTH, BASIC_SALARY, POSITION_SALARY, FAMILY_SALARY, FOOD_SALARY, OVER_WORK_SALARY, NATIONAL_PENSION, HEALTH_INSURANCE,
+	    LONG_TERM_INSURANCE, EMPLOYMENT_INSURANCE, RELIGION_DONATION, INCOME_TAX, RESIDENT_TAX, FINALIZE_STATUS, BASIC_SAL_BEFORE
+	    FROM FULLTIME_EMPLOYEE_SALARY WHERE APPLY_YEAR_MONTH = #{applyYearMonth}
+	</select>-->
+
+ 	<select id="selectFullTimeSalary" parameterType="map" statementType="CALLABLE"> 
+      <![CDATA[
+           {call P_CREATE_MONTH_SALARY(
+             #{applyYearMonth, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{empCode, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{result, mode=OUT, jdbcType=CURSOR, javaType=java.sql.ResultSet, resultMap=fullTimeSalaryResult}
+           , #{errorCode, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
+           , #{errorMsg, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
+           )
+       ]]>
+	</select>
+	
+ 	<!--<update id="updateFullTimeSalary" parameterType="fullTimeSalTO">
+				UPDATE FULLTIME_EMPLOYEE_SALARY SET 
+				FINALIZE_STATUS = #{finalizeStatus, jdbcType=VARCHAR}
+				WHERE EMP_CODE = #{empCode, jdbcType=VARCHAR}
+				AND APPLY_YEAR_MONTH = #{applyYearMonth, jdbcType=VARCHAR}
+	</update>
+	
+	<resultMap type="kr.co.yooooon.hr.salary.to.PayDayTO" id="payDayResult">
+		<result property="ord" column="ORD" />
+		<result property="paymentDate" column="PAYMENT_DATE" />
+		<result property="smltnIssue" column="SMLTN_ISSUE" />
+		<result property="salaryType" column="SALARY_TYPE" />
+		<result property="remarks" column="REMARKS" />
+	</resultMap>
+	
+	<select id="selectPayDayList" resultMap="payDayResult">
+			SELECT * FROM SALARY_BONUS_DATE
+	</select>
+	-->
+</mapper>

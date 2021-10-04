@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.yooooon.base.dao.HolidayDAO">
+
+	<!--<resultMap type="kr.co.yooooon.base.to.HolidayTO" id="holidayResult">
+		<result property="applyDay" column="APPLY_DAY" />
+		<result property="holidayName" column="HOLIDAY_NAME" />
+		<result property="note" column="NOTE" />
+	</resultMap>
+
+	<select id="selectHolidayList" resultMap="holidayResult">
+		<![CDATA[                
+   		SELECT TO_CHAR(APPLY_DAY, 'YYYY-MM-DD') APPLY_DAY
+   		, HOLIDAY_NAME, NOTE
+   		FROM HOLIDAY ]]>
+    </select>-->
+    
+    <select id="selectWeekDayCount" resultType="string" parameterType="map">
+		<![CDATA[                
+   		SELECT WEEKDAY_COUNTING_FUNC(#{startDate} ,#{endDate}) 
+   		WEEKDAY_COUNT 
+   		FROM DUAL ]]>
+    </select>
+    
+    <!--<update id="updateCodeList" parameterType="kr.co.yooooon.base.to.HolidayTO">
+		<![CDATA[                
+   		UPDATE HOLIDAY SET
+   		HOLIDAY_NAME = #{holidayName}
+   		, NOTE = #{note}
+   		WHERE APPLY_DAY = #{applyDay} ]]>
+    </update>
+    
+    <insert id="insertCodeList" parameterType="kr.co.yooooon.base.to.HolidayTO">
+		<![CDATA[                
+   		INSERT INTO HOLIDAY VALUES( TO_DATE(#{applyDay},'YYYY-MM-DD') , #{holidayName} , #{note} ) 
+   		]]>
+    </insert>
+	
+	<delete id="deleteCodeList" parameterType="kr.co.yooooon.base.to.HolidayTO">
+		<![CDATA[                
+   		DELETE HOLIDAY WHERE
+   		APPLY_DAY = #{applyDay} ]]>
+    </delete>-->
+    
+</mapper>
