@@ -45,8 +45,7 @@ public class DatasetBeanMapper {
     public <T> T datasetToBean(PlatformData inData, Class<T> classType) throws Exception {
         T bean = null;
         String datasetName = getDataSetName(classType);   //dataset의 name을 얻어옴.
-        DataSet dataset = inData.getDataSet(datasetName);  //dataset얻음 
-
+        DataSet dataset = inData.getDataSet(datasetName);  //dataset얻음
         if(dataset.getRemovedRowCount() == 0)  //삭제한 행의 갯수 X
             bean = getBean(dataset, classType, 0);   //TO 객체에 값 담음 
         else

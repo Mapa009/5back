@@ -1,6 +1,7 @@
 package kr.co.yooooon.hr.certificate.to;
 
 import kr.co.yooooon.base.to.BaseTO;
+import kr.co.yooooon.common.annotation.Dataset;
 import kr.co.yooooon.hr.certificate.compositKey.CertificateCompositID;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -12,6 +13,7 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper=false)
 @Entity
 @Table(name="CERTIFICATE")
+@Dataset(name="ds_certificate")
 @IdClass(CertificateCompositID.class) //mybatis로 받아야되는 곳도 있어서 idclass사용
 public class CertificateTO extends BaseTO{
 	//복합키
@@ -24,5 +26,5 @@ public class CertificateTO extends BaseTO{
 	 etc, approvalStatus, rejectCause;
 
 	@Transient
-	private String usageName,empName,deptName;
+	private String usageName,empName,deptName,status;
 }

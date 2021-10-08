@@ -154,9 +154,8 @@ public class EmpApplicationServiceImpl implements EmpApplicationService {
 	
 	@Override
 	public void modifyEmployee(EmpTO emp) {
-		EmpTO emp2 = null;
 		if (emp.getStatus().equals("update")) {
-			emp2 = empRepository.save(emp);
+			empDAO.updateEmployee(emp);
 		}
 		if (emp.getWorkInfoList() != null) {
 			List<WorkInfoTO> workInfoList = emp.getWorkInfoList();

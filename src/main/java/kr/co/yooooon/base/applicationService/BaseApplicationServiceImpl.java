@@ -117,7 +117,9 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 
 	@Override
 	public void deleteEmpCode(EmpTO emp) {
-		detailCodeRepository.deleteById(emp.getEmpCode());
+		DetailCodeTO detailCodeTO = new DetailCodeTO();
+		detailCodeTO.setDetailCodeNumber(emp.getEmpCode());
+		detailCodeRepository.delete(detailCodeTO);
 	}
 
 	@Override

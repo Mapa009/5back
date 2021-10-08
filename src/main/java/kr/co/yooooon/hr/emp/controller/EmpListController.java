@@ -2,12 +2,12 @@ package kr.co.yooooon.hr.emp.controller;
 
 import java.util.ArrayList;
 
+import com.tobesoft.xplatform.data.PlatformData;
+import com.tobesoft.xplatform.data.VariableList;
+import kr.co.yooooon.common.mapper.DatasetBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import kr.co.yooooon.hr.emp.sf.EmpServiceFacade;
 import kr.co.yooooon.hr.emp.to.EmpTO;
@@ -16,24 +16,14 @@ import kr.co.yooooon.hr.emp.to.EmpTO;
 public class EmpListController {
 	@Autowired
 	private EmpServiceFacade empServiceFacade;
-	private ModelMap map = new ModelMap();
+	@Autowired
+	private DatasetBeanMapper datasetBeanMapper;
 	
-	@RequestMapping(value="/emp/list", method=RequestMethod.GET)
-	public ModelMap emplist(@RequestParam("value")String pvalue) {
-		
-		try {
-			String value = "전체부서"; 
-			
-			if (pvalue != null) {
-				value = pvalue;
-			}
-			
-			ArrayList<EmpTO> list = empServiceFacade.findEmpList(value);			
-			map.put("list", list);
-		} catch (Exception e) {
-			map.put("errorCode", -1);
-			map.put("errorMsg", e.getMessage());
-		}		
-		return map;
+	@RequestMapping(value="/emp/list")
+	public void emplist(@RequestAttribute("variableList") VariableList varList, @RequestAttribute("resData") PlatformData resData) throws Exception{
+		String value = varList.getString("value");
+
+		ArrayList<EmpTO> list = (ArrayList<EmpTO>) empServiceFacade.findEmpList(value);
+		datasetBeanMapper.beansToDataset(resData, list, EmpTO.class);
 	}	
 }
