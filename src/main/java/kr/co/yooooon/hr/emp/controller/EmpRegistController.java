@@ -1,9 +1,12 @@
 package kr.co.yooooon.hr.emp.controller;
 
 import com.google.gson.GsonBuilder;
+import com.tobesoft.xplatform.data.PlatformData;
+import kr.co.yooooon.common.mapper.DatasetBeanMapper;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,43 +28,23 @@ import java.util.TimeZone;
 public class EmpRegistController {
 	@Autowired
 	private EmpServiceFacade empServiceFacade;
+	@Autowired
+	private DatasetBeanMapper datasetBeanMapper;
+
 	private ModelMap map = new ModelMap();
 	
-	@RequestMapping(value="/emp/empRegistEmp" ,params="sendData")
-	public ModelMap registEmployee(@RequestParam("sendData")String sendData) throws Exception {
-		try {
-			System.out.println(sendData);
-			Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
-			EmpTO emp = gson.fromJson(sendData, new TypeToken<EmpTO>(){}.getType());
-			System.out.println(emp.getBirthdate());
-			empServiceFacade.registEmployee(emp);
+	@RequestMapping(value="/emp/registEmployee")
+	public void registEmployee(@RequestAttribute("reqData") PlatformData reqData) throws Exception {
+		EmpTO emp = datasetBeanMapper.datasetToBean(reqData, EmpTO.class);
 
-			map.put("errorMsg"," 사원이 등록되었습니다.");
-			map.put("errorCode", 0);
-			
-		} catch (DataAccessException dae){
-			map.put("errorMsg", "사원 등록에 실패했습니다 : "+dae.getMessage());
-			map.put("errorCode", -1);
-		} catch(Exception e) {
-			map.put("errorMsg", e.getMessage());
-			map.put("errorCode", -1);
-		}
-		return map;
+		empServiceFacade.registEmployee(emp);
 	}
 	
-	@RequestMapping(value="/emp/empRegist")
-	public ModelMap findLastEmpCode(){
-		try {
-			String empCode = empServiceFacade.findLastEmpCode();
-			map.put("lastEmpCode", empCode);
-			map.put("errorMsg","success");
-			map.put("errorCode", 0);
-		} catch (DataAccessException dae){
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}
-		return map;
+	@RequestMapping(value="/emp/findLastEmpCode")
+	public void findLastEmpCode(@RequestAttribute("resData") PlatformData resData)throws Exception{
+		EmpTO lastEmpCode= new EmpTO();
+		lastEmpCode.setEmpCode(empServiceFacade.findLastEmpCode());
+		datasetBeanMapper.beanToDataset(resData, lastEmpCode, EmpTO.class);
 	}
 	
 }

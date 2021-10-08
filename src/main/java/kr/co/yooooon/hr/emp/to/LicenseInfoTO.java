@@ -1,6 +1,7 @@
 package kr.co.yooooon.hr.emp.to;
 
 import kr.co.yooooon.base.to.BaseTO;
+import kr.co.yooooon.common.annotation.Dataset;
 import kr.co.yooooon.hr.emp.compositKey.LicenseInfoID;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -15,6 +16,7 @@ import javax.persistence.Table;
 @Table(name="LICENSE_INFO")
 @EqualsAndHashCode(callSuper=false)
 @IdClass(LicenseInfoID.class)
+@Dataset(name="ds_licenseInfo")
 public class LicenseInfoTO extends BaseTO{
 	//복합키
 	@Id

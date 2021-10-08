@@ -24,7 +24,7 @@ import javax.persistence.*;
 @Table(name="EMP")
 @EqualsAndHashCode(callSuper=false)
 @Dataset(name="gds_emp")
-public class EmpTO extends BaseTO{
+public class EmpTO{
    @Id
    private String empCode;
    private String empName,gender,mobileNumber,address,
@@ -34,7 +34,7 @@ public class EmpTO extends BaseTO{
 
    //해당 테이블의 컬럼에 부합하지 않는 변수들은 영속성에서 제거
    @Transient
-   private String position,deptName,hobong,occupation,employment;
+   private String position,deptName,hobong,occupation,employment,status;
 
    @OneToMany
    @JoinColumn(name="empCode")

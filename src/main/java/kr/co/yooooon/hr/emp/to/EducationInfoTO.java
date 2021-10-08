@@ -1,6 +1,7 @@
 package kr.co.yooooon.hr.emp.to;
 
 import kr.co.yooooon.base.to.BaseTO;
+import kr.co.yooooon.common.annotation.Dataset;
 import kr.co.yooooon.hr.emp.compositKey.EducationInfoID;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -14,6 +15,7 @@ import java.util.Date;
 @EqualsAndHashCode(callSuper=false)
 //복합키
 @IdClass(EducationInfoID.class)
+@Dataset(name="ds_educationInfo")
 public class EducationInfoTO extends BaseTO{
 	@Id
 	private String empCode;

@@ -11,4 +11,5 @@ public interface EmpDAO {
 	public String selectLastEmpCode();
 	public void registEmployee(HashMap<String ,Object> map);
 	public void deleteEmployee(HashMap<String , Object> map);
+	public void updateEmployee(EmpTO emp);
 }

@@ -2,8 +2,12 @@ package kr.co.yooooon.hr.certificate.controller;
 
 import java.util.ArrayList;
 
+import com.tobesoft.xplatform.data.PlatformData;
+import com.tobesoft.xplatform.data.VariableList;
+import kr.co.yooooon.common.mapper.DatasetBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,38 +23,23 @@ import kr.co.yooooon.hr.certificate.to.CertificateTO;
 public class CertificateApprovalController {
 	@Autowired
 	private CertificateServiceFacade certificateServiceFacade;
+	@Autowired
+	private DatasetBeanMapper datasetBeanMapper;
 	private ModelMap map = new ModelMap();
 	
-	@RequestMapping(value="/certificate/certificateApproval", params="deptName")
-	public ModelMap findCertificateListByDept(@RequestParam("deptName")String deptName, @RequestParam("startDate")String startDate, @RequestParam("endDate")String endDate) {
-		try {
-			ArrayList<CertificateTO> certificateList = certificateServiceFacade.findCertificateListByDept(deptName, startDate, endDate);
-			map.put("certificateList", certificateList);
-			map.put("errorMsg", "success");
-			map.put("errorCode", 0);		
-		} catch (DataAccessException dae) {	
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		} 
-		return map;
+	@RequestMapping(value="/certificate/findCertificateListByDept")
+	public void findCertificateListByDept(@RequestAttribute("variableList")VariableList variableList,@RequestAttribute("resData") PlatformData resData)throws Exception {
+		String deptName = variableList.getString("deptName");
+		String startDate = variableList.getString("startDate");
+		String endDate = variableList.getString("endDate");
+		ArrayList<CertificateTO> certificateList = certificateServiceFacade.findCertificateListByDept(deptName, startDate, endDate);
+		datasetBeanMapper.beansToDataset(resData,certificateList,CertificateTO.class);
 	}
 	
-	@RequestMapping(value="/certificate/certificateApproval", params="sendData")
-	public ModelMap modifyCertificateList(@RequestParam("sendData")String sendData) {
-		try {
-			Gson gson = new Gson();
-			ArrayList<CertificateTO> certificateList = gson.fromJson(sendData, new TypeToken<ArrayList<CertificateTO>>(){}.getType());
-			certificateServiceFacade.modifyCertificateList(certificateList);
-			map.put("errorMsg","success");
-			map.put("errorCode", 0);
+	@RequestMapping(value="/certificate/modifyCertificateList")
+	public void modifyCertificateList(@RequestAttribute("reqData") PlatformData reqData) throws Exception{
+		ArrayList<CertificateTO> certificateList=(ArrayList<CertificateTO>) datasetBeanMapper.datasetToBeans(reqData,CertificateTO.class);
 
-			
-		} catch (DataAccessException dae) {
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}
-		return map;
+		certificateServiceFacade.modifyCertificateList(certificateList);
 	}
 }

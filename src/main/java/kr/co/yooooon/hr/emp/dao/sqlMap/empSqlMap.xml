@@ -191,7 +191,7 @@
 		ORDER BY E.EMP_CODE
 	</select>-->
 	
-	<!--<update id="updateEmployee" parameterType="kr.co.yooooon.hr.emp.to.EmpTO">
+	<update id="updateEmployee" parameterType="kr.co.yooooon.hr.emp.to.EmpTO">
 		UPDATE EMP SET
 		  EMP_NAME = #{empName}
 		, BIRTHDATE = TO_DATE(#{birthdate} ,'YYYY/MM/DD')
@@ -206,7 +206,7 @@
 		, POSITION_CODE = (SELECT POSITION_CODE FROM POSITION WHERE POSITION.POSITION = #{position})
 		, DEPT_CODE = (SELECT DEPT_CODE FROM DEPT WHERE DEPT.DEPT_NAME = #{deptName}) 
 		WHERE EMP_CODE = #{empCode}
-	</update>-->
+	</update>
 	
 	<parameterMap type="map" id="empDeleteParameter" >
       <parameter property="empCode" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />      

@@ -1,6 +1,7 @@
 package kr.co.yooooon.hr.emp.to;
 
 import kr.co.yooooon.base.to.BaseTO;
+import kr.co.yooooon.common.annotation.Dataset;
 import kr.co.yooooon.hr.emp.compositKey.WorkInfoID;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,6 +14,7 @@ import java.util.Date;
 @Table(name = "WORK_INFO")
 @EqualsAndHashCode(callSuper=false)
 @IdClass(WorkInfoID.class)
+@Dataset(name="ds_workInfo")
 public class WorkInfoTO extends BaseTO{
 	//복합키 필요
 	@Id

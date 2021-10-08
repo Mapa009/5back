@@ -1,9 +1,14 @@
 package kr.co.yooooon.hr.emp.controller;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import com.tobesoft.xplatform.data.PlatformData;
+import com.tobesoft.xplatform.data.VariableList;
+import kr.co.yooooon.common.mapper.DatasetBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,65 +29,52 @@ import kr.co.yooooon.hr.emp.to.WorkInfoTO;
 public class EmpDetailController {
 	@Autowired
 	private EmpServiceFacade empServiceFacade;
+	@Autowired
+	private DatasetBeanMapper datasetBeanMapper;
 	private ModelMap map = new ModelMap();
 	
-	@RequestMapping(value="/emp/empDetail", params="empCode")
-	public ModelMap findAllEmployeeInfo(@RequestParam("empCode")String empCode){
-		
-		try{
-			EmpTO empTO=empServiceFacade.findAllEmpInfo(empCode);
-			map.put("empBean", empTO); 
-			WorkInfoTO workInfoTO = new WorkInfoTO();
-			CareerInfoTO careerInfoTO = new CareerInfoTO();
-			EducationInfoTO educationInfoTO = new EducationInfoTO();
-			LicenseInfoTO licenseInfoTO = new LicenseInfoTO();			
-			FamilyInfoTO familyInfoTO = new FamilyInfoTO();
-			
-			map.put("emptyFamilyInfoBean",familyInfoTO );
-			map.put("emptyCareerInfoBean", careerInfoTO);
-			map.put("emptyEducationInfoBean", educationInfoTO);
-			map.put("emptyLicenseInfoBean", licenseInfoTO);
-			map.put("emptyWorkInfoBean", workInfoTO);
-			map.put("errorMsg","success");
-			map.put("errorCode", 0);
-		} catch (DataAccessException dae){
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}
-		return map;
-	}
-	
-	@RequestMapping(value="/emp/empDetailModify", params="sendData")
-	public ModelMap modifyEmployee(@RequestParam("sendData")String sendData){	
-		try{
-			Gson gson = new Gson();
-			EmpTO emp = gson.fromJson(sendData, EmpTO.class);
-			empServiceFacade.modifyEmployee(emp);
-			map.put("errorMsg","success");
-			map.put("errorCode", 0);
+	@RequestMapping(value="/emp/findAllEmployeeInfo")
+	public void findAllEmployeeInfo(@RequestAttribute("variableList") VariableList varList, @RequestAttribute("resData") PlatformData resData)throws Exception{
+		String empCode = varList.getString("empCode");
+		EmpTO empTO=empServiceFacade.findAllEmpInfo(empCode);
 
-		} catch (DataAccessException dae){
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}
-		return map;
+		List<WorkInfoTO> workInfoList = empTO.getWorkInfoList();
+		List<CareerInfoTO> careerInfoList = empTO.getCareerInfoList();
+		List<EducationInfoTO> educationInfoList = empTO.getEducationInfoList();
+		List<LicenseInfoTO> licenseInfoList = empTO.getLicenseInfoList();
+		List<FamilyInfoTO> familyInfoList = empTO.getFamilyInfoList();
+
+		datasetBeanMapper.beansToDataset(resData,workInfoList,WorkInfoTO.class);
+		datasetBeanMapper.beansToDataset(resData,careerInfoList,CareerInfoTO.class);
+		datasetBeanMapper.beansToDataset(resData,educationInfoList,EducationInfoTO.class);
+		datasetBeanMapper.beansToDataset(resData,familyInfoList,FamilyInfoTO.class);
+		datasetBeanMapper.beansToDataset(resData,licenseInfoList,LicenseInfoTO.class);
 	}
 	
-	@RequestMapping(value="/emp/empDetailRemove", params="sendData2")
-	public ModelMap removeEmployeeList(@RequestParam("sendData2")String sendData){
-		try{
-			Gson gson = new Gson();
-			ArrayList<EmpTO> empList = gson.fromJson(sendData, new TypeToken<ArrayList<EmpTO>>(){}.getType());
-			empServiceFacade.deleteEmpList(empList);
-			map.put("errorMsg","success");
-			map.put("errorCode", 0);
-		} catch (DataAccessException dae){
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}
-		return map;
+	@RequestMapping(value="/emp/empDetailModify")
+	public void modifyEmployee(@RequestAttribute("reqData") PlatformData reqData)throws Exception{
+		EmpTO emp = datasetBeanMapper.datasetToBean(reqData, EmpTO.class);
+
+		List<WorkInfoTO> workinfo = datasetBeanMapper.datasetToBeans(reqData, WorkInfoTO.class);
+		List<CareerInfoTO> careerinfo = datasetBeanMapper.datasetToBeans(reqData, CareerInfoTO.class);
+		List<EducationInfoTO> educationinfo = datasetBeanMapper.datasetToBeans(reqData, EducationInfoTO.class);
+		List<FamilyInfoTO> familyinfo = datasetBeanMapper.datasetToBeans(reqData, FamilyInfoTO.class);
+		List<LicenseInfoTO> licenseinfo = datasetBeanMapper.datasetToBeans(reqData, LicenseInfoTO.class);
+
+
+		emp.setWorkInfoList(workinfo);
+		emp.setCareerInfoList(careerinfo);
+		emp.setEducationInfoList(educationinfo);
+		emp.setFamilyInfoList(familyinfo);
+		emp.setLicenseInfoList(licenseinfo);
+
+		empServiceFacade.modifyEmployee(emp);
+	}
+	
+	@RequestMapping(value="/emp/removeEmployeeList")
+	public void removeEmployeeList(@RequestAttribute("reqData") PlatformData reqData)throws Exception{
+		ArrayList<EmpTO> empList = (ArrayList<EmpTO>) datasetBeanMapper.datasetToBeans(reqData, EmpTO.class);
+
+		empServiceFacade.deleteEmpList(empList);
 	}
 }

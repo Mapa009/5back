@@ -1,6 +1,7 @@
 package kr.co.yooooon.hr.attd.to;
 
 import kr.co.yooooon.base.to.BaseTO;
+import kr.co.yooooon.common.annotation.Dataset;
 import kr.co.yooooon.hr.attd.compositKey.DayAttdID;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,6 +14,7 @@ import java.util.Date;
 @Entity
 @Table(name="DAY_ATTD")
 @IdClass(DayAttdID.class)
+@Dataset(name="gds_dayAttd")
 //복합키
 public class DayAttdTO extends BaseTO{
 	@Id
