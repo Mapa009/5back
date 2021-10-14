@@ -4,12 +4,15 @@ import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.tobesoft.xplatform.data.PlatformData;
+import com.tobesoft.xplatform.data.VariableList;
 
 import kr.co.yooooon.common.exception.DataAccessException;
 import kr.co.yooooon.hr.salary.sf.SalaryServiceFacade;
@@ -21,24 +24,18 @@ public class SocialInsureController{
 	private SalaryServiceFacade salaryServiceFacade;
 	private ModelMap map = new ModelMap();
 	
-	@RequestMapping(value="/salary/socialInsure" , params = "yearBox")
-	public ModelMap findBaseInsureList(@RequestParam("yearBox")String yearBox){
-			
-		try {
-			ArrayList<SocialInsureTO> baseInsureList = salaryServiceFacade.findBaseInsureList(yearBox);
-			SocialInsureTO emptyBean = new SocialInsureTO();
-			map.put("baseInsureList", baseInsureList); 
-			emptyBean.setStatus("insert");                     
-			map.put("emptyBean", emptyBean);                 
-			map.put("errorMsg","success");
-			map.put("errorCode", 0);
-		} catch (DataAccessException dae){
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}
-		return map;
-	}
+	/*
+	 * @RequestMapping(value="/salary/socialInsure" , params = "yearBox") public
+	 * ModelMap findBaseInsureList(@RequestParam("yearBox")String yearBox){
+	 * 
+	 * try { ArrayList<SocialInsureTO> baseInsureList =
+	 * salaryServiceFacade.findBaseInsureList(yearBox); SocialInsureTO emptyBean =
+	 * new SocialInsureTO(); map.put("baseInsureList", baseInsureList);
+	 * emptyBean.setStatus("insert"); map.put("emptyBean", emptyBean);
+	 * map.put("errorMsg","success"); map.put("errorCode", 0); } catch
+	 * (DataAccessException dae){ map.clear(); map.put("errorCode", -1);
+	 * map.put("errorMsg", dae.getMessage()); } return map; }
+	 */
 
 	@RequestMapping(value="/salary/socialInsure" , params = "sendData")
 	public ModelMap updateInsureData(@RequestParam("sendData")String sendData){
@@ -77,4 +74,12 @@ public class SocialInsureController{
 		}
 		return map;
 	}
+	
+	@RequestMapping(value="/salary/findsocialInsure")
+	public void findsocialInsure(@RequestAttribute("variableList") VariableList variableList, @RequestAttribute("resData")PlatformData resData) throws Exception {
+		String year = variableList.getString("Year");
+		//System.out.println("@@@@@@@@@@@@@@@@@@보험페이지확인 과 연도가 출력 : "+year);
+		return;
+	}
+	
 }

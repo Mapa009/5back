@@ -57,10 +57,10 @@ public class DatasetBeanMapper {
     public <T> void beansToDataset(PlatformData outData, List<T> beanList, Class<T> classType) throws Exception {
         Map<String, String> nameMap = new HashMap<String, String>();
 
-        DataSetList datasetList = outData.getDataSetList();
-        String datasetName = getDataSetName(classType);
-        DataSet dataset = new DataSet(datasetName);
-        datasetList.add(dataset);
+        DataSetList datasetList = outData.getDataSetList(); // 비어있는 setlist
+        String datasetName = getDataSetName(classType); //dataset 어노테이션 이름을 가져온다
+        DataSet dataset = new DataSet(datasetName); // dataset 생성
+        datasetList.add(dataset); // 보낼데이터를 담음
         
         Field[] fields = classType.getDeclaredFields();
         for(Field field : fields)

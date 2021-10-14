@@ -19,6 +19,7 @@ import kr.co.yooooon.hr.salary.dao.MonthSalaryDAO;
 import kr.co.yooooon.hr.salary.dao.SocialInsureDAO;
 import kr.co.yooooon.hr.salary.to.BaseDeductionTO;
 import kr.co.yooooon.hr.salary.to.BaseExtSalTO;
+import kr.co.yooooon.hr.salary.to.BaseSalaryTO;
 import kr.co.yooooon.hr.salary.to.FullTimeSalTO;
 import kr.co.yooooon.hr.salary.to.MonthSalaryTO;
 import kr.co.yooooon.hr.salary.to.PayDayTO;
@@ -63,7 +64,7 @@ public class SalaryApplicationServiceImpl implements SalaryApplicationService {
 
 	@Override
 	public ArrayList<PositionTO> findBaseSalaryList() {
-		ArrayList<PositionTO> baseSalaryList = positionRepository.findAllByOrderByPositionCode();
+		ArrayList<PositionTO> baseSalaryList = (ArrayList<PositionTO>)positionRepository.findAllByOrderByPositionCode();
 		return baseSalaryList;
 	}
 
