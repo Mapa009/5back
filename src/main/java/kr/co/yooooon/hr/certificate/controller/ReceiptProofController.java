@@ -2,9 +2,13 @@ package kr.co.yooooon.hr.certificate.controller;
 
 import java.util.ArrayList;
 
+import com.tobesoft.xplatform.data.PlatformData;
+import com.tobesoft.xplatform.data.VariableList;
+import kr.co.yooooon.common.mapper.DatasetBeanMapper;
 import kr.co.yooooon.hr.certificate.to.ProofTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,54 +23,31 @@ import kr.co.yooooon.hr.certificate.sf.CertificateServiceFacade;
 public class ReceiptProofController {
 	@Autowired
 	private CertificateServiceFacade certificateServiceFacade;
-	
+	@Autowired
+	private DatasetBeanMapper datasetBeanMapper;
 	private ModelMap map = new ModelMap();
 	
-	@RequestMapping(value="/certificate/receiptProof", params="sendData")
-	public ModelMap proofRequest(@RequestParam("sendData")String sendData) {
-		try {
-			Gson gson = new Gson();
-			ProofTO proof = gson.fromJson(sendData, ProofTO.class);
-			certificateServiceFacade.proofRequest(proof);
-			map.put("errorMsg", "success");
-			map.put("errorCode", 0);
-		} catch (DataAccessException dae) {
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}
-		return map;
+	@RequestMapping(value="/certificate/receiptProof")
+	public void proofRequest(@RequestAttribute("reqData")PlatformData reqData)throws Exception {
+		ProofTO proof = datasetBeanMapper.datasetToBean(reqData,ProofTO.class);
+		certificateServiceFacade.proofRequest(proof);
 	}
 	
-	@RequestMapping(value="/certificate/receiptProof", params="startDate")
-	public ModelMap proofLookupList(@RequestParam("empCode")String empCode,@RequestParam("startDate")String startDate,@RequestParam("endDate")String endDate,@RequestParam("code")String Code) {	
-		
-		try {
-			ArrayList<ProofTO> proofList = certificateServiceFacade.proofLookupList(empCode,Code,startDate, endDate);
-			map.put("proofList", proofList);
-			map.put("errorMsg", "success");
-			map.put("errorCode", 0);
-		} catch (DataAccessException dae) {
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}
-		return map;
+	@RequestMapping(value="/certificate/findProofList")
+	public void proofLookupList(@RequestAttribute("variableList")VariableList variableList,@RequestAttribute("resData") PlatformData resData)throws Exception {
+		String empCode = variableList.getString("empCode");
+		String Code = variableList.getString("Code");
+		String startDate = variableList.getString("startDate");
+		String endDate = variableList.getString("endDate");
+
+		ArrayList<ProofTO> proofList = certificateServiceFacade.proofLookupList(empCode,Code,startDate, endDate);
+
+		datasetBeanMapper.beansToDataset(resData,proofList,ProofTO.class);
 	}
 	
-	@RequestMapping(value="/certificate/receiptProof", params="sendData2")
-	public ModelMap removeProofAttdList(@RequestParam("sendData2")String sendData) {
-		try {
-			Gson gson=new Gson();
-			ArrayList<ProofTO> proofList=gson.fromJson(sendData, new TypeToken<ArrayList<ProofTO>>() {}.getType());
-			certificateServiceFacade.removeProofRequest(proofList);
-			map.put("errorMsg", "success");
-			map.put("errorCode", 0);
-		}catch(DataAccessException dae) {
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}
-		return map;	
+	@RequestMapping(value="/certificate/removeProofAttdList")
+	public void removeProofAttdList(@RequestAttribute("reqData") PlatformData reqData)throws Exception {
+		ArrayList<ProofTO> proofList= (ArrayList<ProofTO>) datasetBeanMapper.datasetToBeans(reqData,ProofTO.class);
+		certificateServiceFacade.removeProofRequest(proofList);
 	}
 }

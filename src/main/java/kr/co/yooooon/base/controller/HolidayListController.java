@@ -2,8 +2,13 @@ package kr.co.yooooon.base.controller;
 
 import java.util.ArrayList;
 
+import com.tobesoft.xplatform.data.DataSet;
+import com.tobesoft.xplatform.data.DataTypes;
+import com.tobesoft.xplatform.data.PlatformData;
+import com.tobesoft.xplatform.data.VariableList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,19 +44,18 @@ public class HolidayListController {
 		return map;
 	}
 	
-	@RequestMapping(value="/base/holidayList" , params = "startDate")
-	public ModelMap findWeekDayCount(@RequestParam("startDate")String startDate , @RequestParam("endDate")String endDate) {
-		try {
-			String weekdayCount = baseServiceFacade.findWeekDayCount(startDate, endDate);
-			map.put("weekdayCount", weekdayCount);
-			map.put("errorMsg", "success");
-			map.put("errorCode", 0);
-		} catch (DataAccessException dae) {
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		} 
-		return map;
+	@RequestMapping(value="/base/findWeekDayCount")
+	public void findWeekDayCount(@RequestAttribute("variableList")VariableList variableList, @RequestAttribute("resData")PlatformData resData) {
+		String startDate = variableList.getString("startDate");
+		String endDate = variableList.getString("endDate");
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@"+startDate);
+		String weekdayCount = baseServiceFacade.findWeekDayCount(startDate, endDate);
+
+		DataSet ds = new DataSet("ds_dayCount");
+		ds.addColumn("WEEKDAY_COUNT"   , DataTypes.STRING  ,(short)10   );
+		ds.newRow();
+		ds.set(0 ,"WEEKDAY_COUNT",weekdayCount);
+		resData.addDataSet(ds);
 	}
 
 	@RequestMapping(value="/base/holidayList" ,params="sendData")

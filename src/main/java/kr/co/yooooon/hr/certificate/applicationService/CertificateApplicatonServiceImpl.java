@@ -98,7 +98,7 @@ public class CertificateApplicatonServiceImpl implements CertificateApplicationS
 	@Override
 	public void modifyProofList(ArrayList<ProofTO> proofList) {
 		for(ProofTO proof : proofList) {
-			System.out.println(proof.getApplovalStatus());
+			System.out.println(proof.getApplovalstatus());
 			
 			if(proof.getStatus().equals("update")) {
 				proofCertificateRepository.save(proof);

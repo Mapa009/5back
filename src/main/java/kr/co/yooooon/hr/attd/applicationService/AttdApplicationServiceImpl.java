@@ -172,7 +172,7 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
    }
    
    @Override
-   public void removeRestAttdList(ArrayList<RestAttdTO> restAttdList) {    
+   public void removeRestAttdList(ArrayList<RestAttdTO> restAttdList) {
       restAttdRepository.deleteAll(restAttdList);
    }
 
