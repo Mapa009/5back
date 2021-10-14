@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 @Data
 public class RestAttdID implements Serializable {
-    private Long restAttdCode;
+    private String restAttdCode;
     private String empCode;
 
 }

@@ -20,16 +20,16 @@
 		
 		<resultMap type="kr.co.yooooon.hr.certificate.to.ProofTO" id="proofCertificateResult1">
 			 <result property="empName" column="EMP_NAME"/> 
-			<!--  <result property="empCode" column="EMP_CODE"/> 
-			 <result property="proofTypeCode" column="PROOF_CODE"/> --> 
-			  <result property="proofTypeName" column="PROOF_NAME"/> 
+			 <result property="empCode" column="EMP_CODE"/>
+			<!-- <result property="proofTypeCode" column="PROOF_CODE"/> -->
+			  <result property="proofName" column="PROOF_NAME"/>
 			   <result property="position" column="POSITION"/> 
-			<result property="dept" column="DEPT_NAME"/>
-			<result property="cash" column="PROOT_COST"/>
-			<result property="startDate" column="REQUEST_DATE"/>
-			<result property="cause" column="REASON"/>
+			<result property="deptName" column="DEPT_NAME"/>
+			<result property="prootCost" column="PROOT_COST"/>
+			<result property="requestDate" column="REQUEST_DATE"/>
+			<result property="reason" column="REASON"/>
 			<result property="receipt" column="RECEIPT"/>
-			<result property="applovalStatus" column="APPLOVALSTATUS"/>
+			<result property="applovalstatus" column="APPLOVALSTATUS"/>
 		</resultMap>
 	
 	<insert id="insertProofCertificateRequest" parameterType="proofTO">
@@ -57,10 +57,11 @@
 		,P.REASON
 		,P.RECEIPT
 		,P.APPLOVALSTATUS
+		,P.EMP_CODE
 		FROM PROOF_LIST P
 		, EMP E
 		WHERE E.EMP_CODE=#{empCode}
-		AND P.PROOF_CODE=#{code}
+		AND P.PROOF_CODE=#{Code}
 		AND P.REQUEST_DATE BETWEEN TO_DATE(#{startDate},'YYYY-MM-DD') AND TO_DATE(#{endDate},'YYYY-MM-DD')
 	</select>
 	
