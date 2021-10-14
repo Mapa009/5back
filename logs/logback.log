@@ -20499,3 +20499,186 @@ Caused by: java.io.IOException: Stream closed
 2021-10-14 15:14:11.104 [HikariPool-1 connection closer] INFO  j.connection - 16. Connection closed
 2021-10-14 15:14:11.104 [HikariPool-1 connection closer] INFO  j.audit - 16. Connection.close() returned 
 2021-10-14 15:14:11.129 [HikariPool-1 connection adder] INFO  j.connection - 30. Connection opened
+2021-10-14 15:14:11.129 [HikariPool-1 connection adder] INFO  j.audit - 30. Connection.new Connection returned 
+2021-10-14 15:14:11.129 [HikariPool-1 connection adder] INFO  j.audit - 30. Connection.isReadOnly() returned false
+2021-10-14 15:14:11.129 [HikariPool-1 connection adder] INFO  j.audit - 30. Connection.getAutoCommit() returned true
+2021-10-14 15:42:58.956 [HikariPool-1 connection closer] INFO  j.connection - 21. Connection closed
+2021-10-14 15:42:58.956 [HikariPool-1 connection closer] INFO  j.audit - 21. Connection.close() returned 
+2021-10-14 15:42:58.983 [HikariPool-1 connection adder] INFO  j.connection - 31. Connection opened
+2021-10-14 15:42:58.983 [HikariPool-1 connection adder] INFO  j.audit - 31. Connection.new Connection returned 
+2021-10-14 15:42:58.984 [HikariPool-1 connection adder] INFO  j.audit - 31. Connection.isReadOnly() returned false
+2021-10-14 15:42:58.984 [HikariPool-1 connection adder] INFO  j.audit - 31. Connection.getAutoCommit() returned true
+2021-10-14 15:43:11.289 [HikariPool-1 connection closer] INFO  j.connection - 24. Connection closed
+2021-10-14 15:43:11.289 [HikariPool-1 connection closer] INFO  j.audit - 24. Connection.close() returned 
+2021-10-14 15:43:11.314 [HikariPool-1 connection adder] INFO  j.connection - 32. Connection opened
+2021-10-14 15:43:11.314 [HikariPool-1 connection adder] INFO  j.audit - 32. Connection.new Connection returned 
+2021-10-14 15:43:11.314 [HikariPool-1 connection adder] INFO  j.audit - 32. Connection.isReadOnly() returned false
+2021-10-14 15:43:11.314 [HikariPool-1 connection adder] INFO  j.audit - 32. Connection.getAutoCommit() returned true
+2021-10-14 15:43:15.279 [HikariPool-1 connection closer] INFO  j.connection - 25. Connection closed
+2021-10-14 15:43:15.280 [HikariPool-1 connection closer] INFO  j.audit - 25. Connection.close() returned 
+2021-10-14 15:43:15.302 [HikariPool-1 connection adder] INFO  j.connection - 33. Connection opened
+2021-10-14 15:43:15.302 [HikariPool-1 connection adder] INFO  j.audit - 33. Connection.new Connection returned 
+2021-10-14 15:43:15.302 [HikariPool-1 connection adder] INFO  j.audit - 33. Connection.isReadOnly() returned false
+2021-10-14 15:43:15.302 [HikariPool-1 connection adder] INFO  j.audit - 33. Connection.getAutoCommit() returned true
+2021-10-14 15:43:32.798 [HikariPool-1 connection closer] INFO  j.connection - 23. Connection closed
+2021-10-14 15:43:32.799 [HikariPool-1 connection closer] INFO  j.audit - 23. Connection.close() returned 
+2021-10-14 15:43:32.822 [HikariPool-1 connection adder] INFO  j.connection - 34. Connection opened
+2021-10-14 15:43:32.822 [HikariPool-1 connection adder] INFO  j.audit - 34. Connection.new Connection returned 
+2021-10-14 15:43:32.822 [HikariPool-1 connection adder] INFO  j.audit - 34. Connection.isReadOnly() returned false
+2021-10-14 15:43:32.822 [HikariPool-1 connection adder] INFO  j.audit - 34. Connection.getAutoCommit() returned true
+2021-10-14 15:43:37.119 [HikariPool-1 connection closer] INFO  j.connection - 22. Connection closed
+2021-10-14 15:43:37.120 [HikariPool-1 connection closer] INFO  j.audit - 22. Connection.close() returned 
+2021-10-14 15:43:37.143 [HikariPool-1 connection adder] INFO  j.connection - 35. Connection opened
+2021-10-14 15:43:37.143 [HikariPool-1 connection adder] INFO  j.audit - 35. Connection.new Connection returned 
+2021-10-14 15:43:37.143 [HikariPool-1 connection adder] INFO  j.audit - 35. Connection.isReadOnly() returned false
+2021-10-14 15:43:37.143 [HikariPool-1 connection adder] INFO  j.audit - 35. Connection.getAutoCommit() returned true
+2021-10-14 15:43:37.213 [HikariPool-1 connection closer] INFO  j.connection - 26. Connection closed
+2021-10-14 15:43:37.213 [HikariPool-1 connection closer] INFO  j.audit - 26. Connection.close() returned 
+2021-10-14 15:43:37.239 [HikariPool-1 connection adder] INFO  j.connection - 36. Connection opened
+2021-10-14 15:43:37.239 [HikariPool-1 connection adder] INFO  j.audit - 36. Connection.new Connection returned 
+2021-10-14 15:43:37.239 [HikariPool-1 connection adder] INFO  j.audit - 36. Connection.isReadOnly() returned false
+2021-10-14 15:43:37.239 [HikariPool-1 connection adder] INFO  j.audit - 36. Connection.getAutoCommit() returned true
+2021-10-14 15:43:39.426 [HikariPool-1 connection closer] INFO  j.connection - 29. Connection closed
+2021-10-14 15:43:39.426 [HikariPool-1 connection closer] INFO  j.audit - 29. Connection.close() returned 
+2021-10-14 15:43:39.453 [HikariPool-1 connection adder] INFO  j.connection - 37. Connection opened
+2021-10-14 15:43:39.453 [HikariPool-1 connection adder] INFO  j.audit - 37. Connection.new Connection returned 
+2021-10-14 15:43:39.453 [HikariPool-1 connection adder] INFO  j.audit - 37. Connection.isReadOnly() returned false
+2021-10-14 15:43:39.453 [HikariPool-1 connection adder] INFO  j.audit - 37. Connection.getAutoCommit() returned true
+2021-10-14 15:43:39.628 [HikariPool-1 connection closer] INFO  j.connection - 30. Connection closed
+2021-10-14 15:43:39.628 [HikariPool-1 connection closer] INFO  j.audit - 30. Connection.close() returned 
+2021-10-14 15:43:39.652 [HikariPool-1 connection adder] INFO  j.connection - 38. Connection opened
+2021-10-14 15:43:39.652 [HikariPool-1 connection adder] INFO  j.audit - 38. Connection.new Connection returned 
+2021-10-14 15:43:39.653 [HikariPool-1 connection adder] INFO  j.audit - 38. Connection.isReadOnly() returned false
+2021-10-14 15:43:39.653 [HikariPool-1 connection adder] INFO  j.audit - 38. Connection.getAutoCommit() returned true
+2021-10-14 15:43:45.940 [HikariPool-1 connection closer] INFO  j.connection - 28. Connection closed
+2021-10-14 15:43:45.941 [HikariPool-1 connection closer] INFO  j.audit - 28. Connection.close() returned 
+2021-10-14 15:43:45.960 [HikariPool-1 connection adder] INFO  j.connection - 39. Connection opened
+2021-10-14 15:43:45.960 [HikariPool-1 connection adder] INFO  j.audit - 39. Connection.new Connection returned 
+2021-10-14 15:43:45.960 [HikariPool-1 connection adder] INFO  j.audit - 39. Connection.isReadOnly() returned false
+2021-10-14 15:43:45.961 [HikariPool-1 connection adder] INFO  j.audit - 39. Connection.getAutoCommit() returned true
+2021-10-14 15:44:02.144 [HikariPool-1 connection closer] INFO  j.connection - 27. Connection closed
+2021-10-14 15:44:02.144 [HikariPool-1 connection closer] INFO  j.audit - 27. Connection.close() returned 
+2021-10-14 15:44:02.169 [HikariPool-1 connection adder] INFO  j.connection - 40. Connection opened
+2021-10-14 15:44:02.169 [HikariPool-1 connection adder] INFO  j.audit - 40. Connection.new Connection returned 
+2021-10-14 15:44:02.169 [HikariPool-1 connection adder] INFO  j.audit - 40. Connection.isReadOnly() returned false
+2021-10-14 15:44:02.169 [HikariPool-1 connection adder] INFO  j.audit - 40. Connection.getAutoCommit() returned true
+2021-10-14 16:12:14.456 [HikariPool-1 connection closer] INFO  j.connection - 31. Connection closed
+2021-10-14 16:12:14.457 [HikariPool-1 connection closer] INFO  j.audit - 31. Connection.close() returned 
+2021-10-14 16:12:14.483 [HikariPool-1 connection adder] INFO  j.connection - 41. Connection opened
+2021-10-14 16:12:14.484 [HikariPool-1 connection adder] INFO  j.audit - 41. Connection.new Connection returned 
+2021-10-14 16:12:14.484 [HikariPool-1 connection adder] INFO  j.audit - 41. Connection.isReadOnly() returned false
+2021-10-14 16:12:14.484 [HikariPool-1 connection adder] INFO  j.audit - 41. Connection.getAutoCommit() returned true
+2021-10-14 16:12:30.445 [HikariPool-1 connection closer] INFO  j.connection - 32. Connection closed
+2021-10-14 16:12:30.445 [HikariPool-1 connection closer] INFO  j.audit - 32. Connection.close() returned 
+2021-10-14 16:12:30.470 [HikariPool-1 connection adder] INFO  j.connection - 42. Connection opened
+2021-10-14 16:12:30.470 [HikariPool-1 connection adder] INFO  j.audit - 42. Connection.new Connection returned 
+2021-10-14 16:12:30.471 [HikariPool-1 connection adder] INFO  j.audit - 42. Connection.isReadOnly() returned false
+2021-10-14 16:12:30.471 [HikariPool-1 connection adder] INFO  j.audit - 42. Connection.getAutoCommit() returned true
+2021-10-14 16:13:03.260 [HikariPool-1 connection closer] INFO  j.connection - 35. Connection closed
+2021-10-14 16:13:03.260 [HikariPool-1 connection closer] INFO  j.audit - 35. Connection.close() returned 
+2021-10-14 16:13:03.287 [HikariPool-1 connection adder] INFO  j.connection - 43. Connection opened
+2021-10-14 16:13:03.287 [HikariPool-1 connection adder] INFO  j.audit - 43. Connection.new Connection returned 
+2021-10-14 16:13:03.287 [HikariPool-1 connection adder] INFO  j.audit - 43. Connection.isReadOnly() returned false
+2021-10-14 16:13:03.287 [HikariPool-1 connection adder] INFO  j.audit - 43. Connection.getAutoCommit() returned true
+2021-10-14 16:13:12.126 [HikariPool-1 connection closer] INFO  j.connection - 38. Connection closed
+2021-10-14 16:13:12.127 [HikariPool-1 connection closer] INFO  j.audit - 38. Connection.close() returned 
+2021-10-14 16:13:12.153 [HikariPool-1 connection adder] INFO  j.connection - 44. Connection opened
+2021-10-14 16:13:12.153 [HikariPool-1 connection adder] INFO  j.audit - 44. Connection.new Connection returned 
+2021-10-14 16:13:12.153 [HikariPool-1 connection adder] INFO  j.audit - 44. Connection.isReadOnly() returned false
+2021-10-14 16:13:12.153 [HikariPool-1 connection adder] INFO  j.audit - 44. Connection.getAutoCommit() returned true
+2021-10-14 16:13:13.933 [HikariPool-1 connection closer] INFO  j.connection - 33. Connection closed
+2021-10-14 16:13:13.933 [HikariPool-1 connection closer] INFO  j.audit - 33. Connection.close() returned 
+2021-10-14 16:13:13.955 [HikariPool-1 connection adder] INFO  j.connection - 45. Connection opened
+2021-10-14 16:13:13.955 [HikariPool-1 connection adder] INFO  j.audit - 45. Connection.new Connection returned 
+2021-10-14 16:13:13.955 [HikariPool-1 connection adder] INFO  j.audit - 45. Connection.isReadOnly() returned false
+2021-10-14 16:13:13.955 [HikariPool-1 connection adder] INFO  j.audit - 45. Connection.getAutoCommit() returned true
+2021-10-14 16:13:14.543 [HikariPool-1 connection closer] INFO  j.connection - 36. Connection closed
+2021-10-14 16:13:14.543 [HikariPool-1 connection closer] INFO  j.audit - 36. Connection.close() returned 
+2021-10-14 16:13:14.565 [HikariPool-1 connection adder] INFO  j.connection - 46. Connection opened
+2021-10-14 16:13:14.565 [HikariPool-1 connection adder] INFO  j.audit - 46. Connection.new Connection returned 
+2021-10-14 16:13:14.566 [HikariPool-1 connection adder] INFO  j.audit - 46. Connection.isReadOnly() returned false
+2021-10-14 16:13:14.566 [HikariPool-1 connection adder] INFO  j.audit - 46. Connection.getAutoCommit() returned true
+2021-10-14 16:13:23.365 [HikariPool-1 connection closer] INFO  j.connection - 40. Connection closed
+2021-10-14 16:13:23.365 [HikariPool-1 connection closer] INFO  j.audit - 40. Connection.close() returned 
+2021-10-14 16:13:23.385 [HikariPool-1 connection adder] INFO  j.connection - 47. Connection opened
+2021-10-14 16:13:23.385 [HikariPool-1 connection adder] INFO  j.audit - 47. Connection.new Connection returned 
+2021-10-14 16:13:23.385 [HikariPool-1 connection adder] INFO  j.audit - 47. Connection.isReadOnly() returned false
+2021-10-14 16:13:23.385 [HikariPool-1 connection adder] INFO  j.audit - 47. Connection.getAutoCommit() returned true
+2021-10-14 16:13:27.582 [HikariPool-1 connection closer] INFO  j.connection - 37. Connection closed
+2021-10-14 16:13:27.583 [HikariPool-1 connection closer] INFO  j.audit - 37. Connection.close() returned 
+2021-10-14 16:13:27.604 [HikariPool-1 connection adder] INFO  j.connection - 48. Connection opened
+2021-10-14 16:13:27.604 [HikariPool-1 connection adder] INFO  j.audit - 48. Connection.new Connection returned 
+2021-10-14 16:13:27.604 [HikariPool-1 connection adder] INFO  j.audit - 48. Connection.isReadOnly() returned false
+2021-10-14 16:13:27.604 [HikariPool-1 connection adder] INFO  j.audit - 48. Connection.getAutoCommit() returned true
+2021-10-14 16:13:29.151 [HikariPool-1 connection closer] INFO  j.connection - 34. Connection closed
+2021-10-14 16:13:29.151 [HikariPool-1 connection closer] INFO  j.audit - 34. Connection.close() returned 
+2021-10-14 16:13:29.175 [HikariPool-1 connection adder] INFO  j.connection - 49. Connection opened
+2021-10-14 16:13:29.175 [HikariPool-1 connection adder] INFO  j.audit - 49. Connection.new Connection returned 
+2021-10-14 16:13:29.175 [HikariPool-1 connection adder] INFO  j.audit - 49. Connection.isReadOnly() returned false
+2021-10-14 16:13:29.175 [HikariPool-1 connection adder] INFO  j.audit - 49. Connection.getAutoCommit() returned true
+2021-10-14 16:13:39.188 [HikariPool-1 connection closer] INFO  j.connection - 39. Connection closed
+2021-10-14 16:13:39.189 [HikariPool-1 connection closer] INFO  j.audit - 39. Connection.close() returned 
+2021-10-14 16:13:39.212 [HikariPool-1 connection adder] INFO  j.connection - 50. Connection opened
+2021-10-14 16:13:39.212 [HikariPool-1 connection adder] INFO  j.audit - 50. Connection.new Connection returned 
+2021-10-14 16:13:39.212 [HikariPool-1 connection adder] INFO  j.audit - 50. Connection.isReadOnly() returned false
+2021-10-14 16:13:39.212 [HikariPool-1 connection adder] INFO  j.audit - 50. Connection.getAutoCommit() returned true
+2021-10-14 16:41:54.023 [HikariPool-1 connection closer] INFO  j.connection - 41. Connection closed
+2021-10-14 16:41:54.023 [HikariPool-1 connection closer] INFO  j.audit - 41. Connection.close() returned 
+2021-10-14 16:41:54.049 [HikariPool-1 connection adder] INFO  j.connection - 51. Connection opened
+2021-10-14 16:41:54.049 [HikariPool-1 connection adder] INFO  j.audit - 51. Connection.new Connection returned 
+2021-10-14 16:41:54.049 [HikariPool-1 connection adder] INFO  j.audit - 51. Connection.isReadOnly() returned false
+2021-10-14 16:41:54.049 [HikariPool-1 connection adder] INFO  j.audit - 51. Connection.getAutoCommit() returned true
+2021-10-14 16:42:28.604 [HikariPool-1 connection closer] INFO  j.connection - 42. Connection closed
+2021-10-14 16:42:28.605 [HikariPool-1 connection closer] INFO  j.audit - 42. Connection.close() returned 
+2021-10-14 16:42:28.628 [HikariPool-1 connection adder] INFO  j.connection - 52. Connection opened
+2021-10-14 16:42:28.628 [HikariPool-1 connection adder] INFO  j.audit - 52. Connection.new Connection returned 
+2021-10-14 16:42:28.628 [HikariPool-1 connection adder] INFO  j.audit - 52. Connection.isReadOnly() returned false
+2021-10-14 16:42:28.628 [HikariPool-1 connection adder] INFO  j.audit - 52. Connection.getAutoCommit() returned true
+2021-10-14 16:42:35.224 [HikariPool-1 connection closer] INFO  j.connection - 43. Connection closed
+2021-10-14 16:42:35.225 [HikariPool-1 connection closer] INFO  j.audit - 43. Connection.close() returned 
+2021-10-14 16:42:35.246 [HikariPool-1 connection adder] INFO  j.connection - 53. Connection opened
+2021-10-14 16:42:35.246 [HikariPool-1 connection adder] INFO  j.audit - 53. Connection.new Connection returned 
+2021-10-14 16:42:35.246 [HikariPool-1 connection adder] INFO  j.audit - 53. Connection.isReadOnly() returned false
+2021-10-14 16:42:35.246 [HikariPool-1 connection adder] INFO  j.audit - 53. Connection.getAutoCommit() returned true
+2021-10-14 16:42:43.085 [HikariPool-1 connection closer] INFO  j.connection - 48. Connection closed
+2021-10-14 16:42:43.085 [HikariPool-1 connection closer] INFO  j.audit - 48. Connection.close() returned 
+2021-10-14 16:42:43.110 [HikariPool-1 connection adder] INFO  j.connection - 54. Connection opened
+2021-10-14 16:42:43.110 [HikariPool-1 connection adder] INFO  j.audit - 54. Connection.new Connection returned 
+2021-10-14 16:42:43.110 [HikariPool-1 connection adder] INFO  j.audit - 54. Connection.isReadOnly() returned false
+2021-10-14 16:42:43.110 [HikariPool-1 connection adder] INFO  j.audit - 54. Connection.getAutoCommit() returned true
+2021-10-14 16:42:43.368 [HikariPool-1 connection closer] INFO  j.connection - 44. Connection closed
+2021-10-14 16:42:43.368 [HikariPool-1 connection closer] INFO  j.audit - 44. Connection.close() returned 
+2021-10-14 16:42:43.389 [HikariPool-1 connection adder] INFO  j.connection - 55. Connection opened
+2021-10-14 16:42:43.389 [HikariPool-1 connection adder] INFO  j.audit - 55. Connection.new Connection returned 
+2021-10-14 16:42:43.389 [HikariPool-1 connection adder] INFO  j.audit - 55. Connection.isReadOnly() returned false
+2021-10-14 16:42:43.389 [HikariPool-1 connection adder] INFO  j.audit - 55. Connection.getAutoCommit() returned true
+2021-10-14 16:42:48.217 [HikariPool-1 connection closer] INFO  j.connection - 49. Connection closed
+2021-10-14 16:42:48.217 [HikariPool-1 connection closer] INFO  j.audit - 49. Connection.close() returned 
+2021-10-14 16:42:48.239 [HikariPool-1 connection adder] INFO  j.connection - 56. Connection opened
+2021-10-14 16:42:48.239 [HikariPool-1 connection adder] INFO  j.audit - 56. Connection.new Connection returned 
+2021-10-14 16:42:48.239 [HikariPool-1 connection adder] INFO  j.audit - 56. Connection.isReadOnly() returned false
+2021-10-14 16:42:48.239 [HikariPool-1 connection adder] INFO  j.audit - 56. Connection.getAutoCommit() returned true
+2021-10-14 16:42:53.889 [HikariPool-1 connection closer] INFO  j.connection - 45. Connection closed
+2021-10-14 16:42:53.889 [HikariPool-1 connection closer] INFO  j.audit - 45. Connection.close() returned 
+2021-10-14 16:42:53.911 [HikariPool-1 connection adder] INFO  j.connection - 57. Connection opened
+2021-10-14 16:42:53.911 [HikariPool-1 connection adder] INFO  j.audit - 57. Connection.new Connection returned 
+2021-10-14 16:42:53.911 [HikariPool-1 connection adder] INFO  j.audit - 57. Connection.isReadOnly() returned false
+2021-10-14 16:42:53.911 [HikariPool-1 connection adder] INFO  j.audit - 57. Connection.getAutoCommit() returned true
+2021-10-14 16:42:55.015 [HikariPool-1 connection closer] INFO  j.connection - 50. Connection closed
+2021-10-14 16:42:55.015 [HikariPool-1 connection closer] INFO  j.audit - 50. Connection.close() returned 
+2021-10-14 16:42:55.038 [HikariPool-1 connection adder] INFO  j.connection - 58. Connection opened
+2021-10-14 16:42:55.038 [HikariPool-1 connection adder] INFO  j.audit - 58. Connection.new Connection returned 
+2021-10-14 16:42:55.038 [HikariPool-1 connection adder] INFO  j.audit - 58. Connection.isReadOnly() returned false
+2021-10-14 16:42:55.038 [HikariPool-1 connection adder] INFO  j.audit - 58. Connection.getAutoCommit() returned true
+2021-10-14 16:43:10.251 [HikariPool-1 connection closer] INFO  j.connection - 47. Connection closed
+2021-10-14 16:43:10.251 [HikariPool-1 connection closer] INFO  j.audit - 47. Connection.close() returned 
+2021-10-14 16:43:10.275 [HikariPool-1 connection adder] INFO  j.connection - 59. Connection opened
+2021-10-14 16:43:10.275 [HikariPool-1 connection adder] INFO  j.audit - 59. Connection.new Connection returned 
+2021-10-14 16:43:10.275 [HikariPool-1 connection adder] INFO  j.audit - 59. Connection.isReadOnly() returned false
+2021-10-14 16:43:10.275 [HikariPool-1 connection adder] INFO  j.audit - 59. Connection.getAutoCommit() returned true
+2021-10-14 16:43:13.933 [HikariPool-1 connection closer] INFO  j.connection - 46. Connection closed
+2021-10-14 16:43:13.933 [HikariPool-1 connection closer] INFO  j.audit - 46. Connection.close() returned 
+2021-10-14 16:43:13.957 [HikariPool-1 connection adder] INFO  j.connection - 60. Connection opened
+2021-10-14 16:43:13.957 [HikariPool-1 connection adder] INFO  j.audit - 60. Connection.new Connection returned 
+2021-10-14 16:43:13.957 [HikariPool-1 connection adder] INFO  j.audit - 60. Connection.isReadOnly() returned false
+2021-10-14 16:43:13.957 [HikariPool-1 connection adder] INFO  j.audit - 60. Connection.getAutoCommit() returned true
