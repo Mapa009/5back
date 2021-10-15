@@ -23,8 +23,7 @@ public class DatasetBeanMapper {
 
     public <T> List<T> datasetToBeans(PlatformData inData, Class<T> classType) throws Exception {
         String datasetName = getDataSetName(classType);  //dataset의 name을 얻어옴
-        DataSet dataset = inData.getDataSet(datasetName); //dataset들 얻음 
-
+        DataSet dataset = inData.getDataSet(datasetName); //dataset들 얻음
         List<T> beanList = new ArrayList<T>();
         T bean = null;
         int rowCount = dataset.getRowCount();  //데이터셋 총갯수 
