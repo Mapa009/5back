@@ -184,12 +184,14 @@ public class SalaryApplicationServiceImpl implements SalaryApplicationService {
 	
    @SuppressWarnings("unchecked")
    @Override
-   public ArrayList<SocialInsureTO> findBaseInsureList(String yearBox) {
+   public ArrayList<SocialInsureTO> findBaseInsureList(String year) {
       HashMap<String, Object> map = new HashMap<String, Object>();
-      map.put("yearBox", yearBox);
+      map.put("year", year);
 	  //프로시져
       socialInsureDAO.selectBaseInsureList(map);
+     // ArrayList<SocialInsureTO> BaseInsureList = socialInsureRepository.findbyattributionyear(year);
       ArrayList<SocialInsureTO> BaseInsureList = (ArrayList<SocialInsureTO>) map.get("result");
+      System.out.println(BaseInsureList);
       return BaseInsureList;
    }
 

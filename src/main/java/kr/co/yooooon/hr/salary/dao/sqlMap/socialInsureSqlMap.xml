@@ -36,7 +36,7 @@
 	<select id="selectBaseInsureList" parameterType="map" statementType="CALLABLE">
       <![CDATA[
            {call P_INSURE_SELECT(
-           #{yearBox, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
+           #{year, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
            , #{result, mode=OUT, jdbcType=CURSOR, javaType=java.sql.ResultSet, resultMap=socialInsureResult}
            )
        ]]>

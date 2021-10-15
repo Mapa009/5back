@@ -58,6 +58,7 @@ public class BaseDeductionController  {
 		return map;
 	}
 	
+	// 페이지 로드시 실행
 	@RequestMapping("/salary/findBaseDeductionList") //211013
 	public void findBaseDeductionList(@RequestAttribute("reqData") PlatformData reqData,
 			@RequestAttribute("resData") PlatformData resData) throws Exception {

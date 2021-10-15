@@ -15,6 +15,7 @@ import com.tobesoft.xplatform.data.PlatformData;
 import com.tobesoft.xplatform.data.VariableList;
 
 import kr.co.yooooon.common.exception.DataAccessException;
+import kr.co.yooooon.common.mapper.DatasetBeanMapper;
 import kr.co.yooooon.hr.salary.sf.SalaryServiceFacade;
 import kr.co.yooooon.hr.salary.to.SocialInsureTO;
 
@@ -23,6 +24,9 @@ public class SocialInsureController{
 	@Autowired
 	private SalaryServiceFacade salaryServiceFacade;
 	private ModelMap map = new ModelMap();
+
+	@Autowired
+	private DatasetBeanMapper datasetBeanMapper;
 	
 	/*
 	 * @RequestMapping(value="/salary/socialInsure" , params = "yearBox") public
@@ -75,11 +79,15 @@ public class SocialInsureController{
 		return map;
 	}
 	
+	//사회보험 환경설정 화면 로드시
 	@RequestMapping(value="/salary/findsocialInsure")
 	public void findsocialInsure(@RequestAttribute("variableList") VariableList variableList, @RequestAttribute("resData")PlatformData resData) throws Exception {
 		String year = variableList.getString("Year");
-		//System.out.println("@@@@@@@@@@@@@@@@@@보험페이지확인 과 연도가 출력 : "+year);
-		return;
+		System.out.println("@@@@@@@@@@@@@@@@@@보험페이지확인 과 연도가 출력 : "+year);
+		ArrayList<SocialInsureTO> baseInsureList = salaryServiceFacade.findBaseInsureList(year);
+		
+		datasetBeanMapper.beansToDataset(resData, baseInsureList, SocialInsureTO.class);
+		
 	}
 	
 }
