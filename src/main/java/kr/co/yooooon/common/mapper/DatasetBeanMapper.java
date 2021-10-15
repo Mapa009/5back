@@ -21,9 +21,9 @@ import java.util.*;
 @Component
 public class DatasetBeanMapper {
 
-    public <T> List<T> datasetToBeans(PlatformData inData, Class<T> classType) throws Exception {
+    public <T> List<T> datasetToBeans(PlatformData reqData, Class<T> classType) throws Exception {
         String datasetName = getDataSetName(classType);  //dataset의 name을 얻어옴
-        DataSet dataset = inData.getDataSet(datasetName); //dataset들 얻음 
+        DataSet dataset = reqData.getDataSet(datasetName); //dataset들 얻음 
 
         List<T> beanList = new ArrayList<T>();
         T bean = null;
@@ -42,10 +42,10 @@ public class DatasetBeanMapper {
     }
 
     
-    public <T> T datasetToBean(PlatformData inData, Class<T> classType) throws Exception {
+    public <T> T datasetToBean(PlatformData reqData, Class<T> classType) throws Exception {
         T bean = null;
         String datasetName = getDataSetName(classType);   //dataset의 name을 얻어옴.
-        DataSet dataset = inData.getDataSet(datasetName);  //dataset얻음
+        DataSet dataset = reqData.getDataSet(datasetName);  //dataset얻음
         if(dataset.getRemovedRowCount() == 0)  //삭제한 행의 갯수 X
             bean = getBean(dataset, classType, 0);   //TO 객체에 값 담음 
         else
@@ -53,10 +53,10 @@ public class DatasetBeanMapper {
         return bean;
     }
 
-    public <T> void beansToDataset(PlatformData outData, List<T> beanList, Class<T> classType) throws Exception {
+    public <T> void beansToDataset(PlatformData resData, List<T> beanList, Class<T> classType) throws Exception {
         Map<String, String> nameMap = new HashMap<String, String>();
 
-        DataSetList datasetList = outData.getDataSetList();
+        DataSetList datasetList = resData.getDataSetList();
         String datasetName = getDataSetName(classType);
         DataSet dataset = new DataSet(datasetName);
         datasetList.add(dataset);
@@ -69,9 +69,9 @@ public class DatasetBeanMapper {
     }
 
 
-    public <T> void beanToDataset(PlatformData outData, T bean, Class<T> classType) throws Exception {
+    public <T> void beanToDataset(PlatformData resData, T bean, Class<T> classType) throws Exception {
         Map<String, String> nameMap = new HashMap<String, String>();
-        DataSetList datasetList = outData.getDataSetList();  //비어있는 상태 
+        DataSetList datasetList = resData.getDataSetList();  //비어있는 상태 
 
         String datasetName = getDataSetName(classType);   //데이터셋 이름 설정 
         DataSet dataset = new DataSet(datasetName);   //dataset생성 
@@ -86,8 +86,8 @@ public class DatasetBeanMapper {
         }
     }
 
-    public void mapToDataset(PlatformData outData, List<Map<String, Object>> mapList, String datasetName) throws Exception {
-        DataSetList datasetList = outData.getDataSetList();
+    public void mapToDataset(PlatformData resData, List<Map<String, Object>> mapList, String datasetName) throws Exception {
+        DataSetList datasetList = resData.getDataSetList();
         DataSet dataset = new DataSet(datasetName);
         datasetList.add(dataset);
 
@@ -106,10 +106,10 @@ public class DatasetBeanMapper {
         }
     }
 
-    public List<Map<String, Object>> datasetToMap(PlatformData inData, String datasetName) throws Exception {
+    public List<Map<String, Object>> datasetToMap(PlatformData reqData, String datasetName) throws Exception {
         List<Map<String, Object>> mapList = new ArrayList<>();
 
-        DataSet dataset = inData.getDataSet(datasetName);
+        DataSet dataset = reqData.getDataSet(datasetName);
         int rowCount = dataset.getRowCount();
         for(int rowIndex = 0; rowIndex < rowCount; rowIndex++) {
             Map<String, Object> map = new HashMap<>();

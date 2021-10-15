@@ -1,11 +1,13 @@
 package kr.co.yooooon.base.sf;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kr.co.yooooon.base.to.*;
 import kr.co.yooooon.hr.emp.to.PositionTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,15 +15,6 @@ import org.springframework.stereotype.Service;
 import kr.co.yooooon.base.applicationService.BaseApplicationService;
 import kr.co.yooooon.base.exception.IdNotFoundException;
 import kr.co.yooooon.base.exception.PwMissMatchException;
-import kr.co.yooooon.base.to.AdminCodeTO;
-import kr.co.yooooon.base.to.BoardTO;
-import kr.co.yooooon.base.to.CodeTO;
-import kr.co.yooooon.base.to.DeptTO;
-import kr.co.yooooon.base.to.DetailCodeTO;
-import kr.co.yooooon.base.to.HolidayTO;
-import kr.co.yooooon.base.to.MenuTO;
-import kr.co.yooooon.base.to.ReportSalaryTO;
-import kr.co.yooooon.base.to.ReportTO;
 import kr.co.yooooon.hr.emp.applicationService.EmpApplicationService;
 
 @Service
@@ -160,4 +153,32 @@ public class BaseServiceFacadeImpl implements BaseServiceFacade {
 	public void modifyAuthority(String empCode, String adminCode) {
 		baseApplicationService.modifyAuthority(empCode,adminCode);
 	}
+	public ArrayList<PowerTO> findPowerList(String position){
+		return baseApplicationService.findPowerList(position);
+	}
+	@Override
+	public ArrayList<PowerTO> findPowerListAll(){
+		return baseApplicationService.findPowerListAll();
+	}
+	@Override
+	public void savePower(PowerTO power) {
+		baseApplicationService.savePower(power);
+	}
+	@Override
+	public ArrayList<AuthorityTO> findAuthorityList(HashMap<String, Object> map){
+		return baseApplicationService.findAuthorityList(map);
+	}
+	@Override
+	public void saveAuthority(ArrayList<AuthorityTO> authority) {
+		baseApplicationService.saveAuthority(authority);
+	}
+	@Override
+	public ArrayList<GroupAuthorityTO> findGroupAuthority(String empCode){
+		return baseApplicationService.findGroupAuthority(empCode);
+	}
+	@Override
+	public List<GroupAuthorityTO> findAllGroupAuthority(){
+		return baseApplicationService.findAllGroupAuthority();
+	}
+
 }

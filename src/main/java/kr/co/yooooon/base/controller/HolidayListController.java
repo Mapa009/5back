@@ -6,6 +6,7 @@ import com.tobesoft.xplatform.data.DataSet;
 import com.tobesoft.xplatform.data.DataTypes;
 import com.tobesoft.xplatform.data.PlatformData;
 import com.tobesoft.xplatform.data.VariableList;
+import kr.co.yooooon.common.mapper.DatasetBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestAttribute;
@@ -24,24 +25,14 @@ import kr.co.yooooon.common.exception.DataAccessException;
 public class HolidayListController {
 	@Autowired
 	private BaseServiceFacade baseServiceFacade;
+	@Autowired
+	private DatasetBeanMapper datasetBeanMapper;
 	private ModelMap map = new ModelMap();
 	
-	@RequestMapping(value="/base/holidayList")
-	public ModelMap findHolidayList() {
-		try {
-			ArrayList<HolidayTO> holidayList = baseServiceFacade.findHolidayList();
-			HolidayTO holito = new HolidayTO();
-			map.put("holidayList", holidayList);
-			map.put("emptyHoilday", holito);
-			map.put("errorMsg", "success");
-			map.put("errorCode", 0);
-		}  catch (DataAccessException dae) {
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		} 
-		
-		return map;
+	@RequestMapping(value="/base/findHolidayList")
+	public void findHolidayList(@RequestAttribute("resData")PlatformData resData)throws Exception {
+		ArrayList<HolidayTO> holidayList = baseServiceFacade.findHolidayList();
+		datasetBeanMapper.beansToDataset(resData,holidayList,HolidayTO.class);
 	}
 	
 	@RequestMapping(value="/base/findWeekDayCount")
@@ -58,21 +49,10 @@ public class HolidayListController {
 		resData.addDataSet(ds);
 	}
 
-	@RequestMapping(value="/base/holidayList" ,params="sendData")
-	public ModelMap batchHoilyDayProcess(@RequestParam("sendData")String sendData) { 
-		try {
-			ObjectMapper mapper = new ObjectMapper();
-			ArrayList<HolidayTO> holydayList = mapper.readValue(sendData, new TypeReference<ArrayList<HolidayTO>>() {});
+	@RequestMapping(value="/base/batchHoilyDayProcess")
+	public void batchHoilyDayProcess(@RequestAttribute("reqData")PlatformData reqData)throws Exception {
+		ArrayList<HolidayTO> holydayList = (ArrayList<HolidayTO>) datasetBeanMapper.datasetToBeans(reqData,HolidayTO.class);
 			
-			baseServiceFacade.batchHoilyDayProcess(holydayList);
-			
-			map.put("errorMsg", "success");
-			map.put("errorCode", 0);
-		} catch (Exception e) {
-			map.put("errorMsg", e.getMessage());
-			map.put("errorCode", -1);
-		}
-		
-		return map;
+		baseServiceFacade.batchHoilyDayProcess(holydayList);
 	}
 }
