@@ -24789,3 +24789,984 @@ Caused by: java.io.IOException: Stream closed
 2021-10-16 14:18:39.627 [HikariPool-7 connection adder] INFO  j.audit - 100. Connection.new Connection returned 
 2021-10-16 14:18:39.627 [HikariPool-7 connection adder] INFO  j.audit - 100. Connection.isReadOnly() returned false
 2021-10-16 14:18:39.627 [HikariPool-7 connection adder] INFO  j.audit - 100. Connection.getAutoCommit() returned true
+2021-10-16 14:43:09.420 [ajp-nio-127.0.0.1-8009-exec-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-16 14:43:09.432 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.isValid(5) returned true
+2021-10-16 14:43:09.432 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.getAutoCommit() returned true
+2021-10-16 14:43:09.432 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.setAutoCommit(false) returned 
+2021-10-16 14:43:09.433 [ajp-nio-127.0.0.1-8009-exec-1] INFO  k.c.y.c.a.CommonAspect - ServiceFacadeImpl  	:  kr.co.yooooon.hr.emp.sf.EmpServiceFacadeImpl.findEmpList()
+2021-10-16 14:43:09.436 [ajp-nio-127.0.0.1-8009-exec-1] INFO  k.c.y.c.a.CommonAspect - ServiceImpl  	:  kr.co.yooooon.hr.emp.applicationService.EmpApplicationServiceImpl.findEmployeeListByDept()
+2021-10-16 14:43:09.451 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.451 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select empto0_.emp_code as emp_code1_13_, empto0_.address as address2_13_, empto0_.authority as authority3_13_, empto0_.birthdate as birthdate4_13_, empto0_.dept_code as dept_code5_13_, empto0_.detail_address as detail_address6_13_, empto0_.email as email7_13_, empto0_.emp_name as emp_name8_13_, empto0_.gender as gender9_13_, empto0_.img_extend as img_extend10_13_, empto0_.last_school as last_school11_13_, empto0_.mobile_number as mobile_number12_13_, empto0_.position_code as position_code13_13_, empto0_.post_number as post_number14_13_ from emp empto0_) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@27c8e35b
+2021-10-16 14:43:09.451 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select empto0_.emp_code as emp_code1_13_, empto0_.address as address2_13_, empto0_.authority as authority3_13_, empto0_.birthdate as birthdate4_13_, empto0_.dept_code as dept_code5_13_, empto0_.detail_address as detail_address6_13_, empto0_.email as email7_13_, empto0_.emp_name as emp_name8_13_, empto0_.gender as gender9_13_, empto0_.img_extend as img_extend10_13_, empto0_.last_school as last_school11_13_, empto0_.mobile_number as mobile_number12_13_, empto0_.position_code as position_code13_13_, empto0_.post_number as post_number14_13_ from emp empto0_
+
+2021-10-16 14:43:09.453 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select empto0_.emp_code as emp_code1_13_, empto0_.address as address2_13_, empto0_.authority as authority3_13_, empto0_.birthdate as birthdate4_13_, empto0_.dept_code as dept_code5_13_, empto0_.detail_address as detail_address6_13_, empto0_.email as email7_13_, empto0_.emp_name as emp_name8_13_, empto0_.gender as gender9_13_, empto0_.img_extend as img_extend10_13_, empto0_.last_school as last_school11_13_, empto0_.mobile_number as mobile_number12_13_, empto0_.position_code as position_code13_13_, empto0_.post_number as post_number14_13_ from emp empto0_
+ {executed in 2 msec}
+2021-10-16 14:43:09.453 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.453 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@76105cc7
+2021-10-16 14:43:09.453 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned true
+2021-10-16 14:43:09.453 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_13_) returned A490072
+2021-10-16 14:43:09.453 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(address2_13_) returned 경상남도 진주시 가좌길74번길 8
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(authority3_13_) returned AD_03
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(birthdate4_13_) returned 2021-04-01 00:00:00
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(dept_code5_13_) returned DEP001
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(detail_address6_13_) returned 5층 4강의실
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(email7_13_) returned DoubleEgg@seoulit.com
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_name8_13_) returned 쌍란
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(gender9_13_) returned 남자
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(img_extend10_13_) returned jpg
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(last_school11_13_) returned 박사
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(mobile_number12_13_) returned 010 ...
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(position_code13_13_) returned POS003
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(post_number14_13_) returned 52822
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned true
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_13_) returned A490071
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(address2_13_) returned 경상남도 진주시 가좌길74번길 8
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(authority3_13_) returned AD_06
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(birthdate4_13_) returned 1993-02-12 00:00:00
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(dept_code5_13_) returned DEP001
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(detail_address6_13_) returned 7층 701호
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(email7_13_) returned phw@seoulit.com
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.454 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_name8_13_) returned 박홍우
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(gender9_13_) returned 남자
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(img_extend10_13_) returned jpg
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(last_school11_13_) returned 고졸
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(mobile_number12_13_) returned 010 ... 
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(position_code13_13_) returned POS003
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(post_number14_13_) returned 52822
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned true
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_13_) returned A490078
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(address2_13_) returned 경상남도 진주시 가좌길74번길 8
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(authority3_13_) returned AD_06
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(birthdate4_13_) returned 2021-04-28 00:00:00
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(dept_code5_13_) returned DEP001
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(detail_address6_13_) returned 7층 701호
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(email7_13_) returned test
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_name8_13_) returned 노각오이
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(gender9_13_) returned 남자
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(img_extend10_13_) returned png
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(last_school11_13_) returned 2년제대학
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(mobile_number12_13_) returned test
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(position_code13_13_) returned POS003
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(post_number14_13_) returned 52822
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned true
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_13_) returned A490079
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(address2_13_) returned 경상남도 진주시 가좌길74번길 8
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(authority3_13_) returned AD_06
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(birthdate4_13_) returned 2021-05-04 00:00:00
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(dept_code5_13_) returned DEP001
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(detail_address6_13_) returned 7층 703호
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(email7_13_) returned Jjang@seoulit.com
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_name8_13_) returned 김짱구
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(gender9_13_) returned 남자
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(img_extend10_13_) returned jpg
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(last_school11_13_) returned 초졸
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(mobile_number12_13_) returned 010 ...
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(position_code13_13_) returned POS003
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(post_number14_13_) returned 52822
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned true
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_13_) returned A490075
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.455 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(address2_13_) returned 경상남도 진주시 가좌길74번길 8
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(authority3_13_) returned void
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(birthdate4_13_) returned 2021-03-18 00:00:00
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(dept_code5_13_) returned DEP001
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(detail_address6_13_) returned 5층 4강의실
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(email7_13_) returned ...
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_name8_13_) returned 마봉팔
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(gender9_13_) returned 남자
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(img_extend10_13_) returned jpg
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(last_school11_13_) returned 고졸
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(mobile_number12_13_) returned 010 ...
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(position_code13_13_) returned POS003
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(post_number14_13_) returned 52822
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned true
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_13_) returned A490081
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(address2_13_) returned 경상남도 진주시 가좌길74번지길 8, 혜람빌딩 6층
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(authority3_13_) returned void
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(birthdate4_13_) returned 2021-09-28 00:00:00
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(dept_code5_13_) returned DEP001
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(detail_address6_13_) returned 혜람빌딩 6층
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(email7_13_) returned 123
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_name8_13_) returned 정성환
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(gender9_13_) returned 남자
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(img_extend10_13_) returned void
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(last_school11_13_) returned 4년제대학
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(mobile_number12_13_) returned 123
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(position_code13_13_) returned POS003
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(post_number14_13_) returned 52822
+2021-10-16 14:43:09.456 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.457 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|--------------|-----------------------------|---------------|--------------------|---------------|--------------------|----------------------|--------------|------------|-----------------|------------------|--------------------|--------------------|------------------|
+|emp_code1_13_ |address2_13_                 |authority3_13_ |birthdate4_13_      |dept_code5_13_ |detail_address6_13_ |email7_13_            |emp_name8_13_ |gender9_13_ |img_extend10_13_ |last_school11_13_ |mobile_number12_13_ |position_code13_13_ |post_number14_13_ |
+|--------------|-----------------------------|---------------|--------------------|---------------|--------------------|----------------------|--------------|------------|-----------------|------------------|--------------------|--------------------|------------------|
+|A490072       |경상남도 진주시 가좌길74번길 8           |AD_03          |2021-04-01 00:00:00 |DEP001         |5층 4강의실             |DoubleEgg@seoulit.com |쌍란            |남자          |jpg              |박사                |010 ...             |POS003              |52822             |
+|A490071       |경상남도 진주시 가좌길74번길 8           |AD_06          |1993-02-12 00:00:00 |DEP001         |7층 701호             |phw@seoulit.com       |박홍우           |남자          |jpg              |고졸                |010 ...             |POS003              |52822             |
+|A490078       |경상남도 진주시 가좌길74번길 8           |AD_06          |2021-04-28 00:00:00 |DEP001         |7층 701호             |test                  |노각오이          |남자          |png              |2년제대학             |test                |POS003              |52822             |
+|A490079       |경상남도 진주시 가좌길74번길 8           |AD_06          |2021-05-04 00:00:00 |DEP001         |7층 703호             |Jjang@seoulit.com     |김짱구           |남자          |jpg              |초졸                |010 ...             |POS003              |52822             |
+|A490075       |경상남도 진주시 가좌길74번길 8           |null           |2021-03-18 00:00:00 |DEP001         |5층 4강의실             |...                   |마봉팔           |남자          |jpg              |고졸                |010 ...             |POS003              |52822             |
+|A490081       |경상남도 진주시 가좌길74번지길 8, 혜람빌딩 6층 |null           |2021-09-28 00:00:00 |DEP001         |혜람빌딩 6층             |123                   |정성환           |남자          |null             |4년제대학             |123                 |POS003              |52822             |
+|--------------|-----------------------------|---------------|--------------------|---------------|--------------------|----------------------|--------------|------------|-----------------|------------------|--------------------|--------------------|------------------|
+
+2021-10-16 14:43:09.457 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.457 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.457 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.457 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.457 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.460 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.460 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@6e3cb78b
+2021-10-16 14:43:09.460 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490072") returned 
+2021-10-16 14:43:09.461 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code='A490072'
+
+2021-10-16 14:43:09.462 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code='A490072'
+ {executed in 1 msec}
+2021-10-16 14:43:09.462 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.462 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@4ebf085e
+2021-10-16 14:43:09.466 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned true
+2021-10-16 14:43:09.467 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_1_) returned A490072
+2021-10-16 14:43:09.467 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.467 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_1_) returned 210401
+2021-10-16 14:43:09.467 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_1_) returned A490072
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_1_) returned 210401
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(dept_name3_30_1_) returned 인사팀
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(employment_type4_30_1_) returned 정규직
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(hiredate5_30_1_) returned 2021-04-01 00:00:00
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(hobong6_30_1_) returned 1호봉
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(occupation7_30_1_) returned 사무직
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(position8_30_1_) returned 팀장
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.468 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(retire_date9_30_1_) returned void
+2021-10-16 14:43:09.469 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_0_) returned A490072
+2021-10-16 14:43:09.469 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.469 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_0_) returned A490072
+2021-10-16 14:43:09.469 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.469 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_0_) returned 210401
+2021-10-16 14:43:09.469 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.476 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+|emp_code1_30_0_ |work_info_days2_30_0_ |emp_code1_30_1_ |work_info_days2_30_1_ |dept_name3_30_1_ |employment_type4_30_1_ |hiredate5_30_1_     |hobong6_30_1_ |occupation7_30_1_ |position8_30_1_ |retire_date9_30_1_ |
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+|A490072         |210401                |A490072         |210401                |인사팀              |정규직                    |2021-04-01 00:00:00 |1호봉           |사무직               |팀장              |null               |
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+
+2021-10-16 14:43:09.476 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.477 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.477 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.477 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.477 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.477 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.477 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@317e72dd
+2021-10-16 14:43:09.477 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490072") returned 
+2021-10-16 14:43:09.477 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code='A490072'
+
+2021-10-16 14:43:09.478 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code='A490072'
+ {executed in 1 msec}
+2021-10-16 14:43:09.478 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.478 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@701da804
+2021-10-16 14:43:09.478 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.478 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.478 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.478 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.478 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.478 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.479 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.479 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@48b6c7df
+2021-10-16 14:43:09.479 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490072") returned 
+2021-10-16 14:43:09.479 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code='A490072'
+
+2021-10-16 14:43:09.479 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code='A490072'
+ {executed in 0 msec}
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@5e6a27fc
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@4fc9dbd1
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490072") returned 
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code='A490072'
+
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code='A490072'
+ {executed in 0 msec}
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@547de3b0
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1f4e8b3a
+2021-10-16 14:43:09.480 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490072") returned 
+2021-10-16 14:43:09.482 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code='A490072'
+
+2021-10-16 14:43:09.482 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code='A490072'
+ {executed in 0 msec}
+2021-10-16 14:43:09.482 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.482 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@44057696
+2021-10-16 14:43:09.482 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.482 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.482 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.482 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.482 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.482 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.482 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.482 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@771acedc
+2021-10-16 14:43:09.483 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490071") returned 
+2021-10-16 14:43:09.483 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code='A490071'
+
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code='A490071'
+ {executed in 1 msec}
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@1443a9b8
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned true
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_1_) returned A490071
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_1_) returned 210210
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_1_) returned A490071
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_1_) returned 210210
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(dept_name3_30_1_) returned 인사팀
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(employment_type4_30_1_) returned 정규직
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(hiredate5_30_1_) returned 2001-05-28 00:00:00
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(hobong6_30_1_) returned 2호봉
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(occupation7_30_1_) returned 사무직
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.484 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(position8_30_1_) returned 팀장
+2021-10-16 14:43:09.485 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.485 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(retire_date9_30_1_) returned void
+2021-10-16 14:43:09.485 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_0_) returned A490071
+2021-10-16 14:43:09.485 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.485 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_0_) returned A490071
+2021-10-16 14:43:09.485 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.485 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_0_) returned 210210
+2021-10-16 14:43:09.485 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.485 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+|emp_code1_30_0_ |work_info_days2_30_0_ |emp_code1_30_1_ |work_info_days2_30_1_ |dept_name3_30_1_ |employment_type4_30_1_ |hiredate5_30_1_     |hobong6_30_1_ |occupation7_30_1_ |position8_30_1_ |retire_date9_30_1_ |
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+|A490071         |210210                |A490071         |210210                |인사팀              |정규직                    |2001-05-28 00:00:00 |2호봉           |사무직               |팀장              |null               |
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+
+2021-10-16 14:43:09.485 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.485 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.485 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.485 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.485 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.486 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.486 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@84d0341
+2021-10-16 14:43:09.486 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490071") returned 
+2021-10-16 14:43:09.486 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code='A490071'
+
+2021-10-16 14:43:09.486 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code='A490071'
+ {executed in 0 msec}
+2021-10-16 14:43:09.486 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.486 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@1f3c9025
+2021-10-16 14:43:09.486 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.486 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@2ad08066
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490071") returned 
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code='A490071'
+
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code='A490071'
+ {executed in 0 msec}
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@322d489
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.487 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.488 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.488 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.488 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.488 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5967a0fd
+2021-10-16 14:43:09.488 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490071") returned 
+2021-10-16 14:43:09.488 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code='A490071'
+
+2021-10-16 14:43:09.488 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code='A490071'
+ {executed in 0 msec}
+2021-10-16 14:43:09.488 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.488 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@123ebba7
+2021-10-16 14:43:09.488 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.488 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.489 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.489 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.489 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.489 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.489 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.489 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@57effe7d
+2021-10-16 14:43:09.489 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490071") returned 
+2021-10-16 14:43:09.489 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code='A490071'
+
+2021-10-16 14:43:09.489 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code='A490071'
+ {executed in 0 msec}
+2021-10-16 14:43:09.489 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.489 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@5aa62d4e
+2021-10-16 14:43:09.489 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.489 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.490 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.490 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.490 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.490 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.490 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.490 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1f913c48
+2021-10-16 14:43:09.490 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490078") returned 
+2021-10-16 14:43:09.490 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code='A490078'
+
+2021-10-16 14:43:09.490 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code='A490078'
+ {executed in 0 msec}
+2021-10-16 14:43:09.490 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.490 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@5bed66d4
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned true
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_1_) returned A490078
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_1_) returned 210428
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_1_) returned A490078
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_1_) returned 210428
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(dept_name3_30_1_) returned 인사팀
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(employment_type4_30_1_) returned 정규직
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(hiredate5_30_1_) returned 2021-04-28 00:00:00
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(hobong6_30_1_) returned 1호봉
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(occupation7_30_1_) returned 생산직
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(position8_30_1_) returned 팀장
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(retire_date9_30_1_) returned void
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_0_) returned A490078
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_0_) returned A490078
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_0_) returned 210428
+2021-10-16 14:43:09.491 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.492 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+|emp_code1_30_0_ |work_info_days2_30_0_ |emp_code1_30_1_ |work_info_days2_30_1_ |dept_name3_30_1_ |employment_type4_30_1_ |hiredate5_30_1_     |hobong6_30_1_ |occupation7_30_1_ |position8_30_1_ |retire_date9_30_1_ |
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+|A490078         |210428                |A490078         |210428                |인사팀              |정규직                    |2021-04-28 00:00:00 |1호봉           |생산직               |팀장              |null               |
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+
+2021-10-16 14:43:09.492 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.492 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.492 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.492 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.492 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.492 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.492 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@34961e41
+2021-10-16 14:43:09.492 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490078") returned 
+2021-10-16 14:43:09.493 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code='A490078'
+
+2021-10-16 14:43:09.493 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code='A490078'
+ {executed in 0 msec}
+2021-10-16 14:43:09.493 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.493 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@47d914ce
+2021-10-16 14:43:09.493 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.493 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.493 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.493 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.493 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.493 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.494 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.494 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@3e7a4658
+2021-10-16 14:43:09.494 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490078") returned 
+2021-10-16 14:43:09.494 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code='A490078'
+
+2021-10-16 14:43:09.494 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code='A490078'
+ {executed in 0 msec}
+2021-10-16 14:43:09.494 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.494 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@5d350eb9
+2021-10-16 14:43:09.494 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.495 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.495 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.495 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.495 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.495 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.495 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.495 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5a7a8e05
+2021-10-16 14:43:09.495 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490078") returned 
+2021-10-16 14:43:09.495 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code='A490078'
+
+2021-10-16 14:43:09.496 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code='A490078'
+ {executed in 1 msec}
+2021-10-16 14:43:09.496 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.496 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@550a7f3e
+2021-10-16 14:43:09.496 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.496 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.496 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.496 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.496 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.496 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.496 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.497 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1fa4e3ce
+2021-10-16 14:43:09.497 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490078") returned 
+2021-10-16 14:43:09.497 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code='A490078'
+
+2021-10-16 14:43:09.498 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code='A490078'
+ {executed in 1 msec}
+2021-10-16 14:43:09.498 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.498 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@46db1c05
+2021-10-16 14:43:09.498 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.498 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.498 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.498 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.498 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.498 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.498 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.498 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@6d00f8ef
+2021-10-16 14:43:09.498 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490079") returned 
+2021-10-16 14:43:09.498 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code='A490079'
+
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code='A490079'
+ {executed in 1 msec}
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@407dfa74
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned true
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_1_) returned A490079
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_1_) returned 210504
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_1_) returned A490079
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_1_) returned 210504
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(dept_name3_30_1_) returned 인사팀
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(employment_type4_30_1_) returned 정규직
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.499 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(hiredate5_30_1_) returned 2021-05-04 00:00:00
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(hobong6_30_1_) returned 1호봉
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(occupation7_30_1_) returned 사무직
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(position8_30_1_) returned 팀장
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(retire_date9_30_1_) returned void
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_0_) returned A490079
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_0_) returned A490079
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_0_) returned 210504
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+|emp_code1_30_0_ |work_info_days2_30_0_ |emp_code1_30_1_ |work_info_days2_30_1_ |dept_name3_30_1_ |employment_type4_30_1_ |hiredate5_30_1_     |hobong6_30_1_ |occupation7_30_1_ |position8_30_1_ |retire_date9_30_1_ |
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+|A490079         |210504                |A490079         |210504                |인사팀              |정규직                    |2021-05-04 00:00:00 |1호봉           |사무직               |팀장              |null               |
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.500 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.501 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@70fc0b88
+2021-10-16 14:43:09.501 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490079") returned 
+2021-10-16 14:43:09.501 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code='A490079'
+
+2021-10-16 14:43:09.501 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code='A490079'
+ {executed in 0 msec}
+2021-10-16 14:43:09.501 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.501 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@7b24f417
+2021-10-16 14:43:09.501 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.501 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.502 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.502 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.502 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.502 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.502 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.502 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@4f58cfc0
+2021-10-16 14:43:09.502 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490079") returned 
+2021-10-16 14:43:09.502 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code='A490079'
+
+2021-10-16 14:43:09.503 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code='A490079'
+ {executed in 1 msec}
+2021-10-16 14:43:09.503 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.503 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@2340c803
+2021-10-16 14:43:09.503 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.503 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.503 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.503 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.503 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.503 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.503 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.503 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@34666afc
+2021-10-16 14:43:09.503 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490079") returned 
+2021-10-16 14:43:09.503 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code='A490079'
+
+2021-10-16 14:43:09.504 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code='A490079'
+ {executed in 1 msec}
+2021-10-16 14:43:09.504 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.504 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@2e999fa8
+2021-10-16 14:43:09.504 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.504 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.504 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.504 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.504 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.504 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.504 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.504 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@58b51573
+2021-10-16 14:43:09.504 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490079") returned 
+2021-10-16 14:43:09.504 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code='A490079'
+
+2021-10-16 14:43:09.505 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code='A490079'
+ {executed in 1 msec}
+2021-10-16 14:43:09.505 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.505 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@5396d112
+2021-10-16 14:43:09.505 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.505 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.505 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.505 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.505 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.505 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.505 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.505 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@61166bd9
+2021-10-16 14:43:09.505 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490075") returned 
+2021-10-16 14:43:09.505 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code='A490075'
+
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code='A490075'
+ {executed in 1 msec}
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@36ad0441
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned true
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_1_) returned A490075
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_1_) returned 210318
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_1_) returned A490075
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_1_) returned 210318
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(dept_name3_30_1_) returned 인사팀
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(employment_type4_30_1_) returned 정규직
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(hiredate5_30_1_) returned 2021-03-18 00:00:00
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(hobong6_30_1_) returned 1호봉
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(occupation7_30_1_) returned 사무직
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(position8_30_1_) returned 팀장
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.506 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(retire_date9_30_1_) returned void
+2021-10-16 14:43:09.507 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_0_) returned A490075
+2021-10-16 14:43:09.507 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.507 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_0_) returned A490075
+2021-10-16 14:43:09.507 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.507 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_0_) returned 210318
+2021-10-16 14:43:09.507 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.508 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+|emp_code1_30_0_ |work_info_days2_30_0_ |emp_code1_30_1_ |work_info_days2_30_1_ |dept_name3_30_1_ |employment_type4_30_1_ |hiredate5_30_1_     |hobong6_30_1_ |occupation7_30_1_ |position8_30_1_ |retire_date9_30_1_ |
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+|A490075         |210318                |A490075         |210318                |인사팀              |정규직                    |2021-03-18 00:00:00 |1호봉           |사무직               |팀장              |null               |
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+
+2021-10-16 14:43:09.508 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.508 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.508 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.508 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.508 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.508 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.508 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@53f5ad76
+2021-10-16 14:43:09.508 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490075") returned 
+2021-10-16 14:43:09.508 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code='A490075'
+
+2021-10-16 14:43:09.509 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code='A490075'
+ {executed in 1 msec}
+2021-10-16 14:43:09.509 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.509 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@718ec3f7
+2021-10-16 14:43:09.509 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.509 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.509 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.509 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.509 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.509 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@76607fbc
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490075") returned 
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code='A490075'
+
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code='A490075'
+ {executed in 0 msec}
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@5ddc1aec
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@27d53231
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490075") returned 
+2021-10-16 14:43:09.510 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code='A490075'
+
+2021-10-16 14:43:09.511 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code='A490075'
+ {executed in 1 msec}
+2021-10-16 14:43:09.511 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.511 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@17fd628e
+2021-10-16 14:43:09.511 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.511 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.511 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.511 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.511 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.511 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.512 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.512 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@22e37638
+2021-10-16 14:43:09.512 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490075") returned 
+2021-10-16 14:43:09.512 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code='A490075'
+
+2021-10-16 14:43:09.513 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code='A490075'
+ {executed in 1 msec}
+2021-10-16 14:43:09.513 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.513 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@2cfde43a
+2021-10-16 14:43:09.513 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.513 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.513 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.513 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.513 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.513 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.513 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.513 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@75b6f1ab
+2021-10-16 14:43:09.513 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490081") returned 
+2021-10-16 14:43:09.513 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code='A490081'
+
+2021-10-16 14:43:09.514 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select workinfoli0_.emp_code as emp_code1_30_0_, workinfoli0_.work_info_days as work_info_days2_30_0_, workinfoli0_.emp_code as emp_code1_30_1_, workinfoli0_.work_info_days as work_info_days2_30_1_, workinfoli0_.dept_name as dept_name3_30_1_, workinfoli0_.employment_type as employment_type4_30_1_, workinfoli0_.hiredate as hiredate5_30_1_, workinfoli0_.hobong as hobong6_30_1_, workinfoli0_.occupation as occupation7_30_1_, workinfoli0_.position as position8_30_1_, workinfoli0_.retire_date as retire_date9_30_1_ from work_info workinfoli0_ where workinfoli0_.emp_code='A490081'
+ {executed in 1 msec}
+2021-10-16 14:43:09.514 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.514 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@267c9359
+2021-10-16 14:43:09.514 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned true
+2021-10-16 14:43:09.514 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_1_) returned A490081
+2021-10-16 14:43:09.514 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.514 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_1_) returned 210928
+2021-10-16 14:43:09.514 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_1_) returned A490081
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_1_) returned 210928
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(dept_name3_30_1_) returned 인사팀
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(employment_type4_30_1_) returned 정규직
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(hiredate5_30_1_) returned 2021-09-28 00:00:00
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(hobong6_30_1_) returned 2호봉
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(occupation7_30_1_) returned 사무직
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(position8_30_1_) returned 팀장
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(retire_date9_30_1_) returned void
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_0_) returned A490081
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(emp_code1_30_0_) returned A490081
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.getString(work_info_days2_30_0_) returned 210928
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.wasNull() returned false
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+|emp_code1_30_0_ |work_info_days2_30_0_ |emp_code1_30_1_ |work_info_days2_30_1_ |dept_name3_30_1_ |employment_type4_30_1_ |hiredate5_30_1_     |hobong6_30_1_ |occupation7_30_1_ |position8_30_1_ |retire_date9_30_1_ |
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+|A490081         |210928                |A490081         |210928                |인사팀              |정규직                    |2021-09-28 00:00:00 |2호봉           |사무직               |팀장              |null               |
+|----------------|----------------------|----------------|----------------------|-----------------|-----------------------|--------------------|--------------|------------------|----------------|-------------------|
+
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.515 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.516 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@3e3baadd
+2021-10-16 14:43:09.516 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490081") returned 
+2021-10-16 14:43:09.516 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code='A490081'
+
+2021-10-16 14:43:09.516 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select careerinfo0_.emp_code as emp_code2_5_0_, careerinfo0_.career_code as career_code1_5_0_, careerinfo0_.career_code as career_code1_5_1_, careerinfo0_.emp_code as emp_code2_5_1_, careerinfo0_.assignment_task as assignment_task3_5_1_, careerinfo0_.company_name as company_name4_5_1_, careerinfo0_.ex_hiredate as ex_hiredate5_5_1_, careerinfo0_.ex_retirement_date as ex_retirement_date6_5_1_, careerinfo0_.occupation as occupation7_5_1_ from career_info careerinfo0_ where careerinfo0_.emp_code='A490081'
+ {executed in 0 msec}
+2021-10-16 14:43:09.516 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.516 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@7865023c
+2021-10-16 14:43:09.516 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.516 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.516 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.516 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.516 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.516 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.517 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.517 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1174b87b
+2021-10-16 14:43:09.517 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490081") returned 
+2021-10-16 14:43:09.517 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code='A490081'
+
+2021-10-16 14:43:09.517 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select educationi0_.emp_code as emp_code2_12_0_, educationi0_.education_code as education_code1_12_0_, educationi0_.education_code as education_code1_12_1_, educationi0_.emp_code as emp_code2_12_1_, educationi0_.entrance_date as entrance_date3_12_1_, educationi0_.grade as grade4_12_1_, educationi0_.graduate_date as graduate_date5_12_1_, educationi0_.major as major6_12_1_, educationi0_.school_name as school_name7_12_1_ from education_info educationi0_ where educationi0_.emp_code='A490081'
+ {executed in 0 msec}
+2021-10-16 14:43:09.517 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.517 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@45cbe1ee
+2021-10-16 14:43:09.517 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.517 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.518 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.518 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.518 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.518 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.518 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.518 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5759d44d
+2021-10-16 14:43:09.518 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490081") returned 
+2021-10-16 14:43:09.518 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code='A490081'
+
+2021-10-16 14:43:09.519 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select familyinfo0_.emp_code as emp_code1_15_0_, familyinfo0_.family_code as family_code2_15_0_, familyinfo0_.emp_code as emp_code1_15_1_, familyinfo0_.family_code as family_code2_15_1_, familyinfo0_.birthdate as birthdate3_15_1_, familyinfo0_.family_name as family_name4_15_1_, familyinfo0_.live_together as live_together5_15_1_, familyinfo0_.relation as relation6_15_1_ from family_info familyinfo0_ where familyinfo0_.emp_code='A490081'
+ {executed in 1 msec}
+2021-10-16 14:43:09.519 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.519 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@23aad267
+2021-10-16 14:43:09.519 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.519 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.519 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.519 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.519 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.519 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.519 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.new PreparedStatement returned 
+2021-10-16 14:43:09.519 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.prepareStatement(select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@9d847be
+2021-10-16 14:43:09.519 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.setString(1, "A490081") returned 
+2021-10-16 14:43:09.519 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqlonly - select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code='A490081'
+
+2021-10-16 14:43:09.520 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.sqltiming - select licenseinf0_.emp_code as emp_code1_18_0_, licenseinf0_.license_code as license_code2_18_0_, licenseinf0_.emp_code as emp_code1_18_1_, licenseinf0_.license_code as license_code2_18_1_, licenseinf0_.expire_date as expire_date3_18_1_, licenseinf0_.get_date as get_date4_18_1_, licenseinf0_.issue_number as issue_number5_18_1_, licenseinf0_.license_center as license_center6_18_1_, licenseinf0_.license_level as license_level7_18_1_, licenseinf0_.license_name as license_name8_18_1_ from license_info licenseinf0_ where licenseinf0_.emp_code='A490081'
+ {executed in 1 msec}
+2021-10-16 14:43:09.520 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.new ResultSet returned 
+2021-10-16 14:43:09.520 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@617cc288
+2021-10-16 14:43:09.520 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultsettable - 
+|
+|
+|
+|
+
+2021-10-16 14:43:09.520 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.next() returned false
+2021-10-16 14:43:09.520 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.resultset - 91. ResultSet.close() returned void
+2021-10-16 14:43:09.520 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getMaxRows() returned 0
+2021-10-16 14:43:09.520 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.getQueryTimeout() returned 0
+2021-10-16 14:43:09.520 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. PreparedStatement.close() returned 
+2021-10-16 14:43:09.523 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.commit() returned 
+2021-10-16 14:43:09.523 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.setAutoCommit(true) returned 
+2021-10-16 14:43:09.526 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.getWarnings() returned null
+2021-10-16 14:43:09.526 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.clearWarnings() returned 
+2021-10-16 14:43:09.526 [ajp-nio-127.0.0.1-8009-exec-1] INFO  j.audit - 91. Connection.clearWarnings() returned 
