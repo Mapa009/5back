@@ -20,7 +20,6 @@ import kr.co.yooooon.hr.attd.dao.DayAttdDAO;
 import kr.co.yooooon.hr.attd.dao.DayAttdMgtDAO;
 import kr.co.yooooon.hr.attd.dao.MonthAttdMgtDAO;
 import kr.co.yooooon.hr.attd.dao.RestAttdDAO;
-import kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO;
 
 @Component
 public class AttdApplicationServiceImpl implements AttdApplicationService{
@@ -117,10 +116,6 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
 	   //프로시저
       monthAttdMgtDAO.batchMonthAttdMgtProcess(map);
       
-      String errorCode = (String)map.get("errorCode");
-      String errorMsg =  (String)map.get("errorMsg");
-     
-     if(Integer.parseInt(errorCode) < 0){ throw new DataAccessException(errorMsg);}
       @SuppressWarnings("unchecked")
       ArrayList<MonthAttdMgtTO> monthAttdMgtList = (ArrayList<MonthAttdMgtTO>) map.get("result");
       return monthAttdMgtList;
@@ -193,10 +188,10 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
    }
    
    @Override
-   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay, String dept) {
+   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay) {
      HashMap<String , Object> map = new HashMap<String , Object>();
      map.put("applyDay",applyDay);
-     map.put("dept",dept);
+     
      
      dayAttdMgtDAO.batchDayAttdMgtProcess(map);
     

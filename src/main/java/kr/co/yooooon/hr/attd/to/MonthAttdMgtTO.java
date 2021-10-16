@@ -1,6 +1,7 @@
 package kr.co.yooooon.hr.attd.to;
 
 import kr.co.yooooon.base.to.BaseTO;
+import kr.co.yooooon.common.annotation.Dataset;
 import kr.co.yooooon.hr.attd.compositKey.MonthAttdMgtID;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -11,7 +12,8 @@ import javax.persistence.*;
 @EqualsAndHashCode(callSuper=false)
 @Entity
 @Table(name="MONTH_ATTD_MANAGE")
-@IdClass(MonthAttdMgtID.class)
+@IdClass(MonthAttdMgtID.class) 
+@Dataset(name="ds_monthAttenMng")
 public class MonthAttdMgtTO extends BaseTO{
 	//복합키필요
 	@Id
