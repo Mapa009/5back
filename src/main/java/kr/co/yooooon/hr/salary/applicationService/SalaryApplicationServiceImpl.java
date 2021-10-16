@@ -3,12 +3,11 @@ package kr.co.yooooon.hr.salary.applicationService;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import kr.co.yooooon.hr.emp.repository.PositionRepository;
-import kr.co.yooooon.hr.emp.to.PositionTO;
-import kr.co.yooooon.hr.salary.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import kr.co.yooooon.hr.emp.repository.PositionRepository;
+import kr.co.yooooon.hr.emp.to.PositionTO;
 import kr.co.yooooon.hr.salary.dao.BaseDeductionDAO;
 import kr.co.yooooon.hr.salary.dao.BaseExtSalDAO;
 import kr.co.yooooon.hr.salary.dao.BaseSalaryDAO;
@@ -17,6 +16,14 @@ import kr.co.yooooon.hr.salary.dao.MonthDeductionDAO;
 import kr.co.yooooon.hr.salary.dao.MonthExtSalDAO;
 import kr.co.yooooon.hr.salary.dao.MonthSalaryDAO;
 import kr.co.yooooon.hr.salary.dao.SocialInsureDAO;
+import kr.co.yooooon.hr.salary.repository.BaseDeductionRepository;
+import kr.co.yooooon.hr.salary.repository.BaseExtSalRepository;
+import kr.co.yooooon.hr.salary.repository.FullTimeSalaryRepository;
+import kr.co.yooooon.hr.salary.repository.MonthDeductionRepository;
+import kr.co.yooooon.hr.salary.repository.MonthExtSalRepository;
+import kr.co.yooooon.hr.salary.repository.MonthSalaryRepository;
+import kr.co.yooooon.hr.salary.repository.SalaryBounsDateRepository;
+import kr.co.yooooon.hr.salary.repository.SocialInsureRepository;
 import kr.co.yooooon.hr.salary.to.BaseDeductionTO;
 import kr.co.yooooon.hr.salary.to.BaseExtSalTO;
 import kr.co.yooooon.hr.salary.to.FullTimeSalTO;
@@ -116,27 +123,37 @@ public class SalaryApplicationServiceImpl implements SalaryApplicationService {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public MonthSalaryTO findMonthSalary(String applyYearMonth, String empCode) {
-		HashMap<String, Object> PrameterMap = new HashMap<String, Object>();
-		PrameterMap.put("applyYearMonth", applyYearMonth);
-		PrameterMap.put("empCode", empCode);
-		//프로시저
-		monthSalaryDAO.batchMonthSalaryProcess(PrameterMap);
-				
-		ArrayList<MonthSalaryTO> list = (ArrayList<MonthSalaryTO>) PrameterMap.get("result");
-		MonthSalaryTO monthSalary = (MonthSalaryTO) list.get(0);
+	public HashMap<String,Object> findMonthSalary(HashMap<String,Object> map) {
 		
-	    monthSalary.setMonthDeductionList(monthDeductionRepository.findMonthDeductionTOByApplyYearMonthAndEmpCode(applyYearMonth,empCode));
-        monthSalary.setMonthExtSalList(monthExtSalRepository.findMonthExtSalTOByApplyYearMonthAndEmpCode(applyYearMonth, empCode));
-    
-		return monthSalary;
+		// 월급여조회 프로시저
+		monthSalaryDAO.batchMonthSalaryProcess(map);
+		
+		@SuppressWarnings("unchecked")
+		ArrayList<MonthSalaryTO> monthSalaryList = (ArrayList<MonthSalaryTO>) map.get("result");
+		
+		MonthSalaryTO monthSalary = monthSalaryList.get(0);
+		
+		String applyYearMonth = monthSalary.getApplyYearMonth();
+		String empCode = monthSalary.getEmpCode();
+
+		
+		// 공제내역
+		monthSalary.setMonthDeductionList(monthDeductionDAO.selectMonthDeductionList(applyYearMonth, empCode));
+		
+		// 초과수당내역
+		monthSalary.setMonthExtSalList(monthExtSalDAO.selectMonthExtSalList(applyYearMonth, empCode));
+		map.put("result",monthSalary);
+		return map;
 	}
 	
 	@Override
-	public ArrayList<MonthSalaryTO> findYearSalary(String applyYear, String empCode) {
-		String applyYear2 = applyYear+"%";
-		ArrayList<MonthSalaryTO> YearList = monthSalaryRepository.findAllByEmpCodeAndFinalizeStatusAndApplyYearMonth(empCode,"Y",applyYear2);
-		return YearList;
+	public HashMap<String,Object> findYearSalary(HashMap<String,Object> map) {
+
+		ArrayList<MonthSalaryTO> yearSalary = monthSalaryDAO.selectYearSalary(map);
+		map.clear();
+		map.put("result",yearSalary);
+
+		return map;
 	}
 
 	@Override
@@ -156,7 +173,12 @@ public class SalaryApplicationServiceImpl implements SalaryApplicationService {
 		//프로시저
 	    HashMap<String,Object> PrameterMap = new HashMap<String,Object>();
 	    PrameterMap.put("applyYearMonth",applyYearMonth2);
-	    PrameterMap.put("empCode",empCode);	    
+	    PrameterMap.put("empCode",empCode);
+		System.out.println("22222222222222222222222ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss");
+		System.out.println(empCode);
+		System.out.println(applyYearMonth2);
+		System.out.println(PrameterMap.get("empCode"));
+		System.out.println(PrameterMap.get("applyYearMonth"));
 	    fulltimeSalDAO.selectFullTimeSalary(PrameterMap);
 		
 	    ArrayList<FullTimeSalTO> selectSalary = (ArrayList<FullTimeSalTO>) PrameterMap.get("result");

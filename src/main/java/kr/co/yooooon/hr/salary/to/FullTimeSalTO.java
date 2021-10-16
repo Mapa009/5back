@@ -2,6 +2,7 @@ package kr.co.yooooon.hr.salary.to;
 
 
 import kr.co.yooooon.base.to.BaseTO;
+import kr.co.yooooon.common.annotation.Dataset;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -13,6 +14,7 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper=false)
 @Entity
 @Table(name="FULLTIME_EMPLOYEE_SALARY")
+@Dataset(name="ds_fullTimeSal")
 public class FullTimeSalTO extends BaseTO {
 	@Id
 	private String empCode;

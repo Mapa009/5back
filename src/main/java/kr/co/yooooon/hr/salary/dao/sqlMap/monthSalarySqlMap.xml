@@ -3,22 +3,22 @@
 
 <mapper namespace="kr.co.yooooon.hr.salary.dao.MonthSalaryDAO">
 
-	<resultMap type="kr.co.yooooon.hr.salary.to.MonthSalaryTO" id="monthSalaryResult">
-		<result property="empCode" column="EMP_CODE" />
-		<result property="applyYearMonth" column="APPLY_YEAR_MONTH" />
-		<result property="salary" column="SALARY" />
-		<result property="totalExtSal" column="TOTAL_EXT_SAL" />
-		<result property="totalDeduction" column="TOTAL_DEDUCTION" />
-		<result property="totalPayment" column="TOTAL_PAYMENT" />
-		<result property="realSalary" column="REAL_SALARY" />
-		<result property="cost" column="COST" />
-		<result property="unusedDaySalary" column="UNUSED_DAY_SALARY" />
-		<result property="finalizeStatus" column="FINALIZE_STATUS" />
-	</resultMap>
+   <resultMap type="kr.co.yooooon.hr.salary.to.MonthSalaryTO" id="monthSalaryResult">
+      <result property="empCode" column="EMP_CODE" />
+      <result property="applyYearMonth" column="APPLY_YEAR_MONTH" />
+      <result property="salary" column="SALARY" />
+      <result property="totalExtSal" column="TOTAL_EXT_SAL" />
+      <result property="totalDeduction" column="TOTAL_DEDUCTION" />
+      <result property="totalPayment" column="TOTAL_PAYMENT" />
+      <result property="realSalary" column="REAL_SALARY" />
+      <result property="cost" column="COST" />
+      <result property="unusedDaySalary" column="UNUSED_DAY_SALARY" />
+      <result property="finalizeStatus" column="FINALIZE_STATUS" />
+   </resultMap>
 
      <select id="batchMonthSalaryProcess" parameterType="map" statementType="CALLABLE">
       <![CDATA[
-           {call P_CREATE_MONTH_SALARY(
+           {call P_HR_SALARY.P_CREATE_MONTH_SALARY(
            #{applyYearMonth, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
            , #{empCode, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
            , #{result, mode=OUT, jdbcType=CURSOR, javaType=java.sql.ResultSet, resultMap=monthSalaryResult}
@@ -26,25 +26,25 @@
            , #{errorMsg, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
            )
        ]]>
-	</select>
+   </select>
 
-	<!--<select id="selectYearSalary" resultMap="monthSalaryResult" parameterType="map">
-		<![CDATA[
-			SELECT * 
-				FROM MONTH_SALARY 
-				WHERE emp_code = #{empCode}
-				AND FINALIZE_STATUS = 'Y'
-				AND APPLY_YEAR_MONTH LIKE #{applyYearMonth}
-		]]>
-	</select>
-	
-	<update id="updateMonthSalary" parameterType="monthSalaryTO">
-		<![CDATA[
-			UPDATE MONTH_SALARY SET
-			FINALIZE_STATUS = #{finalizeStatus}
-			WHERE EMP_CODE = #{empCode}
-			AND APPLY_YEAR_MONTH = #{applyYearMonth}
-		]]>
-	</update>-->
-	
+   <select id="selectYearSalary" resultMap="monthSalaryResult" parameterType="map">
+      <![CDATA[
+         SELECT * 
+            FROM MONTH_SALARY 
+            WHERE emp_code = #{empCode}
+            AND FINALIZE_STATUS = 'Y'
+            AND APPLY_YEAR_MONTH LIKE #{applyYearMonth}
+      ]]>
+   </select>
+   
+   <!--<update id="updateMonthSalary" parameterType="monthSalaryTO">
+      <![CDATA[
+         UPDATE MONTH_SALARY SET
+         FINALIZE_STATUS = #{finalizeStatus}
+         WHERE EMP_CODE = #{empCode}
+         AND APPLY_YEAR_MONTH = #{applyYearMonth}
+      ]]>
+   </update>-->
+   
 </mapper>

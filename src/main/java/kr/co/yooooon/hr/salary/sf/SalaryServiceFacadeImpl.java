@@ -1,11 +1,12 @@
 package kr.co.yooooon.hr.salary.sf;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
-import kr.co.yooooon.hr.emp.to.PositionTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import kr.co.yooooon.hr.emp.to.PositionTO;
 import kr.co.yooooon.hr.salary.applicationService.SalaryApplicationService;
 import kr.co.yooooon.hr.salary.to.BaseDeductionTO;
 import kr.co.yooooon.hr.salary.to.BaseExtSalTO;
@@ -54,14 +55,15 @@ public class SalaryServiceFacadeImpl implements SalaryServiceFacade{
 	}
 
 	@Override
-	public MonthSalaryTO findMonthSalary(String ApplyYearMonth, String empCode) {	
-		MonthSalaryTO monthSalary=salaryApplicationService.findMonthSalary(ApplyYearMonth, empCode);
+	public HashMap<String,Object> findMonthSalary(HashMap<String,Object> map) {
+		
+		HashMap<String,Object> monthSalary = salaryApplicationService.findMonthSalary(map);
 		return monthSalary;
 	}
 
 	@Override
-	public ArrayList<MonthSalaryTO> findYearSalary(String applyYear, String empCode) {
-		ArrayList<MonthSalaryTO> monthSalary=salaryApplicationService.findYearSalary(applyYear, empCode);	
+	public HashMap<String,Object> findYearSalary(HashMap<String,Object> map) {
+		HashMap<String,Object> monthSalary=salaryApplicationService.findYearSalary(map);
 		return monthSalary;
 	}
 	
