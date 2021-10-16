@@ -36,8 +36,8 @@ public class monthSalaryController {
 		HashMap<String,Object> result=new HashMap<>();
 		
 		map.clear();
-		map.put("applyYearMonth",applyYearMonth);
-		map.put("empCode",empCode);
+		map.put("applyYearMonth","2021-9");
+		map.put("empCode","A490071");
 		result = salaryServiceFacade.findMonthSalary(map);
 		
 		MonthSalaryTO monthSalaryTO=(MonthSalaryTO)result.get("result");
