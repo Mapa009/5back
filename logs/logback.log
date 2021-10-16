@@ -24785,3 +24785,7 @@ Caused by: java.io.IOException: Stream closed
 2021-10-16 14:18:27.377 [HikariPool-7 connection adder] INFO  j.audit - 99. Connection.getAutoCommit() returned true
 2021-10-16 14:18:39.612 [HikariPool-7 connection closer] INFO  j.connection - 90. Connection closed
 2021-10-16 14:18:39.612 [HikariPool-7 connection closer] INFO  j.audit - 90. Connection.close() returned 
+2021-10-16 14:18:39.627 [HikariPool-7 connection adder] INFO  j.connection - 100. Connection opened
+2021-10-16 14:18:39.627 [HikariPool-7 connection adder] INFO  j.audit - 100. Connection.new Connection returned 
+2021-10-16 14:18:39.627 [HikariPool-7 connection adder] INFO  j.audit - 100. Connection.isReadOnly() returned false
+2021-10-16 14:18:39.627 [HikariPool-7 connection adder] INFO  j.audit - 100. Connection.getAutoCommit() returned true
