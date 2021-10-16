@@ -4,6 +4,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Embeddable;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.SequenceGenerator;
 import java.io.Serializable;
 
 @Embeddable
@@ -11,5 +14,10 @@ import java.io.Serializable;
 @Getter
 public class ProofCertificateCompositID implements Serializable {
     private String empCode;
-    private String seqNo;
+    @SequenceGenerator(
+            name = "proofSeqGen",
+            sequenceName = "SEQUENCE_TAB1",
+            allocationSize = 1)
+    @GeneratedValue(strategy= GenerationType.IDENTITY, generator = "SEQUENCE_TAB1")
+    private int seqNo;
 }

@@ -208,13 +208,16 @@ public class DatasetBeanMapper {
         statusMethod.invoke(bean, rowType);  // statusMethod메서드 실행
         for(Method method : methods) {
             if(method.getName().startsWith("set")) {  //set으로 시작하는 setter 메소드들 
-                String columnName = getColumnName(method);     //메소드에 어노테이션이 있는지 검사하고 컬럼명을 스네이크 형식으로 변경 
+                String columnName = getColumnName(method);     //메소드에 어노테이션이 있는지 검사하고 컬럼명을 스네이크 형식으로 변경
                 System.out.println("qweqweqweqweqe1111"+columnName);  //칼럼명
                 if(columnName != null) {
                     Object columnValue = dataset.getObject(rowIndex, columnName);
-                    System.out.println("qweqweqweqweqe22222"+columnValue);  //넘어오는값 
+                    if(dataset.getBigDecimal(rowIndex,columnName)!=null){
+                    }
+                    System.out.println("qweqweqweqweqe22222"+columnValue);  //넘어오는값
                     if(columnValue != null)
-                        method.invoke(bean, columnValue);    //set메소드들로 bean에 담음 
+                        method.invoke(bean, columnValue);    //set메소드들로 bean에 담음
+                        System.out.println("@@@@@@@@@@@@@@@@@@@@@@");
                 }
             }
         }
