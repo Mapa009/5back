@@ -32,8 +32,7 @@ public class FulltimeSalaryController{
 			
 			datasetBeanMapper.beansToDataset(resData,AllMoneyList,FullTimeSalTO.class);
 
-	}
-	
+	}	
 
 	@RequestMapping(value="/salary/selectSalary")
 	public void selectSalary(@RequestAttribute("variableList") VariableList varList, @RequestAttribute("resData") PlatformData resData) throws Exception{
