@@ -7,5 +7,5 @@ import java.util.ArrayList;
 import org.springframework.data.repository.CrudRepository;
 
 public interface SocialInsureRepository extends CrudRepository<SocialInsureTO,String> {
-	//public ArrayList<SocialInsureTO> findbyattributionyear(String year);
+	//public ArrayList<SocialInsureTO> findAllbyid(String year);
 }

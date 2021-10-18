@@ -38,23 +38,19 @@ public class BaseSalaryController {
 	 * return map; }
 	 */
 
-	@RequestMapping(value="/salary/baseSalaryManage" , params="sendData")
-	public ModelMap modifyBaseSalaryList(@RequestParam("sendData")String sendData){
-
-		try { 			
-			Gson gson = new Gson();
-			ArrayList<PositionTO> baseSalaryList = gson.fromJson(sendData, new TypeToken<ArrayList<PositionTO>>(){}.getType());
-			salaryServiceFacade.modifyBaseSalaryList(baseSalaryList);
-			map.put("errorMsg","success");
-			map.put("errorCode", 0);
-		} catch (DataAccessException dae){
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}
-		
-		return map;
-	}
+	/*
+	 * @RequestMapping(value="/salary/baseSalaryManage" , params="sendData") public
+	 * ModelMap modifyBaseSalaryList(@RequestParam("sendData")String sendData){
+	 * 
+	 * try { Gson gson = new Gson(); ArrayList<PositionTO> baseSalaryList =
+	 * gson.fromJson(sendData, new TypeToken<ArrayList<PositionTO>>(){}.getType());
+	 * salaryServiceFacade.modifyBaseSalaryList(baseSalaryList);
+	 * map.put("errorMsg","success"); map.put("errorCode", 0); } catch
+	 * (DataAccessException dae){ map.clear(); map.put("errorCode", -1);
+	 * map.put("errorMsg", dae.getMessage()); }
+	 * 
+	 * return map; }
+	 */
 	
 	//baseSalaryManage.xfdl 이 로드될때, 급여기준관리 화면
 	@RequestMapping(value="/salary/findBaseSalaryList")
@@ -66,6 +62,14 @@ public class BaseSalaryController {
 		datasetBeanMapper.beansToDataset(resData,baseSalaryList,PositionTO.class);
 	}
 
-	
+	//baseSalaryManage.xfdl 에서 변경확정 버튼 클릭시
+	@RequestMapping(value="/salary/modifyBaseSalaryList")
+	public void modifyBaseSalaryList(@RequestAttribute("reqData") PlatformData reqData,
+			@RequestAttribute("resData") PlatformData resData) throws Exception {
+		ArrayList<PositionTO> baseSalaryList = (ArrayList<PositionTO>) datasetBeanMapper.datasetToBeans(reqData, PositionTO.class);
+		salaryServiceFacade.modifyBaseSalaryList(baseSalaryList);
+		
+		
+	}
 	
 }

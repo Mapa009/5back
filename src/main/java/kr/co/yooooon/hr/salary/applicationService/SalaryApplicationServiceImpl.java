@@ -189,7 +189,7 @@ public class SalaryApplicationServiceImpl implements SalaryApplicationService {
       map.put("year", year);
 	  //프로시져
       socialInsureDAO.selectBaseInsureList(map);
-     // ArrayList<SocialInsureTO> BaseInsureList = socialInsureRepository.findbyattributionyear(year);
+      //ArrayList<SocialInsureTO> BaseInsureList = socialInsureRepository.findById(year);
       ArrayList<SocialInsureTO> BaseInsureList = (ArrayList<SocialInsureTO>) map.get("result");
       System.out.println(BaseInsureList);
       return BaseInsureList;

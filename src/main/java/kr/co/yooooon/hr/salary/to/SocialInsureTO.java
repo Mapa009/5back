@@ -17,6 +17,7 @@ import javax.persistence.Table;
 public class SocialInsureTO extends BaseTO{
 	@Id
 	private String attributionYear;
+	
 	private String healthInsureRates,
 	longtermCareRate,
 	nationPenisionRates,

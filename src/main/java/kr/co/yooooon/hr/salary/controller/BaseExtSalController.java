@@ -36,23 +36,20 @@ public class BaseExtSalController {
 	 * map.put("errorMsg", dae.getMessage()); } return map; }
 	 */
 
-	@RequestMapping(value="/salary/baseExtSalManage" , params="sendData")
-	public ModelMap modifyBaseExtSalList(@RequestParam("sendData")String sendData){
-		try { 		
-			Gson gson = new Gson();
-			ArrayList<BaseExtSalTO> baseExtSalList = gson.fromJson(sendData, new TypeToken<ArrayList<BaseExtSalTO>>(){}.getType());
-			salaryServiceFacade.modifyBaseExtSalList(baseExtSalList);
-			map.put("errorMsg","success");
-			map.put("errorCode", 0);
-		} catch (DataAccessException dae){
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}
-		return map;
-	}
+	/*
+	 * @RequestMapping(value="/salary/baseExtSalManage" , params="sendData") public
+	 * ModelMap modifyBaseExtSalList(@RequestParam("sendData")String sendData){ try
+	 * { Gson gson = new Gson(); ArrayList<BaseExtSalTO> baseExtSalList =
+	 * gson.fromJson(sendData, new
+	 * TypeToken<ArrayList<BaseExtSalTO>>(){}.getType());
+	 * salaryServiceFacade.modifyBaseExtSalList(baseExtSalList);
+	 * map.put("errorMsg","success"); map.put("errorCode", 0); } catch
+	 * (DataAccessException dae){ map.clear(); map.put("errorCode", -1);
+	 * map.put("errorMsg", dae.getMessage()); } return map; }
+	 */
 	
-	//증빙승인관리 페이지 로드시.
+	
+	//baseExtSalManage.xfdl 초과수당관리 페이지 로드시.
 	@RequestMapping("/salary/findBaseExtSalList")
 	public void findBaseExtSalList(@RequestAttribute("reqData") PlatformData reqData,
 			@RequestAttribute("resData") PlatformData resData) throws Exception {
@@ -62,5 +59,15 @@ public class BaseExtSalController {
 		datasetBeanMapper.beansToDataset(resData,baseExtSalList,BaseExtSalTO.class);
 		
 	}
+	
+	//baseExtSalManage.xfdl 에서 변경확정 버튼 클릭시
+	@RequestMapping("/salary/modifyBaseExtSalList")
+	public void modifyBaseExtSalList(@RequestAttribute("reqData") PlatformData reqData,
+			@RequestAttribute("resData") PlatformData resData) throws Exception {
+		
+		ArrayList<BaseExtSalTO> baseExtSalList = (ArrayList<BaseExtSalTO>) datasetBeanMapper.datasetToBeans(reqData, BaseExtSalTO.class);
+		salaryServiceFacade.modifyBaseExtSalList(baseExtSalList);
+	}
+	
 	
 }

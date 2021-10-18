@@ -58,7 +58,7 @@ public class BaseDeductionController  {
 		return map;
 	}
 	
-	// 페이지 로드시 실행
+	// 공제기준관리 화면 로드시 실행
 	@RequestMapping("/salary/findBaseDeductionList") //211013
 	public void findBaseDeductionList(@RequestAttribute("reqData") PlatformData reqData,
 			@RequestAttribute("resData") PlatformData resData) throws Exception {
@@ -66,4 +66,16 @@ public class BaseDeductionController  {
 		
 		datasetBeanMapper.beansToDataset(resData,baseDeductionList,BaseDeductionTO.class);
 	}
+	
+	
+	//추가 삭제 및 변경확정
+	@RequestMapping(value="/salary/batchBaseDeductionProcess")
+	public void batchBaseDeductionProcess(@RequestAttribute("reqData") PlatformData reqData,
+			@RequestAttribute("resData") PlatformData resData) throws Exception {
+		
+		ArrayList<BaseDeductionTO> baseDeductionList = (ArrayList<BaseDeductionTO>) datasetBeanMapper.datasetToBeans(reqData, BaseDeductionTO.class);
+		salaryServiceFacade.batchBaseDeductionProcess(baseDeductionList);
+	}
+	
+	
 }

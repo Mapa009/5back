@@ -8,6 +8,7 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Data
 @EqualsAndHashCode(callSuper=false)
@@ -18,4 +19,8 @@ public class BaseDeductionTO extends BaseTO{
 	@Id
 	private String deductionCode;
 	private String deductionName,ratio;
+	
+    //영속성에서 제거해주는 역할, 엑스플랫폼에서 dataset을 보면서 참고하자.
+    @Transient
+    String status;
 }
