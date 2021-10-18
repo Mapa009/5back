@@ -23,19 +23,12 @@ public class CodeListController{
 	private BaseServiceFacade baseServiceFacade;
 	@Autowired
 	private DatasetBeanMapper datasetBeanMapper;
-<<<<<<< HEAD
 
 	private ModelMap map = new ModelMap();
-	
-	@RequestMapping(value="/base/detailCodeList")
-	public void detailCodelist(@RequestAttribute("variableList") VariableList variableList, @RequestAttribute("resData") PlatformData resData)throws Exception {
-		System.out.println("@@@@@@@@@@@@@@@@@@#@!@#!#!");
-=======
-	private ModelMap map = new ModelMap();
+
 	
 	@RequestMapping(value="/base/detailCodeList")
 	public void detailCodeList(@RequestAttribute("variableList")VariableList variableList, @RequestAttribute("resData")PlatformData resData) throws Exception{
->>>>>>> min
 		String code = variableList.getString("code");
 		ArrayList<DetailCodeTO> detailCodeList=baseServiceFacade.findDetailCodeList(code);
 		datasetBeanMapper.beansToDataset(resData,detailCodeList,DetailCodeTO.class);
@@ -54,9 +47,5 @@ public class CodeListController{
 	public void codelist(@RequestAttribute("resData")PlatformData resData)throws Exception{
 		ArrayList<CodeTO> codeList=baseServiceFacade.findCodeList();
 		datasetBeanMapper.beansToDataset(resData,codeList,CodeTO.class);
-<<<<<<< HEAD
-	} 
-=======
 	}
->>>>>>> min
 }

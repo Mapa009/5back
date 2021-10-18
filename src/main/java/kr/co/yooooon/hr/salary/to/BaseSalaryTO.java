@@ -13,7 +13,7 @@ import lombok.EqualsAndHashCode;
 @Data   // getter / setter
 @EqualsAndHashCode(callSuper=false)
 @Table(name = "POSITION")  // 테이블
-@Dataset(name="ds_baseSalary")  // 나의 dataset이름 
+@Dataset(name="ds_position")  // 나의 dataset이름
 public class BaseSalaryTO {
 	@Id
 	private String positionCode;

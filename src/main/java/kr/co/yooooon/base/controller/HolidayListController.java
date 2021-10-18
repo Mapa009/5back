@@ -2,14 +2,11 @@ package kr.co.yooooon.base.controller;
 
 import java.util.ArrayList;
 
-<<<<<<< HEAD
 import com.tobesoft.xplatform.data.DataSet;
 import com.tobesoft.xplatform.data.DataTypes;
 import com.tobesoft.xplatform.data.PlatformData;
 import com.tobesoft.xplatform.data.VariableList;
-=======
 import com.tobesoft.xplatform.data.PlatformData;
->>>>>>> min
 import kr.co.yooooon.common.mapper.DatasetBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
@@ -55,14 +52,7 @@ public class HolidayListController {
 
 	@RequestMapping(value="/base/batchHoilyDayProcess")
 	public void batchHoilyDayProcess(@RequestAttribute("reqData")PlatformData reqData)throws Exception {
-<<<<<<< HEAD
 		ArrayList<HolidayTO> holydayList = (ArrayList<HolidayTO>) datasetBeanMapper.datasetToBeans(reqData,HolidayTO.class);
-			
-=======
-		System.out.println(reqData.getDataSetList().size()+"@@@@@@@@@@@@@@@@@@@@@@@");
-		System.out.println(reqData.getDataSetList().get(0)+"@@@@@@@@@@@@@@@@@@@@@@@");
-		ArrayList<HolidayTO> holydayList = (ArrayList<HolidayTO>) datasetBeanMapper.datasetToBeans(reqData,HolidayTO.class);
->>>>>>> min
 		baseServiceFacade.batchHoilyDayProcess(holydayList);
 	}
 }

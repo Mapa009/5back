@@ -44,16 +44,10 @@ public class XplatformInterceptor extends HandlerInterceptorAdapter {
         
         debug(reqData.getDataSetList(), reqData.getVariableList());
         System.out.println("========================"+reqData.getDataSetList()+"=====================찍히는값");
-        
-<<<<<<< HEAD
-        request.setAttribute("resData", resData);
-        request.setAttribute("variableList", reqData.getVariableList());
-        request.setAttribute("reqData", reqData);
-=======
+
         request.setAttribute("reqData", reqData);
         request.setAttribute("variableList", reqData.getVariableList());
         request.setAttribute("resData", resData);
->>>>>>> min
        
         System.out.println("@@@@@@@@@@@@XplatformInterceptor preHandle메서드 종료");
         return true;
