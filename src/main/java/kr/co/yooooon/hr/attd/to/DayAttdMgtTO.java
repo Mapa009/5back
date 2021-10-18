@@ -31,11 +31,7 @@ public class DayAttdMgtTO extends BaseTO{
 	,overWorkHour ,nightWorkHour ,finalizeStatus, privateleaveHour, publicleaveHour;
 
 	@Transient
-<<<<<<< HEAD
 	private String empName,status;
-=======
-	private String empName;
 	@Transient
 	private String lateHour;
->>>>>>> jjy
 }

@@ -192,10 +192,6 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
    public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay) {
      HashMap<String , Object> map = new HashMap<String , Object>();
      map.put("applyDay",applyDay);
-<<<<<<< HEAD
-=======
-     
->>>>>>> jjy
      
      dayAttdMgtDAO.batchDayAttdMgtProcess(map);
     
