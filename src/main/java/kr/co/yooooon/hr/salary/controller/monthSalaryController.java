@@ -20,7 +20,7 @@ import kr.co.yooooon.hr.salary.to.MonthDeductionTO;
 import kr.co.yooooon.hr.salary.to.MonthExtSalTO;
 import kr.co.yooooon.hr.salary.to.MonthSalaryTO;
 
-// ÀüÃ¼ÀûÀ¸·Î ³»¿ë¼öÁ¤ 1018 Àú³áÃÖÁ¾¼öÁ¤
+// ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1018 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 @RestController
 public class monthSalaryController {
    @Autowired
@@ -42,8 +42,8 @@ public class monthSalaryController {
       HashMap<String, Object> result = new HashMap<>();
 
       map.clear();
-      map.put("applyYearMonth", applyYearMonth);
-      map.put("empCode", empCode);
+      map.put("applyYearMonth", "2021-7");
+      map.put("empCode", "A490071");
       result = salaryServiceFacade.findMonthSalary(map);
 
       MonthSalaryTO monthSalaryTO = (MonthSalaryTO) result.get("result");
