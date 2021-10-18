@@ -13,7 +13,7 @@ public interface AttdApplicationService {
    public void removeDayAttdList(ArrayList<DayAttdTO> dayAttdList);
    public void insertDayAttd(DayAttdTO dayAttd); //test
 
-   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay, String dept);
+   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay);
    public void modifyDayAttdMgtList(ArrayList<DayAttdMgtTO> dayAttdMgtList);
    public ArrayList<MonthAttdMgtTO> findMonthAttdMgtList(String applyYearMonth);
    public void modifyMonthAttdMgtList(ArrayList<MonthAttdMgtTO> monthAttdMgtList);
