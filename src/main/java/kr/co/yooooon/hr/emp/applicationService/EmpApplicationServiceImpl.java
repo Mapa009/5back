@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import kr.co.yooooon.base.repository.DeptRepository;
+import kr.co.yooooon.base.to.MenuTO;
 import kr.co.yooooon.hr.emp.repository.*;
 import kr.co.yooooon.hr.emp.to.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,6 +65,8 @@ public class EmpApplicationServiceImpl implements EmpApplicationService {
 	private LicenseInfoRepository licenseInfoRepository;
 	@Autowired
 	private RecordFamilyRepository recordFamilyRepository;
+	@Autowired
+	private EmpAuthGroupRepository empAuthGroupRepository;
 
 	@Override
 	public EmpTO selectEmp(String name) {
@@ -301,4 +304,20 @@ public class EmpApplicationServiceImpl implements EmpApplicationService {
 	         }
 	      }
 	   }
+	@Override
+	public ArrayList<MenuTO> findAccessableMenu(String empCode){
+		return empDAO.findAccessableMenu(empCode);
+	}
+	@Override
+	public List<EmpAuthGroupTO> findEmpAuthGroup(){
+		return empAuthGroupRepository.findAll();
+	}
+	@Override
+	public void saveEmpAuthorityGroup(ArrayList<EmpAuthGroupTO> saveEmpAuthGroup){
+		empAuthGroupRepository.saveAll(saveEmpAuthGroup);
+	}
+	@Override
+	public void deleteEmpAuthorityGroup(HashMap<String, Object> map) {
+		empDAO.deleteEmpAuthorityGroup(map);
+	}
 }

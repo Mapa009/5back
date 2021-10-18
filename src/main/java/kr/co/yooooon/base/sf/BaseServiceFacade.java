@@ -1,6 +1,7 @@
 package kr.co.yooooon.base.sf;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -8,15 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.co.yooooon.base.exception.IdNotFoundException;
 import kr.co.yooooon.base.exception.PwMissMatchException;
-import kr.co.yooooon.base.to.AdminCodeTO;
-import kr.co.yooooon.base.to.BoardTO;
-import kr.co.yooooon.base.to.CodeTO;
-import kr.co.yooooon.base.to.DeptTO;
-import kr.co.yooooon.base.to.DetailCodeTO;
-import kr.co.yooooon.base.to.HolidayTO;
-import kr.co.yooooon.base.to.MenuTO;
-import kr.co.yooooon.base.to.ReportSalaryTO;
-import kr.co.yooooon.base.to.ReportTO;
+import kr.co.yooooon.base.to.*;
 import kr.co.yooooon.hr.emp.to.PositionTO;
 
 public interface BaseServiceFacade {
@@ -57,4 +50,14 @@ public interface BaseServiceFacade {
 	public void addBoard(BoardTO board);
 	public ArrayList<BoardTO> findBoardList();
 	public ArrayList<BoardTO> findPost(BoardTO board);
+
+	//authority part
+	public void savePower(PowerTO power);
+	public void saveAuthority(ArrayList<AuthorityTO> Authority);
+	public ArrayList<GroupAuthorityTO> findGroupAuthority(String empCode);
+	public List<GroupAuthorityTO> findAllGroupAuthority();
+	public ArrayList<PowerTO> findPowerListAll();
+	public ArrayList<PowerTO> findPowerList(String position);
+	public ArrayList<AuthorityTO> findAuthorityList(HashMap<String, Object> map);
+
 }

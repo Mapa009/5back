@@ -1,6 +1,7 @@
 package kr.co.yooooon.hr.attd.to;
 
 import kr.co.yooooon.base.to.BaseTO;
+import kr.co.yooooon.common.annotation.Dataset;
 import kr.co.yooooon.hr.attd.compositKey.DayAttdMgtID;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,6 +14,7 @@ import java.util.Date;
 @Entity
 @Table(name="DAY_ATTD_MANAGE")
 @IdClass(DayAttdMgtID.class)
+@Dataset(name="ds_dayAttenMng")
 public class DayAttdMgtTO extends BaseTO{
 	//복합키 필요
 	@Id
@@ -26,5 +28,5 @@ public class DayAttdMgtTO extends BaseTO{
 	,overWorkHour ,nightWorkHour ,finalizeStatus, privateleaveHour, publicleaveHour;
 
 	@Transient
-	private String empName;
+	private String empName,status;
 }

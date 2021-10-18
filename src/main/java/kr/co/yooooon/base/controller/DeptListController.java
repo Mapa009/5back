@@ -3,8 +3,11 @@ package kr.co.yooooon.base.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.tobesoft.xplatform.data.PlatformData;
+import kr.co.yooooon.common.mapper.DatasetBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,37 +25,20 @@ public class DeptListController {
 	private BaseServiceFacade baseServiceFacade;
 	@Autowired
 	private EmpServiceFacade empServiceFacade;
+	@Autowired
+	private DatasetBeanMapper datasetBeanMapper;
+
 	private ModelMap map = new ModelMap();
 	
-	@RequestMapping(value="/base/deptList" , params = "sendData")
-	public ModelMap batchDeptProcess(@RequestParam("sendData")String sendData) {
-		Gson gson = new Gson();
-		ArrayList<DeptTO> deptto = gson.fromJson(sendData, new TypeToken<ArrayList<DeptTO>>(){}.getType()); // 변경 
-		
-		try {
-			baseServiceFacade.batchDeptProcess(deptto); 
-			map.put("errorCode", 0);
-			map.put("errorMsg", "Successble !");
-		} catch (Exception e) {
-			map.put("errorCode", -1);
-			map.put("errorMsg", e.getMessage());
-		}
-		
-		return map;
+	@RequestMapping(value="/base/batchDeptProcess")
+	public void batchDeptProcess(@RequestAttribute("reqData")PlatformData reqData)throws Exception {
+		ArrayList<DeptTO> deptto = (ArrayList<DeptTO>) datasetBeanMapper.datasetToBeans(reqData,DeptTO.class);
+		baseServiceFacade.batchDeptProcess(deptto);
 	}
 
-	@RequestMapping(value="/base/deptList")
-	public ModelMap findDeptList() {	
-		try {
-			List<DeptTO> list = empServiceFacade.findDeptList();
-			DeptTO emptyBean = new DeptTO();
-			map.put("emptyBean", emptyBean);
-			map.put("list", list);		
-		}catch (Exception e) {
-			map.put("errorCode", -1);
-			map.put("errorMsg", e.getMessage());
-		}
-		
-		return map;
+	@RequestMapping(value="/base/findDeptList")
+	public void findDeptList(@RequestAttribute("resData")PlatformData resData)throws Exception {
+		List<DeptTO> list = empServiceFacade.findDeptList();
+		datasetBeanMapper.beansToDataset(resData,list,DeptTO.class);
 	}
 }

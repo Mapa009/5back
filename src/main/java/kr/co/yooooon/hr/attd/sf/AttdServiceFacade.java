@@ -24,7 +24,7 @@ public interface AttdServiceFacade {
    public void modifyRestAttdList(ArrayList<RestAttdTO> restAttdList);
    public void removeRestAttdList(ArrayList<RestAttdTO> restAttdList);
 
-   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay, String dept);
+   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay);
    public void modifyDayAttdMgtList(ArrayList<DayAttdMgtTO> dayAttdMgtList);
 
    public ArrayList<MonthAttdMgtTO> findMonthAttdMgtList(String applyYearMonth);
