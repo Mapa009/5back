@@ -17,4 +17,7 @@ public class HolidayTO extends BaseTO{
 	@Temporal(TemporalType.DATE)
 	private Date applyDay;
 	private String holidayName, note;
+
+	@Transient
+	private String status;
 }
