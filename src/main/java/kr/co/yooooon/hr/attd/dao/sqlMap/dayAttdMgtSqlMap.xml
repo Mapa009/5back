@@ -31,10 +31,10 @@
     	]]>
 	</select>
 	
-	<!--<update id="updateDayAttdMgtList" parameterType="kr.co.yooooon.hr.attd.to.DayAttdMgtTO">
+	<update id="updateDayAttdMgtList" parameterType="kr.co.yooooon.hr.attd.to.DayAttdMgtTO">
 		UPDATE DAY_ATTD_MANAGE SET
 		FINALIZE_STATUS = #{finalizeStatus}
 		WHERE EMP_CODE = #{empCode}
 		AND APPLY_DAYS = #{applyDays}
-	</update>-->
+	</update>
 </mapper>

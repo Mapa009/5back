@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 import kr.co.yooooon.common.to.ResultTO;
 import kr.co.yooooon.hr.attd.to.*;
-import kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO;
 
 public interface AttdApplicationService {
    public ArrayList<DayAttdTO> findDayAttdList(String empCode, String applyDay);

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 2021-10-17 14:44:02.240 [restartedMain] INFO  k.c.y.InsaBootApplication - Starting InsaBootApplication using Java 15.0.2 on DESKTOP-B8OQEGL with PID 9900 (C:\GIT\5pro\5back\bin\main started by Administrator in C:\GIT\5pro\5back)
@@ -19668,3 +19669,5 @@ Caused by: java.io.IOException: Stream closed
 	at com.tobesoft.xplatform.tx.PlatformRequest.checkInputStream(PlatformRequest.java:670)
 	... 44 common frames omitted
 >>>>>>> min
+=======
+>>>>>>> jjy

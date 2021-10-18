@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import kr.co.yooooon.common.to.ResultTO;
 import kr.co.yooooon.hr.attd.applicationService.AttdApplicationService;
-import kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO;
+import kr.co.yooooon.hr.emp.to.EmpTO;
 
 @Service
 public class AttdServiceFacadeImpl implements AttdServiceFacade{
@@ -71,11 +71,18 @@ public class AttdServiceFacadeImpl implements AttdServiceFacade{
          attdApplicationService.removeRestAttdList(restAttdList);
        
    }
-   
+
    @Override
+<<<<<<< HEAD
    public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay) {
          ArrayList<DayAttdMgtTO> dayAttdMgtList = attdApplicationService.findDayAttdMgtList(applyDay);
          return dayAttdMgtList;
+=======
+   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay) {	
+	   ArrayList<DayAttdMgtTO> dayattdmgtto = null;
+	   dayattdmgtto = attdApplicationService.findDayAttdMgtList(applyDay);   
+         return dayattdmgtto;
+>>>>>>> jjy
    }
 
    @Override

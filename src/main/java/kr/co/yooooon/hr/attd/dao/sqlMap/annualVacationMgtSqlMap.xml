@@ -24,7 +24,7 @@
     	]]>
 	</select>
 	
-	<!--<update id="updateAnnualVacationMgtList" parameterType="kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO">
+	<update id="updateAnnualVacationMgtList" parameterType="kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO">
 		UPDATE ANNUAL_VACATION_MANAGE SET 
 		FINALIZE_STATUS = #{finalizeStatus}, REMAINING_HOLIDAY = #{remainingHoliday}
 		WHERE EMP_CODE = #{empCode} AND APPLY_YEAR_MONTH = #{applyYearMonth}
@@ -35,9 +35,9 @@
 		UPDATE ANNUAL_VACATION_MANAGE SET
 		FINALIZE_STATUS = #{finalizeStatus} ,REMAINING_HOLIDAY = #{remainingHoliday}
 		WHERE EMP_CODE = #{empCode} AND APPLY_YEAR_MONTH = #{applyYearMonth}
-	</update>-->
+	</update>
 	
-	<!--<update id="cancelAnnualVacationList" parameterType="kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO">
+	<update id="cancelAnnualVacationList" parameterType="kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO">
 		UPDATE ANNUAL_VACATION SET
 		REMAINING_VACATION = #{remainingHoliday}
 		WHERE EMP_CODE = #{empCode} AND YEAR = #{year} 
@@ -45,7 +45,7 @@
 	
 	<update id="updateAnnualVacationList" parameterType="kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO">
 		UPDATE ANNUAL_VACATION SET
-		remaining_vacation = #{remainingHoliday}
+		REMAINING_VACATION = #{remainingHoliday}
 		WHERE EMP_CODE = #{empCode} AND year = #{applyYearMonth} 
-	</update>-->
+	</update>
 </mapper>

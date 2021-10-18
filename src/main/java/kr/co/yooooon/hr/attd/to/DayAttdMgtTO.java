@@ -1,13 +1,16 @@
 package kr.co.yooooon.hr.attd.to;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
 import kr.co.yooooon.base.to.BaseTO;
 import kr.co.yooooon.common.annotation.Dataset;
 import kr.co.yooooon.hr.attd.compositKey.DayAttdMgtID;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
-import javax.persistence.*;
-import java.util.Date;
 
 @Data
 @EqualsAndHashCode(callSuper=false)
@@ -28,5 +31,11 @@ public class DayAttdMgtTO extends BaseTO{
 	,overWorkHour ,nightWorkHour ,finalizeStatus, privateleaveHour, publicleaveHour;
 
 	@Transient
+<<<<<<< HEAD
 	private String empName,status;
+=======
+	private String empName;
+	@Transient
+	private String lateHour;
+>>>>>>> jjy
 }
