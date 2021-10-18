@@ -9,15 +9,11 @@ import org.springframework.stereotype.Service;
 
 import kr.co.yooooon.common.to.ResultTO;
 import kr.co.yooooon.hr.attd.applicationService.AttdApplicationService;
-<<<<<<< HEAD
-import kr.co.yooooon.hr.emp.to.EmpTO;
-=======
 import kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO;
 import kr.co.yooooon.hr.attd.to.DayAttdMgtTO;
 import kr.co.yooooon.hr.attd.to.DayAttdTO;
 import kr.co.yooooon.hr.attd.to.MonthAttdMgtTO;
 import kr.co.yooooon.hr.attd.to.RestAttdTO;
->>>>>>> ji
 
 @Service
 public class AttdServiceFacadeImpl implements AttdServiceFacade{

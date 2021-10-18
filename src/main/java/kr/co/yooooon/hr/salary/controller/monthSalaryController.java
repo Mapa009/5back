@@ -1,12 +1,7 @@
 package kr.co.yooooon.hr.salary.controller;
 
-<<<<<<< HEAD
-import java.time.Month;
-import java.util.ArrayList;
-=======
 import java.util.HashMap;
 import java.util.List;
->>>>>>> ji
 
 import com.tobesoft.xplatform.data.PlatformData;
 import com.tobesoft.xplatform.data.VariableList;
@@ -35,42 +30,37 @@ public class monthSalaryController {
 
 	ModelMap modelMap = new ModelMap();
 	HashMap<String,Object> map = new HashMap<>();
-	@Autowired
-	private DatasetBeanMapper datasetBeanMapper;
 	
 	@RequestMapping(value="/salary/findMonthSalary")
 	public void findMonthSalary(@RequestAttribute("reqData") PlatformData reqData,
 			@RequestAttribute("resData") PlatformData resData) throws Exception {
-			
+
 		String applyYearMonth = reqData.getVariable("applyYearMonth").getString();
 		String empCode = reqData.getVariable("empCode").getString();
-		
-		HashMap<String,Object> result=new HashMap<>();
-		
-		map.clear();
-		map.put("applyYearMonth","2021-9");
-		map.put("empCode","A490071");
-		result = salaryServiceFacade.findMonthSalary(map);
-		
-		MonthSalaryTO monthSalaryTO=(MonthSalaryTO)result.get("result");
-		List<MonthDeductionTO> monthDeductionList=monthSalaryTO.getMonthDeductionList();
-		List<MonthExtSalTO> monthExtSalList=monthSalaryTO.getMonthExtSalList();
-		
-		datasetBeanMapper.beanToDataset(resData,monthSalaryTO,MonthSalaryTO.class);
-		datasetBeanMapper.beansToDataset(resData,monthDeductionList,MonthDeductionTO.class);
-		datasetBeanMapper.beansToDataset(resData,monthExtSalList,MonthExtSalTO.class);
-			
 
-<<<<<<< HEAD
-	@RequestMapping(value="/salary/findMonthSalary")
+		HashMap<String, Object> result = new HashMap<>();
+
+		map.clear();
+		map.put("applyYearMonth", "2021-9");
+		map.put("empCode", "A490071");
+		result = salaryServiceFacade.findMonthSalary(map);
+
+		MonthSalaryTO monthSalaryTO = (MonthSalaryTO) result.get("result");
+		List<MonthDeductionTO> monthDeductionList = monthSalaryTO.getMonthDeductionList();
+		List<MonthExtSalTO> monthExtSalList = monthSalaryTO.getMonthExtSalList();
+
+		datasetBeanMapper.beanToDataset(resData, monthSalaryTO, MonthSalaryTO.class);
+		datasetBeanMapper.beansToDataset(resData, monthDeductionList, MonthDeductionTO.class);
+		datasetBeanMapper.beansToDataset(resData, monthExtSalList, MonthExtSalTO.class);
+
+	}
+	/*@RequestMapping(value="/salary/findMonthSalary")
 	public void findMonthSalary(@RequestAttribute("variableList")VariableList variableList, @RequestAttribute("resData")PlatformData resData)throws Exception {
 		String applyYearMonth = variableList.getString("applyYearMonth");
 		String empCode = variableList.getString("empCode");
 		MonthSalaryTO monthSalaryList = salaryServiceFacade.findMonthSalary(applyYearMonth, empCode);
 		datasetBeanMapper.beanToDataset(resData,monthSalaryList, MonthSalaryTO.class);
-=======
->>>>>>> ji
-	}
+	}*/
 	
 	@RequestMapping(value="/salary/findYearSalary")
 	public void findYearSalary(@RequestAttribute("reqData") PlatformData reqData,
