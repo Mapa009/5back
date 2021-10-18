@@ -30,8 +30,9 @@ public class DayAttdManageController {
 		datasetBeanMapper.beansToDataset(resData,dayAttdMgtList,DayAttdMgtTO.class);
 	}
 	
+	// 1018 저녁최종수정
 	@RequestMapping(value="/attendance/modifyDayAttdList")
-	public void modifyDayAttdList(@RequestAttribute("reqData")PlatformData reqData)throws Exception{
+	public void modifyDayAttdList(@RequestAttribute("reqData")PlatformData reqData, @RequestAttribute("resData")PlatformData resData)throws Exception{
 		ArrayList<DayAttdMgtTO> dayAttdMgtList = (ArrayList<DayAttdMgtTO>) datasetBeanMapper.datasetToBeans(reqData,DayAttdMgtTO.class);
 		attdServiceFacade.modifyDayAttdMgtList(dayAttdMgtList);
 	}

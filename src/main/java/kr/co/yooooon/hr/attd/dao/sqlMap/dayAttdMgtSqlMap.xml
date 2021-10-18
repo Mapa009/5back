@@ -20,7 +20,8 @@
 		<result property="empName" column="EMP_NAME" />
 	</resultMap>
 	
-	<select id="" parameterType="map" statementType="CALLABLE">
+	<!-- 1018 저녁최종수정 id 추가 -->
+	<select id="batchDayAttdMgtProcess" parameterType="map" statementType="CALLABLE">
 		<![CDATA[
         	{call P_HR_ATTENDANCE.P_CREATE_DAY_ATTD_MANAGE(
              #{applyDay, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}

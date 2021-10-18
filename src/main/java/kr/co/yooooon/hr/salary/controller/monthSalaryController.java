@@ -20,72 +20,73 @@ import kr.co.yooooon.hr.salary.to.MonthDeductionTO;
 import kr.co.yooooon.hr.salary.to.MonthExtSalTO;
 import kr.co.yooooon.hr.salary.to.MonthSalaryTO;
 
+// 전체적으로 내용수정 1018 저녁최종수정
 @RestController
 public class monthSalaryController {
-	@Autowired
-	private SalaryServiceFacade salaryServiceFacade;
+   @Autowired
+   private SalaryServiceFacade salaryServiceFacade;
 
-	@Autowired
-	private DatasetBeanMapper datasetBeanMapper;
+   @Autowired
+   private DatasetBeanMapper datasetBeanMapper;
 
-	ModelMap modelMap = new ModelMap();
-	HashMap<String,Object> map = new HashMap<>();
-	
-	@RequestMapping(value="/salary/findMonthSalary")
-	public void findMonthSalary(@RequestAttribute("reqData") PlatformData reqData,
-			@RequestAttribute("resData") PlatformData resData) throws Exception {
+   ModelMap modelMap = new ModelMap();
+   HashMap<String,Object> map = new HashMap<>();
+   
+   @RequestMapping(value="/salary/findMonthSalary")
+   public void findMonthSalary(@RequestAttribute("reqData") PlatformData reqData,
+         @RequestAttribute("resData") PlatformData resData) throws Exception {
 
-		String applyYearMonth = reqData.getVariable("applyYearMonth").getString();
-		String empCode = reqData.getVariable("empCode").getString();
+      String applyYearMonth = reqData.getVariable("applyYearMonth").getString();
+      String empCode = reqData.getVariable("empCode").getString();
 
-		HashMap<String, Object> result = new HashMap<>();
+      HashMap<String, Object> result = new HashMap<>();
 
-		map.clear();
-		map.put("applyYearMonth", "2021-9");
-		map.put("empCode", "A490071");
-		result = salaryServiceFacade.findMonthSalary(map);
+      map.clear();
+      map.put("applyYearMonth", applyYearMonth);
+      map.put("empCode", empCode);
+      result = salaryServiceFacade.findMonthSalary(map);
 
-		MonthSalaryTO monthSalaryTO = (MonthSalaryTO) result.get("result");
-		List<MonthDeductionTO> monthDeductionList = monthSalaryTO.getMonthDeductionList();
-		List<MonthExtSalTO> monthExtSalList = monthSalaryTO.getMonthExtSalList();
+      MonthSalaryTO monthSalaryTO = (MonthSalaryTO) result.get("result");
+      List<MonthDeductionTO> monthDeductionList = monthSalaryTO.getMonthDeductionList();
+      List<MonthExtSalTO> monthExtSalList = monthSalaryTO.getMonthExtSalList();
 
-		datasetBeanMapper.beanToDataset(resData, monthSalaryTO, MonthSalaryTO.class);
-		datasetBeanMapper.beansToDataset(resData, monthDeductionList, MonthDeductionTO.class);
-		datasetBeanMapper.beansToDataset(resData, monthExtSalList, MonthExtSalTO.class);
+      datasetBeanMapper.beanToDataset(resData, monthSalaryTO, MonthSalaryTO.class);
+      datasetBeanMapper.beansToDataset(resData, monthDeductionList, MonthDeductionTO.class);
+      datasetBeanMapper.beansToDataset(resData, monthExtSalList, MonthExtSalTO.class);
 
-	}
-	/*@RequestMapping(value="/salary/findMonthSalary")
-	public void findMonthSalary(@RequestAttribute("variableList")VariableList variableList, @RequestAttribute("resData")PlatformData resData)throws Exception {
-		String applyYearMonth = variableList.getString("applyYearMonth");
-		String empCode = variableList.getString("empCode");
-		MonthSalaryTO monthSalaryList = salaryServiceFacade.findMonthSalary(applyYearMonth, empCode);
-		datasetBeanMapper.beanToDataset(resData,monthSalaryList, MonthSalaryTO.class);
-	}*/
-	
-	@RequestMapping(value="/salary/findYearSalary")
-	public void findYearSalary(@RequestAttribute("reqData") PlatformData reqData,
+   }
+   /*@RequestMapping(value="/salary/findMonthSalary")
+   public void findMonthSalary(@RequestAttribute("variableList")VariableList variableList, @RequestAttribute("resData")PlatformData resData)throws Exception {
+      String applyYearMonth = variableList.getString("applyYearMonth");
+      String empCode = variableList.getString("empCode");
+      MonthSalaryTO monthSalaryList = salaryServiceFacade.findMonthSalary(applyYearMonth, empCode);
+      datasetBeanMapper.beanToDataset(resData,monthSalaryList, MonthSalaryTO.class);
+   }*/
+   
+   @RequestMapping(value="/salary/findYearSalary")
+   public void findYearSalary(@RequestAttribute("reqData") PlatformData reqData,
             @RequestAttribute("resData") PlatformData resData) throws Exception {
-		HashMap<String,Object> result = null;
+      HashMap<String,Object> result = null;
 
-		String empCode = reqData.getVariable("empCode").getString();
-		String applyYearMonth = reqData.getVariable("applyYear").getString()+"%";
-		map.clear();
-		//String applyYearMonth = applyYear+"%";
+      String empCode = reqData.getVariable("empCode").getString();
+      String applyYearMonth = reqData.getVariable("applyYear").getString()+"%";
+      map.clear();
+      //String applyYearMonth = applyYear+"%";
 
-		map.put("applyYearMonth",applyYearMonth);
-		map.put("empCode","A490071");
-		result = salaryServiceFacade.findYearSalary(map);
-		@SuppressWarnings("unchecked")
-		List<MonthSalaryTO> monthSalaryTO=(List<MonthSalaryTO>)result.get("result");
-		datasetBeanMapper.beansToDataset(resData,monthSalaryTO,MonthSalaryTO.class);
+      map.put("applyYearMonth",applyYearMonth);
+      map.put("empCode","A490071");
+      result = salaryServiceFacade.findYearSalary(map);
+      @SuppressWarnings("unchecked")
+      List<MonthSalaryTO> monthSalaryTO=(List<MonthSalaryTO>)result.get("result");
+      datasetBeanMapper.beansToDataset(resData,monthSalaryTO,MonthSalaryTO.class);
 
-	}
+   }
 
-	@RequestMapping(value="/salary/modifyMonthSalary")
-	public void modifyMonthSalary(@RequestAttribute("reqData") PlatformData reqData,
+   @RequestMapping(value="/salary/modifyMonthSalary")
+   public void modifyMonthSalary(@RequestAttribute("reqData") PlatformData reqData,
             @RequestAttribute("resData") PlatformData resData) throws Exception {
-	
-			MonthSalaryTO monthSalary = datasetBeanMapper.datasetToBean(reqData, MonthSalaryTO.class);
-			salaryServiceFacade.modifyMonthSalary(monthSalary);
-	}
+   
+         MonthSalaryTO monthSalary = datasetBeanMapper.datasetToBean(reqData, MonthSalaryTO.class);
+         salaryServiceFacade.modifyMonthSalary(monthSalary);
+   }
 }

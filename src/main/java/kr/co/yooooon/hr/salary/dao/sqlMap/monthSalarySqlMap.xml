@@ -16,39 +16,8 @@
       <result property="finalizeStatus" column="FINALIZE_STATUS" />
    </resultMap>
 
-	<select id="batchMonthSalaryProcess" parameterType="map" statementType="CALLABLE">
+     <select id="batchMonthSalaryProcess" parameterType="map" statementType="CALLABLE">
       <![CDATA[
-<<<<<<< HEAD
-		{call P_HR_SALARY.P_CREATE_MONTH_SALARY(
-				#{applyYearMonth, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
-			, #{empCode, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
-			, #{result, mode=OUT, jdbcType=CURSOR, javaType=java.sql.ResultSet, resultMap=monthSalaryResult}
-			, #{errorCode, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
-			, #{errorMsg, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
-			)
-		]]>
-	</select>
-
-	<!--<select id="selectYearSalary" resultMap="monthSalaryResult" parameterType="map">
-		<![CDATA[
-			SELECT * 
-				FROM MONTH_SALARY 
-				WHERE emp_code = #{empCode}
-				AND FINALIZE_STATUS = 'Y'
-				AND APPLY_YEAR_MONTH LIKE #{applyYearMonth}
-		]]>
-	</select>
-	
-	<update id="updateMonthSalary" parameterType="monthSalaryTO">
-		<![CDATA[
-			UPDATE MONTH_SALARY SET
-			FINALIZE_STATUS = #{finalizeStatus}
-			WHERE EMP_CODE = #{empCode}
-			AND APPLY_YEAR_MONTH = #{applyYearMonth}
-		]]>
-	</update>-->
-
-=======
            {call P_HR_SALARY.P_CREATE_MONTH_SALARY(
            #{applyYearMonth, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
            , #{empCode, mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
@@ -78,5 +47,6 @@
       ]]>
    </update>-->
    
->>>>>>> ji
+   <!-- 1018 저녁 최종수정 -->
+   
 </mapper>
