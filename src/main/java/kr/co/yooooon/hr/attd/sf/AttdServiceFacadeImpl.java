@@ -2,14 +2,18 @@ package kr.co.yooooon.hr.attd.sf;
 
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.List;
 
-import kr.co.yooooon.hr.attd.to.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.co.yooooon.common.to.ResultTO;
 import kr.co.yooooon.hr.attd.applicationService.AttdApplicationService;
 import kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO;
+import kr.co.yooooon.hr.attd.to.DayAttdMgtTO;
+import kr.co.yooooon.hr.attd.to.DayAttdTO;
+import kr.co.yooooon.hr.attd.to.MonthAttdMgtTO;
+import kr.co.yooooon.hr.attd.to.RestAttdTO;
 
 @Service
 public class AttdServiceFacadeImpl implements AttdServiceFacade{
@@ -100,15 +104,15 @@ public class AttdServiceFacadeImpl implements AttdServiceFacade{
          attdApplicationService.insertDayAttd(dayAttd);
    }
    @Override
-   public ArrayList<AnnualVacationMgtTO> findAnnualVacationMgtList(String applyYearMonth){
+   public List<AnnualVacationMgtTO> findAnnualVacationMgtList(String applyYearMonth){
     
          ArrayList<AnnualVacationMgtTO> annualVacationMgtList = attdApplicationService.findAnnualVacationMgtList(applyYearMonth);
          return annualVacationMgtList;
    }
    
    @Override
-   public void modifyAnnualVacationMgtList(ArrayList<AnnualVacationMgtTO> annualVacationMgtList) {
-         attdApplicationService.modifyAnnualVacationMgtList(annualVacationMgtList);
+   public void modifyAnnualVacationMgtList(AnnualVacationMgtTO annualVacationMgtTO) {
+         attdApplicationService.modifyAnnualVacationMgtList(annualVacationMgtTO);
    }
    
    @Override

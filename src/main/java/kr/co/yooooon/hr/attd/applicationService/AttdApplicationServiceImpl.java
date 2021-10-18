@@ -245,18 +245,17 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
    }
    
    @Override
-   public void modifyAnnualVacationMgtList(ArrayList<AnnualVacationMgtTO> annualVacationMgtList) {
-      for(AnnualVacationMgtTO annualVacationMgt : annualVacationMgtList){
-         if(annualVacationMgt.getStatus().equals("update")){
-        	 System.out.println("Check :  "+annualVacationMgt.getRemainingHoliday());
+   public void modifyAnnualVacationMgtList(AnnualVacationMgtTO annualVacationMgtTO) {
+	   
+         if(annualVacationMgtTO.getStatus().equals("update")){
+        	 System.out.println("Check :  "+annualVacationMgtTO.getRemainingHoliday());
 				
-			 annualVacationMgtRepository.save(annualVacationMgt);
+			 annualVacationMgtRepository.save(annualVacationMgtTO);
              AnnualVacationTO avt = new AnnualVacationTO();
-             avt.setEmpCode(annualVacationMgt.getEmpCode());
-             avt.setYear(annualVacationMgt.getYear());
+             avt.setEmpCode(annualVacationMgtTO.getEmpCode());
+             avt.setYear(annualVacationMgtTO.getYear());
 			 annualVactionRepository.save(avt);
 				 
-         }
       }      
    }
    
