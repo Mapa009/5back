@@ -193,10 +193,9 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
    }
    
    @Override
-   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay, String dept) {
+   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay) {
      HashMap<String , Object> map = new HashMap<String , Object>();
      map.put("applyDay",applyDay);
-     map.put("dept",dept);
      
      dayAttdMgtDAO.batchDayAttdMgtProcess(map);
     

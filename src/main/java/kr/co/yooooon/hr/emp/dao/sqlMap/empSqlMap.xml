@@ -217,5 +217,30 @@
 	<select id="deleteEmployee" parameterMap="empDeleteParameter" parameterType="map" statementType="CALLABLE">
 		<![CDATA[ {call P_DELETE_EMP(?,?,?)} ]]> 
 	</select>
-	
+	<resultMap type="kr.co.yooooon.base.to.MenuTO" id="menuResult">
+		<result property="menu_code" column="MENU_NAME" />
+		<result property="menu_name" column="MENU_CODE" />
+		<result property="menu_lv" column="MENU_LV" />
+		<result property="menu_url" column="MENU_URL" />
+
+	</resultMap>
+	<select id="findAccessableMenu" parameterType="string" resultMap="menuResult">
+		SELECT MENU_CODE, MENU_NAME, MENU_LV,MENU_URL
+		FROM (select  menu_name ,
+					  menu_code ,
+					  level-1 as menu_lv ,
+					  menu_url
+			  from menu
+			  start with super_menu_code is null connect by prior menu_code = super_menu_code)
+		WHERE MENU_NAME IN (
+			SELECT MENU_NAME FROM MENU_AUTHORITY_GROUP WHERE GROUP_CODE IN
+															 (SELECT GROUP_CODE FROM EMP_AUTHORITY_GROUP WHERE EMP_CODE=#{EMPCODE} )
+		)
+	</select>
+
+	<delete id="deleteEmpAuthorityGroup" parameterType="java.util.Map" >
+		DELETE FROM EMP_AUTHORITY_GROUP
+		WHERE EMP_CODE=#{empCode}
+		  and GROUP_CODE=#{groupCode}
+	</delete>
 </mapper>

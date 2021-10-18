@@ -44,18 +44,8 @@ public class CodeListController{
 	}
 	
 	@RequestMapping(value="/base/codeList")
-	public ModelMap codelist(){
-		try {
-			ArrayList<CodeTO> codeList=baseServiceFacade.findCodeList();
-			map.put("codeList", codeList);
-			map.put("errorMsg","Success !");
-			map.put("errorCode", 0);
-		}catch (DataAccessException dae){
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}
-		
-		return map;
+	public void codelist(@RequestAttribute("resData")PlatformData resData)throws Exception{
+		ArrayList<CodeTO> codeList=baseServiceFacade.findCodeList();
+		datasetBeanMapper.beansToDataset(resData,codeList,CodeTO.class);
 	} 
 }

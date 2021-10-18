@@ -73,8 +73,8 @@ public class AttdServiceFacadeImpl implements AttdServiceFacade{
    }
    
    @Override
-   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay, String dept) {	  
-         ArrayList<DayAttdMgtTO> dayAttdMgtList = attdApplicationService.findDayAttdMgtList(applyDay, dept);   
+   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay) {
+         ArrayList<DayAttdMgtTO> dayAttdMgtList = attdApplicationService.findDayAttdMgtList(applyDay);
          return dayAttdMgtList;
    }
 

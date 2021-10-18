@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.yooooon.base.dao.PowerDAO">
+	<resultMap type="kr.co.yooooon.base.to.PowerTO" id="PowerResult">
+		<result property="position" column="POSITION" />
+		<result property="positionCode" column="POSITION_CODE" />
+		<result property="empRegist" column="EMP_REGIST" />
+		<result property="empDetailedView" column="EMP_DETAILED_VIEW" />
+		<result property="certificateApproval" column="CERTIFICATE_APPROVAL" />
+		<result property="attendanceApproval" column="ATTENDANCE_APPROVAL" />
+		<result property="annualVacationManage" column="ANNUAL_VACATION_MANAGE" />
+		<result property="dayAttendanceManage" column="DAY_ATTENDANCE_MANAGE" />
+		<result property="monthAttendanceManage" column="MONTH_ATTENDANCE_MANAGE" />
+		<result property="proofApproval" column="PROOF_APPROVAL" />
+		<result property="monthSalary" column="MONTH_SALARY" />
+		</resultMap>
+
+	<select id="findPowerByPosition" resultMap="PowerResult" parameterType="String">
+		<![CDATA[                
+   		SELECT * FROM POSITION_AUTHORITY
+   		WHERE POSITION = #{position} AND POSITION !='인턴']]>
+	</select>
+	
+	 <update id="update" parameterType="kr.co.yooooon.base.to.PowerTO">
+		<![CDATA[                
+   		UPDATE POSITION_AUTHORITY SET
+   		POSITION = #{position,mode=IN,javaType=String,jdbcType=VARCHAR},
+   		POSITION_CODE = #{positionCode,mode=IN,javaType=String,jdbcType=VARCHAR},
+   		EMP_REGIST = #{empRegist,mode=IN,javaType=String,jdbcType=VARCHAR},
+   		EMP_DETAILED_VIEW = #{empDetailedView,mode=IN,javaType=String,jdbcType=VARCHAR},
+   		CERTIFICATE_APPROVAL = #{certificateApproval,mode=IN,javaType=String,jdbcType=VARCHAR},
+   		ATTENDANCE_APPROVAL = #{attendanceApproval,mode=IN,javaType=String,jdbcType=VARCHAR},
+   		ANNUAL_VACATION_MANAGE = #{annualVacationManage,mode=IN,javaType=String,jdbcType=VARCHAR},
+   		DAY_ATTENDANCE_MANAGE = #{dayAttendanceManage,mode=IN,javaType=String,jdbcType=VARCHAR},
+   		MONTH_ATTENDANCE_MANAGE = #{monthAttendanceManage,mode=IN,javaType=String,jdbcType=VARCHAR},
+   		PROOF_APPROVAL = #{proofApproval,mode=IN,javaType=String,jdbcType=VARCHAR},
+   		MONTH_SALARY = #{monthSalary,mode=IN,javaType=String,jdbcType=VARCHAR}
+   		WHERE POSITION = #{position,mode=IN,javaType=String,jdbcType=DATE}
+   		]]>
+    </update>
+
+</mapper>

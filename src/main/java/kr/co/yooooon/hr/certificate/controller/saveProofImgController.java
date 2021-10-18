@@ -16,7 +16,7 @@ public class saveProofImgController {
 
 	//영수증 이미지를 저장하는 메서드 
 	@RequestMapping("/certificate/saveProofImg")
-	public ModelAndView saveProofImg(@RequestAttribute("reqData") PlatformData reqData,
+	public void saveProofImg(@RequestAttribute("reqData") PlatformData reqData,
 				 		   @RequestAttribute("resData") PlatformData resData) throws Exception {
 		
 		
@@ -39,7 +39,6 @@ public class saveProofImgController {
 			}
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
-		}		
-		return null;
+		}
 	}
 }

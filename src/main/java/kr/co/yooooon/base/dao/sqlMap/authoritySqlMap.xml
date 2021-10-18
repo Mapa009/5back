@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.yooooon.base.dao.AuthorityDAO">
+
+	<resultMap type="kr.co.yooooon.base.to.AuthorityTO" id="AuthorityResult">
+		<result property="empName" column="EMP_NAME" />
+		<result property="empCode" column="EMP_CODE" />
+		<result property="deptCode" column="DEPT_CODE" />
+		<result property="deptName" column="DEPT_NAME" />
+		<result property="menuCode" column="MENU_CODE" />
+		<result property="menuName" column="MENU_NAME" />
+		<result property="authority" column="AUTHORITY" />
+		<result property="status" column="STATUS" />
+		</resultMap>
+		
+		
+		<resultMap type="kr.co.yooooon.base.to.GroupAuthorityTO" id="GroupAuthorityResult">
+		<result property="groupName" column="GROUP_NAME" />
+		<result property="groupCode" column="GROUP_CODE" />
+		</resultMap>
+		
+		
+		<select id="findAuthorityList" resultMap="AuthorityResult" parameterType="java.util.Map">
+		<![CDATA[
+	   		SELECT * FROM AUTHORITY
+	   		WHERE EMP_CODE = #{empCode}
+   		]]>
+	</select>
+	
+	<select id="findGroupAuthority" resultMap="GroupAuthorityResult" parameterType="String">
+		<![CDATA[
+	   		SELECT * FROM AUTHORITY_GROUP 
+	   		WHERE group_code in 
+	   		(SELECT group_code FROM EMP_AUTHORITY_GROUP WHERE emp_code=#{empCode} )
+   		]]>
+	</select>
+	
+	<update id="update" parameterType="kr.co.yooooon.base.to.AuthorityTO">
+		<![CDATA[                
+   		UPDATE AUTHORITY 
+   		SET AUTHORITY = #{authority,mode=IN,javaType=String,jdbcType=VARCHAR}
+   		WHERE EMP_NAME=#{empName,mode=IN,javaType=String,jdbcType=VARCHAR} 
+   		AND MENU_CODE=#{menuCode,mode=IN,javaType=String,jdbcType=VARCHAR}
+   		]]>
+    </update>
+  
+</mapper>
