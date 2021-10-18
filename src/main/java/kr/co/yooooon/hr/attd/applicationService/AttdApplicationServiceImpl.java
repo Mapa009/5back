@@ -240,6 +240,7 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
    }
    
    @Override
+<<<<<<< HEAD
    public void modifyAnnualVacationMgtList(ArrayList<AnnualVacationMgtTO> annualVacationMgtList) {
 		/*
 		 * for(AnnualVacationMgtTO annualVacationMgt : annualVacationMgtList){
@@ -256,6 +257,20 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
 	            annualVacationMgtDAO.updateAnnualVacationMgtList(annualVacationMgt);
 	            annualVacationMgtDAO.updateAnnualVacationList(annualVacationMgt);
 	      }
+=======
+   public void modifyAnnualVacationMgtList(AnnualVacationMgtTO annualVacationMgtTO) {
+	   
+         if(annualVacationMgtTO.getStatus().equals("update")){
+        	 System.out.println("Check :  "+annualVacationMgtTO.getRemainingHoliday());
+				
+			 annualVacationMgtRepository.save(annualVacationMgtTO);
+             AnnualVacationTO avt = new AnnualVacationTO();
+             avt.setEmpCode(annualVacationMgtTO.getEmpCode());
+             avt.setYear(annualVacationMgtTO.getYear());
+			 annualVactionRepository.save(avt);
+				 
+      }      
+>>>>>>> ji
    }
    
    @Override

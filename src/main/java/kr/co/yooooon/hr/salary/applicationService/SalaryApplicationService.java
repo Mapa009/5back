@@ -1,6 +1,7 @@
 package kr.co.yooooon.hr.salary.applicationService;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import kr.co.yooooon.hr.emp.to.PositionTO;
 import kr.co.yooooon.hr.salary.to.BaseDeductionTO;
@@ -22,8 +23,8 @@ public interface SalaryApplicationService {
 	public ArrayList<BaseExtSalTO> findBaseExtSalList();
 	public void modifyBaseExtSalList(ArrayList<BaseExtSalTO> baseExtSalList);
 
-	public MonthSalaryTO findMonthSalary(String applyYearMonth, String empCode);
-	public ArrayList<MonthSalaryTO> findYearSalary(String applyYear, String empCode);
+	public HashMap<String,Object> findMonthSalary(HashMap<String,Object> map);
+	public HashMap<String,Object> findYearSalary(HashMap<String,Object> map);
 	public void modifyMonthSalary(MonthSalaryTO monthSalary);
 	
 	public ArrayList<FullTimeSalTO> findAllMoney(String applyYearMonth);

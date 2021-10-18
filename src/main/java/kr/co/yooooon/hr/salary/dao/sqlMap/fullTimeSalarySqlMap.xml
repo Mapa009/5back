@@ -3,7 +3,7 @@
 
 <mapper namespace="kr.co.yooooon.hr.salary.dao.FullTimeSalaryDAO">
 
-	<!--<resultMap type="kr.co.yooooon.hr.salary.to.FullTimeSalTO" id="fullTimeSalaryResult">
+	<resultMap type="kr.co.yooooon.hr.salary.to.FullTimeSalTO" id="fullTimeSalaryResult">
 		<result property="empCode" column="EMP_CODE" />
 		<result property="applyYearMonth" column="APPLY_YEAR_MONTH" />
 		<result property="basicSalary" column="BASIC_SALARY" />
@@ -22,7 +22,7 @@
 		<result property="basicSalBefore" column="BASIC_SAL_BEFORE" />
 	</resultMap>
 	 
-   
+   <!--
 	<select id="findAllMoney" resultMap="fullTimeSalaryResult" parameterType="String">
 		SELECT EMP_CODE, APPLY_YEAR_MONTH, BASIC_SALARY, POSITION_SALARY, FAMILY_SALARY, FOOD_SALARY, OVER_WORK_SALARY, NATIONAL_PENSION, HEALTH_INSURANCE,
 	    LONG_TERM_INSURANCE, EMPLOYMENT_INSURANCE, RELIGION_DONATION, INCOME_TAX, RESIDENT_TAX, FINALIZE_STATUS, BASIC_SAL_BEFORE

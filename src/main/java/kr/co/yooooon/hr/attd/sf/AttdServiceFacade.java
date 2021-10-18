@@ -3,13 +3,14 @@ package kr.co.yooooon.hr.attd.sf;
 
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.List;
 
 import kr.co.yooooon.common.to.ResultTO;
+import kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO;
 import kr.co.yooooon.hr.attd.to.DayAttdMgtTO;
 import kr.co.yooooon.hr.attd.to.DayAttdTO;
 import kr.co.yooooon.hr.attd.to.MonthAttdMgtTO;
 import kr.co.yooooon.hr.attd.to.RestAttdTO;
-import kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO;
 
 public interface AttdServiceFacade {
    public ArrayList<DayAttdTO> findDayAttdList(String empCode, String applyDay);
@@ -30,7 +31,7 @@ public interface AttdServiceFacade {
    public ArrayList<MonthAttdMgtTO> findMonthAttdMgtList(String applyYearMonth);
    public void modifyMonthAttdMgtList(ArrayList<MonthAttdMgtTO> monthAttdMgtList);
    
-   public ArrayList<AnnualVacationMgtTO> findAnnualVacationMgtList(String applyYearMonth);
-   public void modifyAnnualVacationMgtList(ArrayList<AnnualVacationMgtTO> annualVacationMgtList);
+   public List<AnnualVacationMgtTO> findAnnualVacationMgtList(String applyYearMonth);
+   public void modifyAnnualVacationMgtList(AnnualVacationMgtTO annualVacationMgtTO);
    public void cancelAnnualVacationMgtList(ArrayList<AnnualVacationMgtTO> annualVacationMgtList);
 }

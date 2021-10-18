@@ -1,6 +1,6 @@
 package kr.co.yooooon.hr.attd.controller;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
@@ -9,12 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+<<<<<<< HEAD
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.tobesoft.xplatform.data.PlatformData;
 import com.tobesoft.xplatform.data.VariableList;
 
 import kr.co.yooooon.common.exception.DataAccessException;
+=======
+import com.tobesoft.xplatform.data.PlatformData;
+
+>>>>>>> ji
 import kr.co.yooooon.common.mapper.DatasetBeanMapper;
 import kr.co.yooooon.hr.attd.sf.AttdServiceFacade;
 import kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO;
@@ -25,6 +30,7 @@ public class annualVacationManageController {
 	@Autowired
 	private AttdServiceFacade attdServiceFacade;
 	private ModelMap map = new ModelMap();
+<<<<<<< HEAD
 	@Autowired
 	private DatasetBeanMapper datasetBeanMapper;
 	
@@ -49,22 +55,36 @@ public class annualVacationManageController {
 	   		ArrayList<AnnualVacationMgtTO> annualVacationMgtList = (ArrayList<AnnualVacationMgtTO>)datasetBeanMapper.datasetToBeans(reqData, AnnualVacationMgtTO.class);
 	   		attdServiceFacade.modifyAnnualVacationMgtList(annualVacationMgtList);
 	   	
+=======
+	private DatasetBeanMapper datasetBeanMapper;
+  
+	@RequestMapping(value="/attendance/findAnnualVacationMgtList")
+    public void findAnnualVacationMgtList(@RequestAttribute("reqData") PlatformData reqData,
+			@RequestAttribute("resData") PlatformData resData) throws Exception {
+     
+			String applyYearMonth= reqData.getVariable("applyYearMonth").getString();
+			List<AnnualVacationMgtTO> annualVacationMgtList = attdServiceFacade.findAnnualVacationMgtList("2021-10");
+         	
+			datasetBeanMapper.beansToDataset(resData, annualVacationMgtList, AnnualVacationMgtTO.class);
+			
+
+   }
+   
+	@RequestMapping(value="/attendance/modifyAnnualVacationMgtList")
+    public void modifyAnnualVacationMgtList(@RequestAttribute("reqData") PlatformData reqData,
+			@RequestAttribute("resData") PlatformData resData) throws Exception {
+ 
+	   		AnnualVacationMgtTO annualVacationMgtTO = datasetBeanMapper.datasetToBean(reqData, AnnualVacationMgtTO.class);
+	   		attdServiceFacade.modifyAnnualVacationMgtList(annualVacationMgtTO);
+         
+>>>>>>> ji
    	} 
    
    @RequestMapping(value="/attendance/annualVacationManage", params="sendData2")
-   public ModelMap cancelAnnualVacationMgtList(@RequestParam("sendData2")String sendData){
+   public void cancelAnnualVacationMgtList(@RequestParam("sendData2")String sendData){
       
-	   try {
-		   Gson gson = new Gson();
-		   ArrayList<AnnualVacationMgtTO> annualVacationMgtList = gson.fromJson(sendData, new TypeToken<ArrayList<AnnualVacationMgtTO>>(){}.getType());
-		   attdServiceFacade.cancelAnnualVacationMgtList(annualVacationMgtList);
-		   map.put("errorMsg","success");
-		   map.put("errorCode", 0);
-	   } catch (DataAccessException dae){
-		   map.clear();
-		   map.put("errorCode", -1);
-		   map.put("errorMsg", dae.getMessage());
-      }
-	   return map;
-   } 
+		   //ArrayList<AnnualVacationMgtTO> annualVacationMgtList = gson.fromJson(sendData, new TypeToken<ArrayList<AnnualVacationMgtTO>>(){}.getType());
+		   //attdServiceFacade.cancelAnnualVacationMgtList(annualVacationMgtList);
+   }
+
 }
