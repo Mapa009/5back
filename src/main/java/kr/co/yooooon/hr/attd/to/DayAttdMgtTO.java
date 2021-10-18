@@ -32,4 +32,6 @@ public class DayAttdMgtTO extends BaseTO{
 
 	@Transient
 	private String empName;
+	@Transient
+	private String lateHour;
 }

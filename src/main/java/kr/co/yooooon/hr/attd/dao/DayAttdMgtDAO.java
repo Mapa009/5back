@@ -9,5 +9,5 @@ import kr.co.yooooon.hr.attd.to.DayAttdMgtTO;
 @Mapper
 public interface DayAttdMgtDAO {
 	public HashMap<String, Object> batchDayAttdMgtProcess(HashMap<String , Object> map);
-	//public void updateDayAttdMgtList(DayAttdMgtTO dayAttdMgt);
+	public void updateDayAttdMgtList(DayAttdMgtTO dayAttdMgt);
 }

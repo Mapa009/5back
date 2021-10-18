@@ -23,6 +23,7 @@ import kr.co.yooooon.hr.attd.dao.RestAttdDAO;
 
 @Component
 public class AttdApplicationServiceImpl implements AttdApplicationService{
+	 
    @Autowired
    private DayAttdDAO dayAttdDAO;
    @Autowired
@@ -98,12 +99,12 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
 
    @Override
    public void modifyDayAttdMgtList(ArrayList<DayAttdMgtTO> dayAttdMgtList) {
-     
+     System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###################"+dayAttdMgtList);
       for(DayAttdMgtTO dayAttdMgt : dayAttdMgtList){
     	  
-         if(dayAttdMgt.getStatus().equals("update")){
-            dayAttdMgtRepository.save(dayAttdMgt);
-         }
+    	  dayAttdMgtDAO.updateDayAttdMgtList(dayAttdMgt);
+            //dayAttdMgtRepository.save(dayAttdMgt);
+         
          
       }
  
@@ -210,9 +211,9 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
    @Override
    public void modifyMonthAttdMgtList(ArrayList<MonthAttdMgtTO> monthAttdMgtList) {
       for(MonthAttdMgtTO monthAttdMgt : monthAttdMgtList){
-         if(monthAttdMgt.getStatus().equals("update")){
-            monthAttdMgtRepository.save(monthAttdMgt);
-         }
+         
+           monthAttdMgtRepository.save(monthAttdMgt);
+         
       }       
    }
    
@@ -241,18 +242,21 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
    
    @Override
    public void modifyAnnualVacationMgtList(ArrayList<AnnualVacationMgtTO> annualVacationMgtList) {
-      for(AnnualVacationMgtTO annualVacationMgt : annualVacationMgtList){
-         if(annualVacationMgt.getStatus().equals("update")){
-        	 System.out.println("Check :  "+annualVacationMgt.getRemainingHoliday());
-				
-			 annualVacationMgtRepository.save(annualVacationMgt);
-             AnnualVacationTO avt = new AnnualVacationTO();
-             avt.setEmpCode(annualVacationMgt.getEmpCode());
-             avt.setYear(annualVacationMgt.getYear());
-			 annualVactionRepository.save(avt);
-				 
-         }
-      }      
+		/*
+		 * for(AnnualVacationMgtTO annualVacationMgt : annualVacationMgtList){
+		 * if(annualVacationMgt.getStatus().equals("update")){
+		 * System.out.println("Check :  "+annualVacationMgt.getRemainingHoliday());
+		 * 
+		 * annualVacationMgtRepository.save(annualVacationMgt); AnnualVacationTO avt =
+		 * new AnnualVacationTO(); avt.setEmpCode(annualVacationMgt.getEmpCode());
+		 * avt.setYear(annualVacationMgt.getYear()); annualVactionRepository.save(avt);
+		 * 
+		 * } }
+		 */   
+	      for(AnnualVacationMgtTO annualVacationMgt : annualVacationMgtList){
+	            annualVacationMgtDAO.updateAnnualVacationMgtList(annualVacationMgt);
+	            annualVacationMgtDAO.updateAnnualVacationList(annualVacationMgt);
+	      }
    }
    
    @Override
@@ -265,7 +269,7 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
             annualVacationMgtRepository.save(annualVacationMgt);
             AnnualVacationTO avt = new AnnualVacationTO();
             avt.setEmpCode(annualVacationMgt.getEmpCode());
-            avt.setYear(annualVacationMgt.getYear());
+            //avt.setYear(annualVacationMgt.getYear());
             annualVactionRepository.save(avt);
          }
       }

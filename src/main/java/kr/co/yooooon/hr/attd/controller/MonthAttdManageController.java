@@ -44,22 +44,15 @@ public class MonthAttdManageController {
 	}
 	
 		
+	@RequestMapping(value="/attendance/modifyMonthAttdList")
+	public void modifyMonthAttdList(@RequestAttribute("reqData")PlatformData reqData,@RequestAttribute("resData")PlatformData resData)throws Exception{		
 		
-	@RequestMapping(value="/attendance/monthAttendanceManage", params="sendData")
-	public ModelMap modifyMonthAttdList(@RequestParam("sendData")String sendData){		
-		try {
-			Gson gson = new Gson();
-			ArrayList<MonthAttdMgtTO> monthAttdMgtList = gson.fromJson(sendData, new TypeToken<ArrayList<MonthAttdMgtTO>>(){}.getType());
-			attdServiceFacade.modifyMonthAttdMgtList(monthAttdMgtList);
-			map.put("errorMsg","success");
-			map.put("errorCode", 0);
+		ArrayList<MonthAttdMgtTO> monthAttdMgtList = (ArrayList<MonthAttdMgtTO>)datasetBeanMapper.datasetToBeans(reqData, MonthAttdMgtTO.class);
+		attdServiceFacade.modifyMonthAttdMgtList(monthAttdMgtList);
 
-		}	catch (DataAccessException dae){
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}	 
-		return map;
+		
+			
+			
 	} 
 
 }

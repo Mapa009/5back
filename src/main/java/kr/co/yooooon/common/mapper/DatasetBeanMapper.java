@@ -69,9 +69,9 @@ public class DatasetBeanMapper {
     }
 
 
-    public <T> void beanToDataset(PlatformData outData, T bean, Class<T> classType) throws Exception {
+    public <T> void beanToDataset(PlatformData resData, T bean, Class<T> classType) throws Exception {
         Map<String, String> nameMap = new HashMap<String, String>();
-        DataSetList datasetList = outData.getDataSetList();  //비어있는 상태 
+        DataSetList datasetList = resData.getDataSetList();  //비어있는 상태 
 
         String datasetName = getDataSetName(classType);   //데이터셋 이름 설정 
         DataSet dataset = new DataSet(datasetName);   //dataset생성 
