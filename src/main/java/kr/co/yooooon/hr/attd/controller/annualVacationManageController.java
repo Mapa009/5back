@@ -55,7 +55,7 @@ public class annualVacationManageController {
     public void modifyAnnualVacationMgtList(@RequestAttribute("reqData") PlatformData reqData,
 			@RequestAttribute("resData") PlatformData resData) throws Exception {
  
-	   		AnnualVacationMgtTO annualVacationMgtTO = datasetBeanMapper.datasetToBean(reqData, AnnualVacationMgtTO.class);
+	   		ArrayList<AnnualVacationMgtTO> annualVacationMgtTO = (ArrayList<AnnualVacationMgtTO>) datasetBeanMapper.datasetToBeans(reqData, AnnualVacationMgtTO.class);
 	   		attdServiceFacade.modifyAnnualVacationMgtList(annualVacationMgtTO);
 
    	} 

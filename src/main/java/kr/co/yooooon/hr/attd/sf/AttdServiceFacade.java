@@ -32,6 +32,6 @@ public interface AttdServiceFacade {
    public void modifyMonthAttdMgtList(ArrayList<MonthAttdMgtTO> monthAttdMgtList);
    
    public List<AnnualVacationMgtTO> findAnnualVacationMgtList(String applyYearMonth);
-   public void modifyAnnualVacationMgtList(AnnualVacationMgtTO annualVacationMgtTO);
+   public void modifyAnnualVacationMgtList(ArrayList<AnnualVacationMgtTO> annualVacationMgtTO);
    public void cancelAnnualVacationMgtList(ArrayList<AnnualVacationMgtTO> annualVacationMgtList);
 }

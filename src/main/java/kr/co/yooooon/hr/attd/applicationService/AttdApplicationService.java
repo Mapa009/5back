@@ -25,7 +25,7 @@ public interface AttdApplicationService {
    public void removeRestAttdList(ArrayList<RestAttdTO> restAttdList);
    
    public ArrayList<AnnualVacationMgtTO> findAnnualVacationMgtList(String applyYearMonth);
-   public void modifyAnnualVacationMgtList(AnnualVacationMgtTO annualVacationMgtTO);
+   public void modifyAnnualVacationMgtList(ArrayList<AnnualVacationMgtTO> annualVacationMgtTO);
    public void cancelAnnualVacationMgtList(ArrayList<AnnualVacationMgtTO> annualVacationMgtList);
    
 }

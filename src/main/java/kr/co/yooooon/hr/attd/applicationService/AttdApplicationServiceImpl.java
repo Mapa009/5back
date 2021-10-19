@@ -226,8 +226,8 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
     HashMap<String , Object> map = new HashMap<String ,Object>();
      map.put("applyYearMonth",applyYearMonth);
      map.put("dept","인사팀");
-       ArrayList<AnnualVacationMgtTO> annualVacationMgtList=annualVacationMgtRepository.findAllByApplyYearMonth(applyYearMonth);
-      /*annualVacationMgtDAO.batchAnnualVacationMgtProcess(map);
+      // ArrayList<AnnualVacationMgtTO> annualVacationMgtList=annualVacationMgtRepository.findAllByApplyYearMonth(applyYearMonth);
+      annualVacationMgtDAO.batchAnnualVacationMgtProcess(map);
       
       String errorCode = (String)map.get("errorCode");
       String errorMsg =  (String)map.get("errorMsg");
@@ -235,7 +235,7 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
      if(Integer.parseInt(errorCode) < 0){ throw new DataAccessException(errorMsg);}
      
       @SuppressWarnings("unchecked")
-      ArrayList<AnnualVacationMgtTO> annualVacationMgtList = (ArrayList<AnnualVacationMgtTO>) map.get("result");*/
+      ArrayList<AnnualVacationMgtTO> annualVacationMgtList = (ArrayList<AnnualVacationMgtTO>) map.get("result");
      for(AnnualVacationMgtTO to : annualVacationMgtList){
          String a = to.getRemainingHoliday();
          System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@Remain : "+to.getFinalizeStatus());
@@ -247,15 +247,18 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
    }
    
    @Override
-   public void modifyAnnualVacationMgtList(AnnualVacationMgtTO annualVacationMgtTO) {
-	   
-         if(annualVacationMgtTO.getStatus().equals("update")){
-        	 System.out.println("Check :  "+annualVacationMgtTO.getRemainingHoliday());
-				
-			 annualVacationMgtRepository.save(annualVacationMgtTO);
-             annualVacationMgtDAO.updateAnnualVacationList(annualVacationMgtTO);
-				 
-      }
+   public void modifyAnnualVacationMgtList(ArrayList<AnnualVacationMgtTO> annualVacationMgtList) {
+	   for(AnnualVacationMgtTO annualVacationMgtTO : annualVacationMgtList) {
+           if (annualVacationMgtTO.getStatus().equals("update")) {
+               System.out.println("Check :  " + annualVacationMgtTO.getRemainingHoliday());
+               if (annualVacationMgtTO.getTotalUsing() == null) {
+                   annualVacationMgtTO.setTotalUsing("0");
+               }
+               annualVacationMgtRepository.save(annualVacationMgtTO);
+               annualVacationMgtDAO.updateAnnualVacationList(annualVacationMgtTO);
+
+           }
+       }
    }
    
    @Override
