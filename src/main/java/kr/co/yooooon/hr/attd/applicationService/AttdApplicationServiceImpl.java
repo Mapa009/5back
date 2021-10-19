@@ -226,8 +226,8 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
     HashMap<String , Object> map = new HashMap<String ,Object>();
      map.put("applyYearMonth",applyYearMonth);
      map.put("dept","인사팀");
-     
-      annualVacationMgtDAO.batchAnnualVacationMgtProcess(map);
+       ArrayList<AnnualVacationMgtTO> annualVacationMgtList=annualVacationMgtRepository.findAllByApplyYearMonth(applyYearMonth);
+      /*annualVacationMgtDAO.batchAnnualVacationMgtProcess(map);
       
       String errorCode = (String)map.get("errorCode");
       String errorMsg =  (String)map.get("errorMsg");
@@ -235,7 +235,14 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
      if(Integer.parseInt(errorCode) < 0){ throw new DataAccessException(errorMsg);}
      
       @SuppressWarnings("unchecked")
-      ArrayList<AnnualVacationMgtTO> annualVacationMgtList = (ArrayList<AnnualVacationMgtTO>) map.get("result");
+      ArrayList<AnnualVacationMgtTO> annualVacationMgtList = (ArrayList<AnnualVacationMgtTO>) map.get("result");*/
+     for(AnnualVacationMgtTO to : annualVacationMgtList){
+         String a = to.getRemainingHoliday();
+         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@Remain : "+to.getFinalizeStatus());
+         if(a==null){
+             to.setRemainingHoliday("0");
+         }
+     }
       return annualVacationMgtList;
    }
    
@@ -246,10 +253,7 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
         	 System.out.println("Check :  "+annualVacationMgtTO.getRemainingHoliday());
 				
 			 annualVacationMgtRepository.save(annualVacationMgtTO);
-             AnnualVacationTO avt = new AnnualVacationTO();
-             avt.setEmpCode(annualVacationMgtTO.getEmpCode());
-             avt.setYear(annualVacationMgtTO.getYear());
-			 annualVactionRepository.save(avt);
+             annualVacationMgtDAO.updateAnnualVacationList(annualVacationMgtTO);
 				 
       }
    }

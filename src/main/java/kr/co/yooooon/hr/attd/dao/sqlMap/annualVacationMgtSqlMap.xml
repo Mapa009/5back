@@ -46,6 +46,6 @@
 	<update id="updateAnnualVacationList" parameterType="kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO">
 		UPDATE ANNUAL_VACATION SET
 		REMAINING_VACATION = #{remainingHoliday}
-		WHERE EMP_CODE = #{empCode} AND year = #{applyYearMonth} 
+		WHERE EMP_CODE = #{empCode} AND year = SUBSTR(#{applyYearMonth},0,4 )
 	</update>
 </mapper>

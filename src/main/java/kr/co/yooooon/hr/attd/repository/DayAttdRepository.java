@@ -7,4 +7,5 @@ import java.util.ArrayList;
 
 public interface DayAttdRepository extends CrudRepository<DayAttdTO,String> {
     ArrayList<DayAttdTO> findDayAttdTOByEmpCodeAndApplyDayOrderByTime(String empCode,String applyDay);
+
 }

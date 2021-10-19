@@ -55,12 +55,10 @@ public class DatasetBeanMapper {
 
     public <T> void beansToDataset(PlatformData resData, List<T> beanList, Class<T> classType) throws Exception {
         Map<String, String> nameMap = new HashMap<String, String>();
-
         DataSetList datasetList = resData.getDataSetList();
         String datasetName = getDataSetName(classType);
         DataSet dataset = new DataSet(datasetName);
         datasetList.add(dataset);
-        
         Field[] fields = classType.getDeclaredFields();
         for(Field field : fields)
             setColumnName(dataset, nameMap, field);

@@ -24,6 +24,7 @@ public class RestAttdTO extends BaseTO{
 	@GenericGenerator(name = "restAttdSeqGen", strategy = "kr.co.yooooon.hr.attd.generator.restAttdGen")
 	@GeneratedValue(generator = "restAttdSeqGen")
 	private String restAttdCode;
+
 	/*@SequenceGenerator(name = "restAttdSeqGen", sequenceName = "REST_ATTD_CODE_SEQ", allocationSize = 1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "restAttdSeqGen") //GenerationType.SEQUENCE*/
 

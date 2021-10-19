@@ -31,12 +31,11 @@ public class AnnualVacationMgtTO extends BaseTO implements Serializable{
 	private String empCode;
 	@Id
 	private String applyYearMonth;
-	
-	@Column(nullable=false)
+
 	private String afternoonOff, monthlyLeave, finalizeStatus,remainingHoliday,totalUsing;
 	
 	//애를 annualvacationmanage로 사용할 경우 transient 어노테이션 붙여줘야됨
 	@Transient
-	private String empName,year;
+	private String empName,status;
 	
 }
