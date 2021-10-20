@@ -27,13 +27,15 @@ public class SaveEmpImgController {
      
       try {
          if (fileName != null) {
-         out = new FileOutputStream(filePath+fileName); //파일 입출력 
+         out = new FileOutputStream(filePath+fileName); //새 파일 출력 스트림이 만들어진다. 새 파일 객체
          byte[] file = dataset.getBlob(0, "IMG_FILE_DATA"); //Blob : Binary Large Objects 의약자임  [이미지, 사운드, 동영상 등 대용량 바이너리 데이터 가져오기] 
-         BufferedOutputStream  bufferedOut=new BufferedOutputStream(out); // FileOutputStream 값을 입출력 
+         BufferedOutputStream  bufferedOut=new BufferedOutputStream(out); // FileOutputStream 값을 입출력
+         														//지정된 기본 출력 스트림에 데이터를 쓸 버퍼링된 새 출력 스트림을 만듭니다.
          System.out.print("1111111111111111"+file);
          bufferedOut.write(file); 
          bufferedOut.flush(); //현재 버퍼에 저장되어 있는 내용을 클라이언트로 전송하고 버퍼를 비운다. 
          bufferedOut.close();
+         
          out.close();
          bufferedOut=null;
          out = null;
