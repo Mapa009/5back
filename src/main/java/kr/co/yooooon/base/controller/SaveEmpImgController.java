@@ -22,7 +22,7 @@ public class SaveEmpImgController {
 
    @RequestMapping("/base/saveEmpImg")
    public ModelAndView saveEmpImg(@RequestAttribute("reqData") PlatformData reqData) throws Exception {
-      empImgFileUploadUtil.uploadFile(reqData); //123\
+      empImgFileUploadUtil.uploadFile(reqData,"emp"); //123\
       return null;
    }
 }

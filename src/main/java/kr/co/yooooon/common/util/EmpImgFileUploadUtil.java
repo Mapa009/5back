@@ -11,12 +11,12 @@ import java.io.FileOutputStream;
 public class EmpImgFileUploadUtil {
     private String filePath="C:\\dev\\http\\httpd-2.4.48-win64-VS16\\Apache24\\htdocs\\profile\\";
 
-    public void uploadFile(PlatformData reqData){
+    public void uploadFile(PlatformData reqData,String filePackage){
         DataSet dataset = reqData.getDataSet("ds_img");
         FileOutputStream out=null; //파일로 바이트 단위의 출력을 내보내는 클래스
         String fileName = (String) dataset.getObject(0, "EMP_FILE_NAME");
         System.out.println("================ EmpImg : "+fileName);
-
+        filePath=filePath+filePackage+"\\";
         try {
             if (fileName != null) {
                 out = new FileOutputStream(filePath+fileName); //파일 입출력
