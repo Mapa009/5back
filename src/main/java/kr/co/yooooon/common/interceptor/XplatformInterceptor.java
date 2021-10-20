@@ -73,7 +73,7 @@ public class XplatformInterceptor extends HandlerInterceptorAdapter {
             exception.printStackTrace();
             variableList.add("ErrorCode", -1);
             System.out.println("@@@@@@@@@@@@@@@@@@@@@Error : "+exception.getMessage());
-            variableList.add("ErrorMsg", exception.getMessage().split(":")[1]);
+            variableList.add("ErrorMsg", exception.getMessage().split(":")[0]);
         } else {
             variableList.add("ErrorCode", 0);
             variableList.add("ErrorMsg", "success");

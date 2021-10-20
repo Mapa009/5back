@@ -84,6 +84,18 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
    @Override
    public void removeDayAttdList(ArrayList<DayAttdTO> dayAttdList) {
       dayAttdRepository.deleteAll(dayAttdList);
+      ArrayList<DayAttdMgtTO> mgtList = new ArrayList<>();
+      int size = dayAttdList.size();
+      for(int i=0;i<size;i++) {
+          DayAttdMgtTO to = new DayAttdMgtTO();
+          to.setEmpCode(dayAttdList.get(i).getEmpCode());
+          to.setApplyDays(dayAttdList.get(i).getApplyDay());
+          RestAttdTO rest = new RestAttdTO();
+          rest.setEmpCode(dayAttdList.get(i).getEmpCode());
+          rest.setRequestDate(dayAttdList.get(i).getApplyDay().substring(0,10));
+          restAttdDAO.deleteRestAttdByToday(rest);
+      }
+      dayAttdMgtRepository.deleteAll(mgtList);
    }
    
    @Override
@@ -104,7 +116,6 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
     	  
     	  dayAttdMgtDAO.updateDayAttdMgtList(dayAttdMgt);
             //dayAttdMgtRepository.save(dayAttdMgt);
-         
          
       }
  

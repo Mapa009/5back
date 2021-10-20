@@ -151,13 +151,18 @@
 		AND REST_ATTD_CODE = #{restAttdCode}
 	]]>
 	</update>
-	<!--
 	<delete id="deleteRestAttd" parameterType="kr.co.yooooon.hr.attd.to.RestAttdTO">
 	<![CDATA[
 		DELETE FROM REST_ATTD 
 		WHERE EMP_CODE = #{empCode} 
 		AND REST_ATTD_CODE = #{restAttdCode}
 	]]>
-	</delete>-->
-	
+	</delete>
+	<delete id="deleteRestAttdByToday" parameterType="kr.co.yooooon.hr.attd.to.RestAttdTO">
+	<![CDATA[
+		DELETE FROM REST_ATTD
+		WHERE EMP_CODE = #{empCode}
+		  AND REQUEST_DATE = TO_DATE(#{requestDate},'YYYY-MM-DD')
+		]]>
+	</delete>
 </mapper>
