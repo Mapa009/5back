@@ -30,7 +30,7 @@ public class DayAttdController {
 
 	private ModelMap map = new ModelMap();
 
-	@RequestMapping(value="/attendance/findDayAttdList")
+	@RequestMapping(value="/attendance/findDayAttdList") //날짜 바뀔 때마다
 	public void findDayAttdList(@RequestAttribute("variableList") VariableList variableList,@RequestAttribute("resData") PlatformData resData)throws Exception{
 		String applyDay = variableList.getString("applyDay");
 		String empCode = variableList.getString("empCode");
@@ -38,7 +38,7 @@ public class DayAttdController {
 		datasetBeanMapper.beansToDataset(resData,dayAttdList, DayAttdTO.class);
 	}
 
-	@RequestMapping(value="/attendance/dayAttendance")
+	@RequestMapping(value="/attendance/dayAttendance") //기록하기 누르면 실행
 	public void registDayAttd(@RequestAttribute("reqData") PlatformData reqData)throws Exception{
 		DayAttdTO dayAttd = datasetBeanMapper.datasetToBean(reqData,DayAttdTO.class);
 		ResultTO resultTO = attdServiceFacade.registDayAttd(dayAttd);
@@ -51,7 +51,7 @@ public class DayAttdController {
 		System.out.println(resultTO.getErrorCode()+"@@@@@@@@@@@@@@@@@@@");
 	}
 
-	@RequestMapping(value="/attendance/removeDayAttdList")
+	@RequestMapping(value="/attendance/removeDayAttdList")//
 	public void removeDayAttdList(@RequestAttribute("reqData") PlatformData reqData)throws Exception{
 
 		ArrayList<DayAttdTO> dayAttdList = (ArrayList<DayAttdTO>) datasetBeanMapper.datasetToBeans(reqData,DayAttdTO.class);
