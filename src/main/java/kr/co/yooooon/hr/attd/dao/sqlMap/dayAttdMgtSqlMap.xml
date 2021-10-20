@@ -15,8 +15,8 @@
 		<result property="nightWorkHour" column="NIGHT_WORK_HOUR" />
 		<result property="finalizeStatus" column="FINALIZE_STATUS" />
 		<result property="applyDays" column="APPLY_DAYS" />
-		<result property="privateleaveHour" column="PRIVATE_LEAVE_HOUR" />
-		<result property="publicleaveHour" column="PUBLIC_LEAVE_HOUR" />
+		<result property="privateLeaveHour" column="PRIVATE_LEAVE_HOUR" />
+		<result property="publicLeaveHour" column="PUBLIC_LEAVE_HOUR" />
 		<result property="empName" column="EMP_NAME" />
 	</resultMap>
 	

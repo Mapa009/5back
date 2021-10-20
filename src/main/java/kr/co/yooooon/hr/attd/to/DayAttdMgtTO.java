@@ -28,7 +28,7 @@ public class DayAttdMgtTO extends BaseTO{
 	private String dayAttdCode
 	,dayAttdName ,attendTime,HalfHolidayStatus
 	,quitTime ,lateWhether ,leaveHour ,workHour,earlyLeaveHour
-	,overWorkHour ,nightWorkHour ,finalizeStatus, privateleaveHour, publicleaveHour;
+	,overWorkHour ,nightWorkHour ,finalizeStatus, privateLeaveHour, publicLeaveHour;
 
 	@Transient
 	private String empName,status;
