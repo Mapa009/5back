@@ -2,10 +2,12 @@ package kr.co.yooooon.common.util;
 
 import com.tobesoft.xplatform.data.DataSet;
 import com.tobesoft.xplatform.data.PlatformData;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 
+@Component
 public class EmpImgFileUploadUtil {
     private static String filePath="C:\\dev\\http\\httpd-2.4.48-win64-VS16\\Apache24\\htdocs\\profile\\";
 
