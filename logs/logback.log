@@ -28297,3 +28297,105 @@ Caused by: java.io.IOException: Stream closed
 2021-10-20 10:43:54.848 [ajp-nio-127.0.0.1-8009-exec-7] INFO  k.c.y.c.a.CommonAspect - ServiceImpl  	:  kr.co.yooooon.hr.salary.applicationService.SalaryApplicationServiceImpl.findselectSalary()
 2021-10-20 10:43:54.848 [ajp-nio-127.0.0.1-8009-exec-7] INFO  k.c.y.c.a.CommonAspect - DAO  		:  kr.co.yooooon.hr.salary.dao.FullTimeSalaryDAO.selectFullTimeSalary()
 2021-10-20 10:43:54.849 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. Connection.getAutoCommit() returned false
+2021-10-20 10:43:54.849 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. CallableStatement.new CallableStatement returned 
+2021-10-20 10:43:54.849 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. Connection.prepareCall({call P_CREATE_MONTH_SALARY(
+             ?
+           , ?
+           , ?
+           , ?
+           , ?
+           )) returned net.sf.log4jdbc.sql.jdbcapi.CallableStatementSpy@7de56715
+2021-10-20 10:43:54.850 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. CallableStatement.registerOutParameter(3, -10) returned 
+2021-10-20 10:43:54.850 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. CallableStatement.registerOutParameter(4, 12) returned 
+2021-10-20 10:43:54.850 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. CallableStatement.registerOutParameter(5, 12) returned 
+2021-10-20 10:43:54.850 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. CallableStatement.setString(1, "2021-7") returned 
+2021-10-20 10:43:54.850 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. CallableStatement.setString(2, "A490071") returned 
+2021-10-20 10:43:54.850 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.sqlonly - {call P_CREATE_MONTH_SALARY(
+             '2021-7'
+           , 'A490071'
+           , '<OUT>'
+           , '<OUT>'
+           , '<OUT>'
+           )
+
+2021-10-20 10:43:54.853 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.sqltiming - {call P_CREATE_MONTH_SALARY(
+             '2021-7'
+           , 'A490071'
+           , '<OUT>'
+           , '<OUT>'
+           , '<OUT>'
+           )
+ {executed in 3 msec}
+2021-10-20 10:43:54.854 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. CallableStatement.execute() returned false
+2021-10-20 10:43:54.854 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. CallableStatement.getResultSet() returned null
+2021-10-20 10:43:54.854 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. CallableStatement.getMoreResults() returned false
+2021-10-20 10:43:54.854 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. CallableStatement.getUpdateCount() returned -1
+2021-10-20 10:43:54.854 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. CallableStatement.getObject(3) returned oracle.jdbc.driver.OracleResultSetImpl@58ab887a
+2021-10-20 10:43:54.855 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. CallableStatement.getString(4) returned 0
+2021-10-20 10:43:54.855 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. CallableStatement.getString(5) returned SUCCESS
+2021-10-20 10:43:54.855 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. CallableStatement.close() returned 
+2021-10-20 10:43:54.858 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. Connection.commit() returned 
+2021-10-20 10:43:54.858 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. Connection.setAutoCommit(true) returned 
+2021-10-20 10:43:54.859 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. Connection.getWarnings() returned null
+2021-10-20 10:43:54.860 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. Connection.clearWarnings() returned 
+2021-10-20 10:43:54.860 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 1. Connection.clearWarnings() returned 
+2021-10-20 10:48:57.489 [HikariPool-1 connection closer] INFO  j.connection - 10. Connection closed
+2021-10-20 10:48:57.490 [HikariPool-1 connection closer] INFO  j.audit - 10. Connection.close() returned 
+2021-10-20 10:48:57.525 [HikariPool-1 connection adder] INFO  j.connection - 11. Connection opened
+2021-10-20 10:48:57.525 [HikariPool-1 connection adder] INFO  j.audit - 11. Connection.new Connection returned 
+2021-10-20 10:48:57.525 [HikariPool-1 connection adder] INFO  j.audit - 11. Connection.isReadOnly() returned false
+2021-10-20 10:48:57.526 [HikariPool-1 connection adder] INFO  j.audit - 11. Connection.getAutoCommit() returned true
+2021-10-20 10:48:59.151 [HikariPool-1 connection closer] INFO  j.connection - 7. Connection closed
+2021-10-20 10:48:59.151 [HikariPool-1 connection closer] INFO  j.audit - 7. Connection.close() returned 
+2021-10-20 10:48:59.183 [HikariPool-1 connection adder] INFO  j.connection - 12. Connection opened
+2021-10-20 10:48:59.183 [HikariPool-1 connection adder] INFO  j.audit - 12. Connection.new Connection returned 
+2021-10-20 10:48:59.183 [HikariPool-1 connection adder] INFO  j.audit - 12. Connection.isReadOnly() returned false
+2021-10-20 10:48:59.183 [HikariPool-1 connection adder] INFO  j.audit - 12. Connection.getAutoCommit() returned true
+2021-10-20 10:48:59.805 [HikariPool-1 connection closer] INFO  j.connection - 9. Connection closed
+2021-10-20 10:48:59.805 [HikariPool-1 connection closer] INFO  j.audit - 9. Connection.close() returned 
+2021-10-20 10:48:59.838 [HikariPool-1 connection adder] INFO  j.connection - 13. Connection opened
+2021-10-20 10:48:59.838 [HikariPool-1 connection adder] INFO  j.audit - 13. Connection.new Connection returned 
+2021-10-20 10:48:59.838 [HikariPool-1 connection adder] INFO  j.audit - 13. Connection.isReadOnly() returned false
+2021-10-20 10:48:59.838 [HikariPool-1 connection adder] INFO  j.audit - 13. Connection.getAutoCommit() returned true
+2021-10-20 10:49:01.417 [HikariPool-1 connection closer] INFO  j.connection - 6. Connection closed
+2021-10-20 10:49:01.418 [HikariPool-1 connection closer] INFO  j.audit - 6. Connection.close() returned 
+2021-10-20 10:49:01.463 [HikariPool-1 connection adder] INFO  j.connection - 14. Connection opened
+2021-10-20 10:49:01.463 [HikariPool-1 connection adder] INFO  j.audit - 14. Connection.new Connection returned 
+2021-10-20 10:49:01.463 [HikariPool-1 connection adder] INFO  j.audit - 14. Connection.isReadOnly() returned false
+2021-10-20 10:49:01.463 [HikariPool-1 connection adder] INFO  j.audit - 14. Connection.getAutoCommit() returned true
+2021-10-20 10:49:02.940 [HikariPool-1 connection closer] INFO  j.connection - 2. Connection closed
+2021-10-20 10:49:02.941 [HikariPool-1 connection closer] INFO  j.audit - 2. Connection.close() returned 
+2021-10-20 10:49:02.975 [HikariPool-1 connection adder] INFO  j.connection - 15. Connection opened
+2021-10-20 10:49:02.975 [HikariPool-1 connection adder] INFO  j.audit - 15. Connection.new Connection returned 
+2021-10-20 10:49:02.975 [HikariPool-1 connection adder] INFO  j.audit - 15. Connection.isReadOnly() returned false
+2021-10-20 10:49:02.975 [HikariPool-1 connection adder] INFO  j.audit - 15. Connection.getAutoCommit() returned true
+2021-10-20 10:49:09.985 [HikariPool-1 connection closer] INFO  j.connection - 3. Connection closed
+2021-10-20 10:49:09.986 [HikariPool-1 connection closer] INFO  j.audit - 3. Connection.close() returned 
+2021-10-20 10:49:10.019 [HikariPool-1 connection adder] INFO  j.connection - 16. Connection opened
+2021-10-20 10:49:10.019 [HikariPool-1 connection adder] INFO  j.audit - 16. Connection.new Connection returned 
+2021-10-20 10:49:10.019 [HikariPool-1 connection adder] INFO  j.audit - 16. Connection.isReadOnly() returned false
+2021-10-20 10:49:10.019 [HikariPool-1 connection adder] INFO  j.audit - 16. Connection.getAutoCommit() returned true
+2021-10-20 10:49:10.842 [HikariPool-1 connection closer] INFO  j.connection - 8. Connection closed
+2021-10-20 10:49:10.842 [HikariPool-1 connection closer] INFO  j.audit - 8. Connection.close() returned 
+2021-10-20 10:49:10.876 [HikariPool-1 connection adder] INFO  j.connection - 17. Connection opened
+2021-10-20 10:49:10.877 [HikariPool-1 connection adder] INFO  j.audit - 17. Connection.new Connection returned 
+2021-10-20 10:49:10.877 [HikariPool-1 connection adder] INFO  j.audit - 17. Connection.isReadOnly() returned false
+2021-10-20 10:49:10.877 [HikariPool-1 connection adder] INFO  j.audit - 17. Connection.getAutoCommit() returned true
+2021-10-20 10:49:12.798 [HikariPool-1 connection closer] INFO  j.connection - 5. Connection closed
+2021-10-20 10:49:12.799 [HikariPool-1 connection closer] INFO  j.audit - 5. Connection.close() returned 
+2021-10-20 10:49:12.827 [HikariPool-1 connection adder] INFO  j.connection - 18. Connection opened
+2021-10-20 10:49:12.828 [HikariPool-1 connection adder] INFO  j.audit - 18. Connection.new Connection returned 
+2021-10-20 10:49:12.828 [HikariPool-1 connection adder] INFO  j.audit - 18. Connection.isReadOnly() returned false
+2021-10-20 10:49:12.828 [HikariPool-1 connection adder] INFO  j.audit - 18. Connection.getAutoCommit() returned true
+2021-10-20 10:49:19.949 [HikariPool-1 connection closer] INFO  j.connection - 4. Connection closed
+2021-10-20 10:49:19.950 [HikariPool-1 connection closer] INFO  j.audit - 4. Connection.close() returned 
+2021-10-20 10:49:19.982 [HikariPool-1 connection adder] INFO  j.connection - 19. Connection opened
+2021-10-20 10:49:19.983 [HikariPool-1 connection adder] INFO  j.audit - 19. Connection.new Connection returned 
+2021-10-20 10:49:19.983 [HikariPool-1 connection adder] INFO  j.audit - 19. Connection.isReadOnly() returned false
+2021-10-20 10:49:19.983 [HikariPool-1 connection adder] INFO  j.audit - 19. Connection.getAutoCommit() returned true
+2021-10-20 10:49:29.268 [HikariPool-1 connection closer] INFO  j.connection - 1. Connection closed
+2021-10-20 10:49:29.269 [HikariPool-1 connection closer] INFO  j.audit - 1. Connection.close() returned 
+2021-10-20 10:49:29.301 [HikariPool-1 connection adder] INFO  j.connection - 20. Connection opened
+2021-10-20 10:49:29.301 [HikariPool-1 connection adder] INFO  j.audit - 20. Connection.new Connection returned 
+2021-10-20 10:49:29.302 [HikariPool-1 connection adder] INFO  j.audit - 20. Connection.isReadOnly() returned false
+2021-10-20 10:49:29.302 [HikariPool-1 connection adder] INFO  j.audit - 20. Connection.getAutoCommit() returned true
