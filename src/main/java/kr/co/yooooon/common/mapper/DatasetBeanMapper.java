@@ -12,6 +12,7 @@ import org.apache.commons.lang.WordUtils;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -170,7 +171,8 @@ public class DatasetBeanMapper {
                 nameMap.put(column.name(), field.getName());
             } else if(column == null && remove == null) {
                 JoinColumn list = field.getAnnotation(JoinColumn.class);
-                if(list==null){
+                JoinColumns list2 = field.getAnnotation(JoinColumns.class);
+                if(list==null&&list2==null){
                     String columnName = formattingToSnake(field.getName());  //스네이크 표기법 + 대문자로
                     dataset.addColumn(columnName, getDataType(field)); // 엑스플랫폼타입 컬럼
                     nameMap.put(columnName, field.getName());

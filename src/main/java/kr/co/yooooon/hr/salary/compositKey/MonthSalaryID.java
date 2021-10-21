@@ -7,7 +7,6 @@ import java.io.Serializable;
 
 @Data
 public class MonthSalaryID implements Serializable {
-
     private String empCode;
     private String applyYearMonth;
 
