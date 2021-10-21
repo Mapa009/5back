@@ -214,7 +214,14 @@ public class AttdApplicationServiceImpl implements AttdApplicationService{
      @SuppressWarnings("unchecked")
      ArrayList<DayAttdMgtTO> dayAttdMgtList = (ArrayList<DayAttdMgtTO>)map.get("result");
      System.out.println(map);
-     
+     for(DayAttdMgtTO to : dayAttdMgtList){
+         String dayAttdName = to.getDayAttdName();
+         if(to.getAttendTime()!=null){
+              int attendTime = Integer.parseInt(to.getAttendTime());
+              int lateHour = attendTime-900;
+              to.setLateHour(Integer.toString(lateHour));
+         }
+     }
      return dayAttdMgtList;
    }
    

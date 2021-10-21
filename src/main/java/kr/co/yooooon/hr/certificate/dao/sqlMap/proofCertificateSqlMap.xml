@@ -6,18 +6,17 @@
 		<resultMap type="kr.co.yooooon.hr.certificate.to.ProofTO" id="proofCertificateResult">
 			  <result property="empName" column="EMP_NAME"/> 
 			 <result property="empCode" column="EMP_CODE"/> 
-			 <result property="proofTypeCode" column="PROOF_CODE"/> 
-			 <result property="proofTypeName" column="DETAIL_CODE_NAME"/> 
+			 <result property="proofCode" column="PROOF_CODE"/>
+			 <result property="proofName" column="DETAIL_CODE_NAME"/>
 			 <!--   <result property="position" column="POSITION"/> -->
-			<result property="dept" column="DEPT_NAME"/> 
-			<result property="cash" column="PROOT_COST"/>
-			<result property="startDate" column="REQUEST_DATE"/>
-			<result property="cause" column="REASON"/>
+			<result property="deptName" column="DEPT_NAME"/>
+			<result property="prootCost" column="PROOT_COST"/>
+			<result property="requestDate" column="REQUEST_DATE"/>
+			<result property="reason" column="REASON"/>
 			<result property="receipt" column="RECEIPT"/>
-			<result property="applovalStatus" column="APPLOVALSTATUS"/>
+			<result property="applovalstatus" column="APPLOVALSTATUS"/>
 		</resultMap>
-		
-		
+
 		<resultMap type="kr.co.yooooon.hr.certificate.to.ProofTO" id="proofCertificateResult1">
 			 <result property="empName" column="EMP_NAME"/> 
 			 <result property="empCode" column="EMP_CODE"/>
@@ -35,15 +34,15 @@
 	<insert id="insertProofCertificateRequest" parameterType="proofTO">
 		INSERT INTO PROOF_LIST VALUES
 		 (#{empCode}
-		 ,#{proofTypeCode}
-		 ,#{proofTypeName}
+		 ,#{proofCode}
+		 ,#{proofName}
 		 ,#{position}
-		 ,#{dept}
+		 ,#{deptName}
 		 ,#{cash}
 		 ,#{startDate}
 		 ,#{cause}
 		 ,#{receipt}
-		 ,#{applovalStatus}
+		 ,#{applovalstatus}
 		 ,sequence_tab1.nextval)
 	</insert>
 	
@@ -85,7 +84,7 @@
 			 WHERE P.EMP_CODE=E.EMP_CODE(+)
 			 AND E.DEPT_CODE=D.DEPT_CODE(+)
 			 AND P.PROOF_CODE=DD.DETAIL_CODE_NUMBER(+)
-			 AND P.PROOF_NAME=#{deptName}
+			 AND P.DEPT_NAME=#{deptName}
 			 AND REQUEST_DATE BETWEEN TO_DATE(#{startDate},'YYYY-MM-DD') 
 			 AND TO_DATE(#{endDate},'YYYY-MM-DD')
     </select>
