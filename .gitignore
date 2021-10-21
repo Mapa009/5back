@@ -36,4 +36,8 @@ out/
 ### VS Code ###
 .vscode/
 
-logs/
+## Ignore File ##
+logs/*.log
+logs/*.log.gz
+logs/*
+logs/logback.log
