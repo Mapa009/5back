@@ -320,4 +320,9 @@ public class EmpApplicationServiceImpl implements EmpApplicationService {
 	public void deleteEmpAuthorityGroup(HashMap<String, Object> map) {
 		empDAO.deleteEmpAuthorityGroup(map);
 	}
+
+	@Override
+	public ArrayList<EmpTO> listByMonthSal(String value) {
+		return empDAO.selectEmpByMonthSal(value);
+	}
 }

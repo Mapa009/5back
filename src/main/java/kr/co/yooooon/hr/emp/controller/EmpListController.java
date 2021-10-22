@@ -25,5 +25,12 @@ public class EmpListController {
 
 		ArrayList<EmpTO> list = (ArrayList<EmpTO>) empServiceFacade.findEmpList(value);
 		datasetBeanMapper.beansToDataset(resData, list, EmpTO.class);
-	}	
+	}
+	@RequestMapping(value="/emp/listByMonthSal")
+	public void listByMonthSal(@RequestAttribute("variableList") VariableList varList, @RequestAttribute("resData") PlatformData resData) throws Exception{
+		String value = varList.getString("value");
+
+		ArrayList<EmpTO> list = (ArrayList<EmpTO>) empServiceFacade.listByMonthSal(value);
+		datasetBeanMapper.beansToDataset(resData, list, EmpTO.class);
+	}
 }

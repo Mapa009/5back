@@ -15,4 +15,5 @@ public interface EmpDAO {
 	public void updateEmployee(EmpTO emp);
 	public ArrayList<MenuTO> findAccessableMenu(String empCode);
 	public void deleteEmpAuthorityGroup(HashMap<String,Object> map);
+	public ArrayList<EmpTO> selectEmpByMonthSal(String value);
 }
