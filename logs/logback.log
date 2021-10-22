@@ -9714,3 +9714,35 @@ Caused by: java.io.IOException: Stream closed
 2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.isClosed() returned false
 2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.next() returned true
 2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.getString(MONTH_EXT_SAL_CODE) returned 8889
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.getString(APPLY_YEAR_MONTH) returned 2021-10
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.getString(EMP_CODE) returned A490081
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.getString(EXT_SAL_CODE) returned EXT002
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.getString(EXT_SAL_NAME) returned 심야근무
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.getString(PRICE) returned 306300
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.isClosed() returned false
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.next() returned true
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.getString(MONTH_EXT_SAL_CODE) returned 8890
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.getString(APPLY_YEAR_MONTH) returned 2021-10
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.getString(EMP_CODE) returned A490081
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.getString(EXT_SAL_CODE) returned EXT003
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.getString(EXT_SAL_NAME) returned 휴일근무
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.getString(PRICE) returned 382875
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.isClosed() returned false
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultsettable - 
+|-----------------|---------|-------------|-------------|-------|-------------------|
+|apply_year_month |emp_code |ext_sal_code |ext_sal_name |price  |month_ext_sal_code |
+|-----------------|---------|-------------|-------------|-------|-------------------|
+|2021-10          |A490081  |EXT001       |연장근무         |172294 |8888               |
+|2021-10          |A490081  |EXT002       |심야근무         |306300 |8889               |
+|2021-10          |A490081  |EXT003       |휴일근무         |382875 |8890               |
+|-----------------|---------|-------------|-------------|-------|-------------------|
+
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.next() returned false
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.resultset - 11. ResultSet.close() returned void
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 11. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@578ababb
+2021-10-22 10:05:59.038 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 11. PreparedStatement.close() returned 
+2021-10-22 10:05:59.039 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 11. Connection.commit() returned 
+2021-10-22 10:05:59.039 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 11. Connection.setAutoCommit(true) returned 
+2021-10-22 10:05:59.039 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 11. Connection.getWarnings() returned null
+2021-10-22 10:05:59.039 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 11. Connection.clearWarnings() returned 
+2021-10-22 10:05:59.039 [ajp-nio-127.0.0.1-8009-exec-7] INFO  j.audit - 11. Connection.clearWarnings() returned 
