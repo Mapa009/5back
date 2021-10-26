@@ -2,7 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="kr.co.yooooon.hr.emp.dao.EmpDAO">
-		
+		<resultMap id="empByMontSal" type="kr.co.yooooon.hr.emp.to.EmpTO">
+			<result property="empCode" column="EMP_CODE" />
+			<result property="empName" column="EMP_NAME" />
+		</resultMap>
 	<!--	<resultMap type="kr.co.yooooon.hr.emp.to.EmpTO" id="empResult">
 			<result property="empCode" column="EMP_CODE" />
 			<result property="empName" column="EMP_NAME" />
@@ -57,7 +60,13 @@
       <parameter property="employment" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN" />    
 	</parameterMap>
 
-
+	<select id="selectEmpByMonthSal" parameterType="string" resultMap="empByMontSal">
+		select E.EMP_CODE
+			 ,E.EMP_NAME
+		from emp E,work_info W
+		where E.EMP_CODE=W.EMP_CODE
+		  AND W.SALARY_TYPE=#{value}
+	</select>
 	<!--<select id="selectEmp" parameterType="string" resultMap="empResult">
 		SELECT E.EMP_CODE
 		, E.EMP_NAME

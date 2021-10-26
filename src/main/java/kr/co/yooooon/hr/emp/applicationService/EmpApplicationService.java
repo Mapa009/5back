@@ -27,4 +27,5 @@ public interface EmpApplicationService {
 	public List<EmpAuthGroupTO> findEmpAuthGroup();
 	public void saveEmpAuthorityGroup(ArrayList<EmpAuthGroupTO> saveEmpAuthGroup);
 	public void deleteEmpAuthorityGroup(HashMap<String, Object> map);
+	public ArrayList<EmpTO> listByMonthSal(String value);
 }

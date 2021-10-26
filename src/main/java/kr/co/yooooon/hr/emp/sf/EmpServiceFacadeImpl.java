@@ -93,4 +93,9 @@ public class EmpServiceFacadeImpl implements EmpServiceFacade {
 	public void deleteEmpAuthorityGroup(HashMap<String, Object> map){
 		empApplicationService.deleteEmpAuthorityGroup(map);
 	}
+
+	@Override
+	public ArrayList<EmpTO> listByMonthSal(String value) {
+		return empApplicationService.listByMonthSal(value);
+	}
 }
