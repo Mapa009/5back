@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.tobesoft.xplatform.data.PlatformData;
 import com.tobesoft.xplatform.data.VariableList;
 import kr.co.yooooon.common.mapper.DatasetBeanMapper;
+import org.jfree.data.time.Day;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestAttribute;
@@ -29,22 +30,15 @@ public class DayAttdController {
 
 	private ModelMap map = new ModelMap();
 
-	@RequestMapping(value="/attendance/dayAttendance", params="applyDay")
-	public ModelMap findDayAttdList(@RequestParam("applyDay")String applyDay , @RequestParam("empCode")String empCode){
-		try {
-			ArrayList<DayAttdTO> dayAttdList = attdServiceFacade.findDayAttdList(empCode, applyDay);
-			map.put("dayAttdList", dayAttdList);
-			map.put("errorMsg","success");
-			map.put("errorCode", 0);
-		}  catch (DataAccessException dae){
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		} 
-		return map;
+	@RequestMapping(value="/attendance/findDayAttdList") //날짜 바뀔 때마다
+	public void findDayAttdList(@RequestAttribute("variableList") VariableList variableList,@RequestAttribute("resData") PlatformData resData)throws Exception{
+		String applyDay = variableList.getString("applyDay");
+		String empCode = variableList.getString("empCode");
+		ArrayList<DayAttdTO> dayAttdList = attdServiceFacade.findDayAttdList(empCode, applyDay);
+		datasetBeanMapper.beansToDataset(resData,dayAttdList, DayAttdTO.class);
 	}
 
-	@RequestMapping(value="/attendance/dayAttendance")
+	@RequestMapping(value="/attendance/dayAttendance") //기록하기 누르면 실행
 	public void registDayAttd(@RequestAttribute("reqData") PlatformData reqData)throws Exception{
 		DayAttdTO dayAttd = datasetBeanMapper.datasetToBean(reqData,DayAttdTO.class);
 		ResultTO resultTO = attdServiceFacade.registDayAttd(dayAttd);
@@ -57,20 +51,10 @@ public class DayAttdController {
 		System.out.println(resultTO.getErrorCode()+"@@@@@@@@@@@@@@@@@@@");
 	}
 
-	@RequestMapping(value="/attendance/dayAttendance" ,params="sendData2")
-	public ModelMap removeDayAttdList(@RequestParam("sendData2")String sendData){
-		try {
-			Gson gson = new Gson();
-			ArrayList<DayAttdTO> dayAttdList = gson.fromJson(sendData, new TypeToken<ArrayList<DayAttdTO>>(){}.getType());
-			System.out.println(dayAttdList);
-			attdServiceFacade.removeDayAttdList(dayAttdList);
-			map.put("errorMsg","success");
-			map.put("errorCode", 0);
-		} catch (DataAccessException dae){
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}
-		return map;
+	@RequestMapping(value="/attendance/removeDayAttdList")//
+	public void removeDayAttdList(@RequestAttribute("reqData") PlatformData reqData)throws Exception{
+
+		ArrayList<DayAttdTO> dayAttdList = (ArrayList<DayAttdTO>) datasetBeanMapper.datasetToBeans(reqData,DayAttdTO.class);
+		attdServiceFacade.removeDayAttdList(dayAttdList);
 	}
 }

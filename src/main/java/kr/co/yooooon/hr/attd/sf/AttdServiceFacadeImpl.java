@@ -1,5 +1,6 @@
 package kr.co.yooooon.hr.attd.sf;
 
+import java.lang.reflect.Array;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
@@ -75,11 +76,11 @@ public class AttdServiceFacadeImpl implements AttdServiceFacade{
          attdApplicationService.removeRestAttdList(restAttdList);
        
    }
-   
+
    @Override
-   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay, String dept) {	  
-         ArrayList<DayAttdMgtTO> dayAttdMgtList = attdApplicationService.findDayAttdMgtList(applyDay, dept);   
-         return dayAttdMgtList;
+   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay) {
+       ArrayList<DayAttdMgtTO> dayAttdMgtList = attdApplicationService.findDayAttdMgtList(applyDay);
+       return dayAttdMgtList;
    }
 
    @Override
@@ -111,7 +112,7 @@ public class AttdServiceFacadeImpl implements AttdServiceFacade{
    }
    
    @Override
-   public void modifyAnnualVacationMgtList(AnnualVacationMgtTO annualVacationMgtTO) {
+   public void modifyAnnualVacationMgtList(ArrayList<AnnualVacationMgtTO> annualVacationMgtTO) {
          attdApplicationService.modifyAnnualVacationMgtList(annualVacationMgtTO);
    }
    

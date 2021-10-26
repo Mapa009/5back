@@ -15,6 +15,7 @@ public interface RestAttdDAO {
 	public ArrayList<RestAttdTO> selectRestAttdListByDept(HashMap<String , Object> map);
 	public ArrayList<RestAttdTO> selectRestAttdListByAllDept(String applyDay);
 	public void updateRestAttd(RestAttdTO restAttd);
-	/*public void insertRestAttd(RestAttdTO restAttd);
-	public void deleteRestAttd(RestAttdTO restAttd);*/
+	/*public void insertRestAttd(RestAttdTO restAttd);*/
+	public void deleteRestAttd(RestAttdTO restAttd);
+	public void deleteRestAttdByToday(RestAttdTO restAttd);
 }

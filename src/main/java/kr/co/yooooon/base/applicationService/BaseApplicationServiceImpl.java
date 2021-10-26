@@ -4,36 +4,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import kr.co.yooooon.base.dao.*;
 import kr.co.yooooon.base.repository.*;
+import kr.co.yooooon.base.to.*;
 import kr.co.yooooon.hr.emp.repository.EmpRepository;
 import kr.co.yooooon.hr.emp.repository.PositionRepository;
 import kr.co.yooooon.hr.emp.to.PositionTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import kr.co.yooooon.base.dao.AdminCodeDAO;
-import kr.co.yooooon.base.dao.BoardDAO;
-import kr.co.yooooon.base.dao.CodeDAO;
-import kr.co.yooooon.base.dao.DeptDAO;
-import kr.co.yooooon.base.dao.DetailCodeDAO;
-import kr.co.yooooon.base.dao.HolidayDAO;
-import kr.co.yooooon.base.dao.ReportDAO;
-import kr.co.yooooon.base.dao.menuDAO;
 import kr.co.yooooon.base.exception.IdNotFoundException;
 import kr.co.yooooon.base.exception.PwMissMatchException;
-import kr.co.yooooon.base.to.AdminCodeTO;
-import kr.co.yooooon.base.to.BoardTO;
-import kr.co.yooooon.base.to.CodeTO;
-import kr.co.yooooon.base.to.DeptTO;
-import kr.co.yooooon.base.to.DetailCodeTO;
-import kr.co.yooooon.base.to.HolidayTO;
-import kr.co.yooooon.base.to.MenuTO;
-import kr.co.yooooon.base.to.ReportSalaryTO;
-import kr.co.yooooon.base.to.ReportTO;
 import kr.co.yooooon.common.exception.DataAccessException;
 import kr.co.yooooon.hr.emp.applicationService.EmpApplicationService;
 import kr.co.yooooon.hr.emp.sf.EmpServiceFacade;
@@ -82,6 +63,15 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 	private EmpRepository empRepository;
 	@Autowired
 	private BoardRepository boardRepository;
+
+	@Autowired
+	private PowerDAO powerDAO;
+	@Autowired
+	private PowerRepository powerRepository;
+	@Autowired
+	private AuthorityDAO authorityDAO;
+	@Autowired
+	private GroupAuthorityRepository groupAuthorityRepository;
 
 	public boolean loginEmployee(String name, String empCode) throws IdNotFoundException, PwMissMatchException {
 		
@@ -335,4 +325,36 @@ public class BaseApplicationServiceImpl implements BaseApplicationService {
 		return array;
 	}
 
+	@Override
+	public ArrayList<PowerTO> findPowerList(String position){
+		return (ArrayList<PowerTO>) powerDAO.findPowerByPosition(position);
+	};
+	@Override
+	public ArrayList<PowerTO> findPowerListAll(){
+		return (ArrayList<PowerTO>) powerRepository.findAll();
+	};
+	@Override
+	public void savePower(PowerTO power) {
+		powerDAO.update(power);
+	}
+	@Override
+	public ArrayList<AuthorityTO> findAuthorityList(HashMap<String, Object> map){
+		return authorityDAO.findAuthorityList(map);
+	}
+
+	@Override
+	public void saveAuthority(ArrayList<AuthorityTO> authority) {
+
+		System.out.println(authority);
+		for(AuthorityTO auth : authority) {
+			authorityDAO.update(auth);}
+	}
+	@Override
+	public ArrayList<GroupAuthorityTO> findGroupAuthority(String empCode){
+		return authorityDAO.findGroupAuthority(empCode);
+	}
+	@Override
+	public List<GroupAuthorityTO> findAllGroupAuthority(){
+		return groupAuthorityRepository.findAll();
+	}
 }

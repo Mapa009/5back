@@ -33,6 +33,5 @@ public class FullTimeSalTO extends BaseTO {
 	residentTax,
 	finalizeStatus,
 	basicSalBefore;
-
 }
 	

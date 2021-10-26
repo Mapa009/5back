@@ -44,10 +44,10 @@ public class XplatformInterceptor extends HandlerInterceptorAdapter {
         
         debug(reqData.getDataSetList(), reqData.getVariableList());
         System.out.println("========================"+reqData.getDataSetList()+"=====================찍히는값");
-        
-        request.setAttribute("resData", resData);
-        request.setAttribute("variableList", reqData.getVariableList());
+
         request.setAttribute("reqData", reqData);
+        request.setAttribute("variableList", reqData.getVariableList());
+        request.setAttribute("resData", resData);
        
         System.out.println("@@@@@@@@@@@@XplatformInterceptor preHandle메서드 종료");
         return true;
@@ -73,7 +73,7 @@ public class XplatformInterceptor extends HandlerInterceptorAdapter {
             exception.printStackTrace();
             variableList.add("ErrorCode", -1);
             System.out.println("@@@@@@@@@@@@@@@@@@@@@Error : "+exception.getMessage());
-            variableList.add("ErrorMsg", exception.getMessage().split(":")[1]);
+            variableList.add("ErrorMsg", exception.getMessage().split(":")[0]);
         } else {
             variableList.add("ErrorCode", 0);
             variableList.add("ErrorMsg", "success");

@@ -38,6 +38,10 @@ out/
 
 ## Ignore File ##
 logs/*.log
+<<<<<<< HEAD
 logs/*.log.gz
 logs/*
 logs/logback.log
+=======
+logs/*.log.gz
+>>>>>>> 450213dfa8d27cd0628db62138407908bbab9cd2

@@ -96,8 +96,8 @@ public class SalaryServiceFacadeImpl implements SalaryServiceFacade{
 	}
 	
 	@Override
-	public ArrayList<SocialInsureTO> findBaseInsureList(String yearBox) {
-		ArrayList<SocialInsureTO> baseInsureList=salaryApplicationService.findBaseInsureList(yearBox);
+	public ArrayList<SocialInsureTO> findBaseInsureList(String year) {
+		ArrayList<SocialInsureTO> baseInsureList=salaryApplicationService.findBaseInsureList(year);
 		return baseInsureList;
 	}
 	

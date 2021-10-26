@@ -15,11 +15,12 @@
 		<result property="nightWorkHour" column="NIGHT_WORK_HOUR" />
 		<result property="finalizeStatus" column="FINALIZE_STATUS" />
 		<result property="applyDays" column="APPLY_DAYS" />
-		<result property="privateleaveHour" column="PRIVATE_LEAVE_HOUR" />
-		<result property="publicleaveHour" column="PUBLIC_LEAVE_HOUR" />
+		<result property="privateLeaveHour" column="PRIVATE_LEAVE_HOUR" />
+		<result property="publicLeaveHour" column="PUBLIC_LEAVE_HOUR" />
 		<result property="empName" column="EMP_NAME" />
 	</resultMap>
 	
+	<!-- 1018 저녁최종수정 id 추가 -->
 	<select id="batchDayAttdMgtProcess" parameterType="map" statementType="CALLABLE">
 		<![CDATA[
         	{call P_HR_ATTENDANCE.P_CREATE_DAY_ATTD_MANAGE(
@@ -31,10 +32,10 @@
     	]]>
 	</select>
 	
-	<!--<update id="updateDayAttdMgtList" parameterType="kr.co.yooooon.hr.attd.to.DayAttdMgtTO">
+	<update id="updateDayAttdMgtList" parameterType="kr.co.yooooon.hr.attd.to.DayAttdMgtTO">
 		UPDATE DAY_ATTD_MANAGE SET
 		FINALIZE_STATUS = #{finalizeStatus}
 		WHERE EMP_CODE = #{empCode}
 		AND APPLY_DAYS = #{applyDays}
-	</update>-->
+	</update>
 </mapper>

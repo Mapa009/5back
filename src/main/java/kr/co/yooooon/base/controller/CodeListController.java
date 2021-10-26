@@ -25,47 +25,27 @@ public class CodeListController{
 	private DatasetBeanMapper datasetBeanMapper;
 
 	private ModelMap map = new ModelMap();
+
 	
 	@RequestMapping(value="/base/detailCodeList")
-	public void detailCodelist(@RequestAttribute("variableList") VariableList variableList, @RequestAttribute("resData") PlatformData resData)throws Exception {
-		System.out.println("@@@@@@@@@@@@@@@@@@#@!@#!#!");
+	public void detailCodeList(@RequestAttribute("variableList")VariableList variableList, @RequestAttribute("resData")PlatformData resData) throws Exception{
 		String code = variableList.getString("code");
 		ArrayList<DetailCodeTO> detailCodeList=baseServiceFacade.findDetailCodeList(code);
 		datasetBeanMapper.beansToDataset(resData,detailCodeList,DetailCodeTO.class);
 	}
 	
-	@RequestMapping(value="/base/codeList", params="code1")
-	public ModelMap detailCodelistRest(@RequestParam("code1")String code1 , @RequestParam("code2")String code2 ,@RequestParam("code3")String code3) {
-		System.out.println(code1+"@@@@");
-		System.out.println(code2+"@@@@");
-		System.out.println(code3+"@@@@");
-		try {
-			ArrayList<DetailCodeTO> detailCodeList=baseServiceFacade.findDetailCodeListRest(code1,code2,code3);
-			map.put("detailCodeList", detailCodeList);
-			map.put("errorMsg","success");
-			map.put("errorCode", 0);
-		}catch (DataAccessException dae){
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		} 
-		
-		return map;
+	@RequestMapping(value="/base/detailCodeListRest")
+	public void detailCodelistRest(@RequestAttribute("variableList") VariableList variableList,@RequestAttribute("resData") PlatformData resData)throws Exception {
+		String code1 = variableList.getString("code1");
+		String code2 = variableList.getString("code2");
+		String code3 = variableList.getString("code3");
+		ArrayList<DetailCodeTO> detailCodeList=baseServiceFacade.findDetailCodeListRest(code1,code2,code3);
+		datasetBeanMapper.beansToDataset(resData,detailCodeList,DetailCodeTO.class);
 	}
 	
 	@RequestMapping(value="/base/codeList")
-	public ModelMap codelist(){
-		try {
-			ArrayList<CodeTO> codeList=baseServiceFacade.findCodeList();
-			map.put("codeList", codeList);
-			map.put("errorMsg","Success !");
-			map.put("errorCode", 0);
-		}catch (DataAccessException dae){
-			map.clear();
-			map.put("errorCode", -1);
-			map.put("errorMsg", dae.getMessage());
-		}
-		
-		return map;
-	} 
+	public void codelist(@RequestAttribute("resData")PlatformData resData)throws Exception{
+		ArrayList<CodeTO> codeList=baseServiceFacade.findCodeList();
+		datasetBeanMapper.beansToDataset(resData,codeList,CodeTO.class);
+	}
 }

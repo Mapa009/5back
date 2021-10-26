@@ -1,8 +1,11 @@
 package kr.co.yooooon.hr.emp.sf;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
+import kr.co.yooooon.base.to.MenuTO;
+import kr.co.yooooon.hr.emp.to.EmpAuthGroupTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -72,5 +75,22 @@ public class EmpServiceFacadeImpl implements EmpServiceFacade {
 	public void modifyRecordEmployee(List<RecordFamilyInfoTO> emp) {
 		empApplicationService.modifyRecordEmployee(emp);
 		
+	}
+
+	@Override
+	public ArrayList<MenuTO> findAccessableMenu(String empCode){
+		return empApplicationService.findAccessableMenu(empCode);
+	}
+	@Override
+	public List<EmpAuthGroupTO> findEmpAuthGroup(){
+		return empApplicationService.findEmpAuthGroup();
+	}
+	@Override
+	public void saveEmpAuthorityGroup(ArrayList<EmpAuthGroupTO> saveEmpAuthGroup){
+		empApplicationService.saveEmpAuthorityGroup(saveEmpAuthGroup);
+	}
+	@Override
+	public void deleteEmpAuthorityGroup(HashMap<String, Object> map){
+		empApplicationService.deleteEmpAuthorityGroup(map);
 	}
 }

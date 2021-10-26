@@ -26,6 +26,7 @@ import kr.co.yooooon.hr.salary.repository.SalaryBounsDateRepository;
 import kr.co.yooooon.hr.salary.repository.SocialInsureRepository;
 import kr.co.yooooon.hr.salary.to.BaseDeductionTO;
 import kr.co.yooooon.hr.salary.to.BaseExtSalTO;
+import kr.co.yooooon.hr.salary.to.BaseSalaryTO;
 import kr.co.yooooon.hr.salary.to.FullTimeSalTO;
 import kr.co.yooooon.hr.salary.to.MonthSalaryTO;
 import kr.co.yooooon.hr.salary.to.PayDayTO;
@@ -70,7 +71,7 @@ public class SalaryApplicationServiceImpl implements SalaryApplicationService {
 
 	@Override
 	public ArrayList<PositionTO> findBaseSalaryList() {
-		ArrayList<PositionTO> baseSalaryList = positionRepository.findAllByOrderByPositionCode();
+		ArrayList<PositionTO> baseSalaryList = (ArrayList<PositionTO>)positionRepository.findAllByOrderByPositionCode();
 		return baseSalaryList;
 	}
 
@@ -205,12 +206,14 @@ public class SalaryApplicationServiceImpl implements SalaryApplicationService {
 	
    @SuppressWarnings("unchecked")
    @Override
-   public ArrayList<SocialInsureTO> findBaseInsureList(String yearBox) {
+   public ArrayList<SocialInsureTO> findBaseInsureList(String year) {
       HashMap<String, Object> map = new HashMap<String, Object>();
-      map.put("yearBox", yearBox);
+      map.put("year", year);
 	  //프로시져
       socialInsureDAO.selectBaseInsureList(map);
+      //ArrayList<SocialInsureTO> BaseInsureList = socialInsureRepository.findById(year);
       ArrayList<SocialInsureTO> BaseInsureList = (ArrayList<SocialInsureTO>) map.get("result");
+      System.out.println(BaseInsureList);
       return BaseInsureList;
    }
 

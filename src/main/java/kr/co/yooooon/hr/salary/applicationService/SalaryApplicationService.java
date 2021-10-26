@@ -6,6 +6,7 @@ import java.util.HashMap;
 import kr.co.yooooon.hr.emp.to.PositionTO;
 import kr.co.yooooon.hr.salary.to.BaseDeductionTO;
 import kr.co.yooooon.hr.salary.to.BaseExtSalTO;
+import kr.co.yooooon.hr.salary.to.BaseSalaryTO;
 import kr.co.yooooon.hr.salary.to.FullTimeSalTO;
 import kr.co.yooooon.hr.salary.to.MonthSalaryTO;
 import kr.co.yooooon.hr.salary.to.PayDayTO;

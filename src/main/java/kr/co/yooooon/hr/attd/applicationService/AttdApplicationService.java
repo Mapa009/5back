@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 import kr.co.yooooon.common.to.ResultTO;
 import kr.co.yooooon.hr.attd.to.*;
-import kr.co.yooooon.hr.attd.to.AnnualVacationMgtTO;
 
 public interface AttdApplicationService {
    public ArrayList<DayAttdTO> findDayAttdList(String empCode, String applyDay);
@@ -13,7 +12,7 @@ public interface AttdApplicationService {
    public void removeDayAttdList(ArrayList<DayAttdTO> dayAttdList);
    public void insertDayAttd(DayAttdTO dayAttd); //test
 
-   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay, String dept);
+   public ArrayList<DayAttdMgtTO> findDayAttdMgtList(String applyDay);
    public void modifyDayAttdMgtList(ArrayList<DayAttdMgtTO> dayAttdMgtList);
    public ArrayList<MonthAttdMgtTO> findMonthAttdMgtList(String applyYearMonth);
    public void modifyMonthAttdMgtList(ArrayList<MonthAttdMgtTO> monthAttdMgtList);
@@ -26,7 +25,7 @@ public interface AttdApplicationService {
    public void removeRestAttdList(ArrayList<RestAttdTO> restAttdList);
    
    public ArrayList<AnnualVacationMgtTO> findAnnualVacationMgtList(String applyYearMonth);
-   public void modifyAnnualVacationMgtList(AnnualVacationMgtTO annualVacationMgtTO);
+   public void modifyAnnualVacationMgtList(ArrayList<AnnualVacationMgtTO> annualVacationMgtTO);
    public void cancelAnnualVacationMgtList(ArrayList<AnnualVacationMgtTO> annualVacationMgtList);
    
 }
